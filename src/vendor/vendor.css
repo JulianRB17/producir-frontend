@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: "Quicksand";
+  box-sizing: border-box;
+  height: 100vh;
+  color: #ccc7e1;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}

@@ -1,0 +1,27 @@
+.hero {
+  background-color: bisque;
+}
+
+.hero__header {
+  font-weight: bold;
+  margin: 7px 0;
+}
+
+.hero__title {
+  font-size: 50px;
+  width: 50%;
+}
+
+.hero__disclaimer {
+  font-size: 12px;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+}
+
+.hero__img {
+  width: 50%;
+  text-align: center;
+}

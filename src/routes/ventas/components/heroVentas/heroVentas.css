@@ -1,0 +1,27 @@
+.heroVentas {
+  background-color: bisque;
+}
+
+.heroVentas__container {
+  display: flex;
+}
+
+.heroVentas__text-container {
+  width: 50%;
+}
+
+.heroVentas__title {
+  font-size: 50px;
+}
+
+.heroVentas__disclaimer {
+  font-size: 12px;
+}
+
+.heroVentas__img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}

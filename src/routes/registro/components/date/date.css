@@ -1,0 +1,7 @@
+.date {
+  display: flex;
+}
+
+.date__title {
+  width: 30%;
+}

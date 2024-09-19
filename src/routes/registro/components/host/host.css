@@ -1,0 +1,10 @@
+.host {
+  display: flex;
+  align-items: center;
+}
+
+.host__person-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

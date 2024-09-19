@@ -1,0 +1,10 @@
+.bios__element {
+  display: flex;
+  margin: 50px 0;
+}
+
+.bios__photo {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}

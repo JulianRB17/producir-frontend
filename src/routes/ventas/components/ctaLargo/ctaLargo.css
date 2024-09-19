@@ -1,0 +1,19 @@
+.cta-largo__hook {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.cta-largo__container {
+  display: flex;
+}
+
+.cta-largo__logo {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.cta-largo__text {
+  font-size: 17px;
+}
