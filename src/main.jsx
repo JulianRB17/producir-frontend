@@ -1,8 +1,6 @@
 import { StrictMode } from "react";
-import {
-  createRoot,
-  BrowserRouter,
-} from "../node_modules/.vite/deps/react-dom_client.js";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./global.css";
 import { ScrollToTop } from "./utils/scrollToTop";

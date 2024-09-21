@@ -16,5 +16,5 @@ export default function Date({ localDate, hour, count }) {
 Date.propTypes = {
   localDate: PropTypes.any,
   hour: PropTypes.string,
-  count: PropTypes.number,
+  count: PropTypes.any,
 };

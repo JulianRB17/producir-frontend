@@ -1,3 +1,5 @@
+import { data } from "./dataDummie.js";
+
 class Api {
   constructor() {
     this._baseUrl = "https://elartedeproducir.com/api/";
@@ -39,7 +41,7 @@ class Api {
     // } catch (err) {
     //   console.error(err);
     // }
-    return "data";
+    return data;
   }
 
   // Por si algún día regreso a mi backend

@@ -42,7 +42,7 @@ Form.propTypes = {
   isValidForm: PropTypes.bool,
   loading: PropTypes.bool,
   msgSuccess: PropTypes.bool,
-  sentUser: PropTypes.func,
+  sentUser: PropTypes.bool,
   setSentUser: PropTypes.func,
-  formValues: PropTypes.array,
+  formValues: PropTypes.object,
 };

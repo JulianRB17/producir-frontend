@@ -48,13 +48,13 @@ export default function Registro({
 Registro.propTypes = {
   localDate: PropTypes.any,
   hour: PropTypes.string,
-  count: PropTypes.number,
+  count: PropTypes.any,
   onSubmit: PropTypes.func,
   onChange: PropTypes.func,
   isValidForm: PropTypes.bool,
   loading: PropTypes.bool,
   msgSuccess: PropTypes.bool,
-  sentUser: PropTypes.func,
+  sentUser: PropTypes.bool,
   setSentUser: PropTypes.func,
-  formValues: PropTypes.array,
+  formValues: PropTypes.object,
 };
