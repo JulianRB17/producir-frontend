@@ -1,36 +1,43 @@
 // import { motion } from "framer-motion";
-// import picSrc from "../../../../assets/overlay-blue-s.webp";
-// import logoSrc from "../../../../assets/logo-oscuro-transparente.png";
-// import Form from './../../../../components/form/Form';
+import logoSrc from '../../../../assets/logos/imag-eap.png';
+import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 
 export default function Hero() {
-  //     {
-  //   // onSubmit,
-  //   // onChange,
-  //   // sentUser,
-  //   // isValidForm,
-  //   // loading,
-  //   // msgSuccess,
-  //   // setSentUser,
-  //   // formValues,
-  // })
   return (
-    <section className="hero">
-      <header className="hero__header">
-        ¡Atención, artista escénico! ¿Quieres aprender a consolidar tus
-        proyectos escénicos y materializar tus ideas? Esto es para tí…
-      </header>
-      <div className="hero__container">
-        <h1 className="hero__title">
-          Aprende las 3 claves para desarrollar tus proyectos y profesionalizar
-          tu carrera artística.
-        </h1>
-        <p className="hero__img">(Aquí puede ir una imagen)</p>
+    <section className='hero'>
+      <div className='hero__container hero__container_general'>
+        <div className='hero__container hero__container_title-shadow'>
+          <span className='hero__title_accent hero__title_shadow'>Aprende</span>
+          <div className='hero__container hero__container_title'>
+            <h1 className='hero__title hero__title_accent'>
+              Aprende las 3 claves
+            </h1>
+            <h1 className='hero__title'>
+              para desarrollar tus proyectos y profesionalizar tu carrera
+              artística.
+            </h1>
+          </div>
+        </div>
+        <div className='hero__container hero__container_logo'>
+          <img
+            src={logoSrc}
+            alt='logo-el-arte-de-producir'
+            className='hero__logo'
+          />
+        </div>
       </div>
-      <button className="hero__btn">Regístrate gratis</button>
-      <p className="hero__disclaimer">
-        Tu información está segura y no será compartida con nadie.
-      </p>
+      <button className='hero__btn'>Regístrate gratis</button>
+      <div className='hero__container hero__container_disclaimer'>
+        <img
+          src={logoDisclaimerSrc}
+          alt='logo-del-arte-de-producir'
+          className='hero__logo hero__logo_disclaimer'
+        />
+        <p className='hero__disclaimer'>
+          Tu información está segura y no será compartida con nadie.
+        </p>
+      </div>
+      <div className='hero__overlay' />
     </section>
   );
 }

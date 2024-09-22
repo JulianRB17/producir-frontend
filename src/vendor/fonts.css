@@ -1,0 +1,20 @@
+@font-face {
+  font-family: GandhiSans-Regular;
+  src: url('../assets/fonts/GandhiSans-Regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: GandhiSans-Bold;
+  src: url('../assets/fonts/GandhiSans-Bold-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: GandhiSans-Italic;
+  src: url('../assets/fonts/GandhiSans-Italic-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: GandhiSans-BoldItalic;
+  src: url('../assets/fonts/GandhiSans-BoldItalic-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: anton;
+  src: url('../assets/fonts/Anton-Regular.ttf') format('truetype');
+}

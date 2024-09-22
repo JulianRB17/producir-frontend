@@ -1,0 +1,25 @@
+.header {
+  font-weight: bold;
+  background-color: #4438d8;
+  display: flex;
+  color: white;
+  height: 3em;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__text {
+  font-size: 1.3rem;
+  margin: 0 0.3em;
+  font-family: anton;
+}
+
+.header__accent {
+  font-family: GandhiSans-Italic;
+  font-style: italic;
+  color: #e1f102;
+}
+
+.header__logo {
+  height: 75%;
+}

@@ -1,9 +1,12 @@
-body {
-  margin: 0;
-  font-family: "Quicksand";
-  box-sizing: border-box;
+#root {
   height: 100vh;
-  color: #ccc7e1;
+  color: #383455;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: GandhiSans-Regular;
 }
 
 .hidden {

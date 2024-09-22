@@ -9,10 +9,6 @@ export const data = {
     moduleDate_3: "1 de noviembre",
     moduleDate_4: "1 de noviembre",
     moduleDate_5: "1 de noviembre",
-    moduleDate_6: "1 de noviembre",
-    moduleDate_7: "1 de noviembre",
-    moduleDate_8: "1 de noviembre",
-    moduleDate_9: "1 de noviembre",
   },
   urls: {
     repetitionUrl: "https://elartedeproducir.com/repeticion",
