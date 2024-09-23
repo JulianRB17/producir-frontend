@@ -1,7 +1,88 @@
 .date {
   display: flex;
+  padding: 1%;
+  align-items: center;
+  flex-direction: column;
+  background-color: #aca6e4;
+  position: relative;
+}
+
+.date__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .date__title {
-  width: 30%;
+  text-align: center;
+  font-size: 4rem;
+  font-family: GandhiSans-Italic;
+  font-style: italic;
+  color: #05022b;
+  font-weight: 550;
+}
+
+.date__container_counter {
+  flex-direction: row;
+  margin: 1em auto;
+}
+
+.date__date {
+  font-family: anton;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 3px 3px 3px #05022b;
+}
+
+.date__element {
+  margin: 0 1em;
+  font-size: 2em;
+}
+
+.date__container_gradient {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3em;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px #05022b;
+}
+
+.date__gradient {
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    0deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(5, 2, 43, 1) 70%,
+    rgba(68, 56, 216, 1) 100%
+  );
+  height: 1.3em;
+  width: 2.5em;
+}
+
+.date__number {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  font-family: anton;
+  margin: 0;
+}
+
+.date__label {
+  color: #e1f102;
+  text-shadow: 1px 1px 4px #05022b;
+  font-family: anton;
+  font-size: 1.3rem;
+  margin: 0.5em auto;
+  text-align: center;
+}
+
+.date__vector {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  width: 7%;
 }
