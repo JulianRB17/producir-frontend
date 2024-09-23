@@ -1,6 +1,7 @@
 // import { motion } from "framer-motion";
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
+import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
 export default function Hero() {
   return (
@@ -26,7 +27,11 @@ export default function Hero() {
           />
         </div>
       </div>
-      <button className='hero__btn'>Regístrate gratis</button>
+      <div className='hero__container'>
+        <a className='hero_btn hero__btn_registro' href='#form'>
+          Regístrate gratis
+        </a>
+      </div>
       <div className='hero__container hero__container_disclaimer'>
         <img
           src={logoDisclaimerSrc}
@@ -36,6 +41,11 @@ export default function Hero() {
         <p className='hero__disclaimer'>
           Tu información está segura y no será compartida con nadie.
         </p>
+      </div>
+      <div className='hero__container hero__container_arrow'>
+        <a href='#date' className='hero_btn hero__btn_arrow'>
+          <img src={flechaSrc} alt='flecha' className='hero__arrow' />
+        </a>
       </div>
       <div className='hero__overlay' />
     </section>

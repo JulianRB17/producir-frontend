@@ -1,14 +1,20 @@
 .hero {
   display: flex;
+  position: relative;
   flex-direction: column;
   background-image: url('../../../../assets/imgs/hero-registro-img.webp');
-  padding: 10em 6em 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10% 10% 3%;
+  z-index: 1;
 }
 
 .hero__container {
   display: flex;
   margin: 0;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__container_general {
@@ -47,21 +53,22 @@
 }
 
 .hero__disclaimer {
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 .hero__logo {
-  width: 13em;
-  margin: -10em 0 auto auto;
+  width: 40%;
+  margin-top: -25%;
 }
 
 .hero__container_logo {
   display: flex;
   width: 50%;
+  align-items: flex-end;
 }
 
-.hero__btn {
-  margin: 2em auto 1em auto;
+.hero__btn_registro {
+  margin: 10% auto 7% auto;
   width: fit-content;
   padding: 0.3em 0.7em;
   font-size: 2rem;
@@ -70,14 +77,51 @@
   color: white;
   border: 2px solid #e1f102;
   border-radius: 2em;
+  text-decoration: none;
 }
 
 .hero__container_disclaimer {
-  margin: 4em 0 0 0;
+  margin: 0;
   display: block;
+}
+
+.hero__logo_disclaimer {
+  width: 15em;
 }
 
 .hero__disclaimer {
   color: white;
   font-size: 1.2rem;
+}
+
+.hero__container_arrow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero__arrow {
+  width: 70%;
+}
+
+.hero__btn {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  /* mix-blend-mode: color-dodge; */
+  mix-blend-mode: exclusion;
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    138deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
 }
