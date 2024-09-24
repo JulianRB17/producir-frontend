@@ -1,0 +1,54 @@
+.venta {
+  background-color: #e1f102;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.venta__title {
+  font-size: 3rem;
+  font-family: anton;
+  color: #4438d8;
+  margin: 0;
+  padding: 1em 0 0.5em;
+  font-weight: 500;
+}
+
+.venta__list {
+  width: 75%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.venta__element {
+  list-style-type: none;
+  display: flex;
+  margin: 1em 0;
+  width: 90%;
+}
+
+.venta__text {
+  font-size: 2rem;
+  color: #383455;
+}
+
+.venta__list-style {
+  width: 2em;
+  margin-right: 1em;
+  position: relative;
+  align-self: flex-start;
+}
+
+.venta__divition {
+  height: 4px;
+  background-color: #4438d8;
+  width: 100%;
+}
+
+.venta__text_accent {
+  font-family: GandhiSans-BoldItalic;
+}

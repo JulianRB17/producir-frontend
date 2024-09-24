@@ -1,7 +1,6 @@
 import Host from './components/host/Host';
 import Hero from './components/hero/Hero';
 import Date from './components/date/Date';
-import Quote from './components/quote/Quote';
 import Venta from './components/venta/Venta';
 import Description from './components/description/Description';
 import Bios from '../../components/bios/Bios';
@@ -29,7 +28,6 @@ export default function Registro({
       <Hero />
       <Date localDate={localDate} count={count} hour={hour} />
       <Host />
-      <Quote quote={'´Una idea no ejecutada es un sueño´ Louis de Rouvroy'} />
       <Venta />
       <Description />
       <Bios />

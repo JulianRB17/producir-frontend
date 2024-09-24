@@ -34,7 +34,7 @@
 }
 
 .date__element {
-  margin: 0 1em;
+  margin: 0 0.5em;
   font-size: 2em;
 }
 
@@ -56,16 +56,16 @@
     rgba(5, 2, 43, 1) 70%,
     rgba(68, 56, 216, 1) 100%
   );
-  height: 1.3em;
-  width: 2.5em;
+  height: 1.5em;
+  width: 3em;
 }
 
 .date__number {
   position: absolute;
-  top: 15%;
+  top: 20%;
   width: 100%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.3rem;
   color: white;
   font-family: anton;
   margin: 0;
@@ -82,7 +82,7 @@
 
 .date__vector {
   position: absolute;
-  top: 20%;
-  right: 20%;
-  width: 7%;
+  top: 40%;
+  right: 15%;
+  width: 9%;
 }

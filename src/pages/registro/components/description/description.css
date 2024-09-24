@@ -1,0 +1,84 @@
+.description {
+  background-color: #e1f102;
+  display: flex;
+  justify-content: center;
+  padding: 3em 0;
+}
+
+.description__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description__container_general {
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
+  color: white;
+  width: 75%;
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+}
+
+.description__element {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2em 2em;
+  border-bottom: #e1f102 2px solid;
+}
+
+.description__list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.description__list-element {
+  width: 2em;
+  margin-right: 1em;
+  position: relative;
+  align-self: flex-start;
+}
+
+.description__division {
+  position: relative;
+
+  height: 5px;
+  background-color: #e1f102;
+  z-index: 1;
+}
+
+.description__title {
+  margin: 0.6em auto 0;
+  font-size: 4rem;
+  color: #e1f102;
+  font-family: GandhiSans-BoldItalic;
+}
+
+.description__title_accent {
+  font-family: anton;
+  color: white;
+  font-size: 2.5rem;
+  margin: 0 auto;
+}
+
+.description__text {
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+.description__text_accent {
+  font-family: GandhiSans-BoldItalic;
+  color: #e1f102;
+}

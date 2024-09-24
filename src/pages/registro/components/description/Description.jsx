@@ -1,22 +1,64 @@
+import listElementSrc from '../../../../assets/imgs/triangulo.svg';
+
 export default function Description() {
   return (
-    <section className="descripcion">
-      <h2 className="descripcion__title">
-        Te compartimos un poco de lo que veremos en esta clase:
-      </h2>
-      <ul className="descripcion__list">
-        <li className="descripcion__element">
-          Aprende cómo optimizar los recursos y conseguir mejores resultados
-          para tus proyectos escénicos.
-        </li>
-        <li className="descripcion__element">
-          Conoce técnicas para sobreponerte a la procrastinación y autosabotaje
-          siendo artista
-        </li>
-        <li className="descripcion__element">
-          Descubre cómo la producción también es un acto creativo.
-        </li>
-      </ul>
+    <section className='description'>
+      <div className='description__container description__container_general'>
+        <div className='description__container description__container_title'>
+          <p className='description__title'>Te compartimos un poco</p>
+          <p className='description__title description__title_accent'>
+            de lo que veremos en esta clase:
+          </p>
+        </div>
+        <ul className='description__list'>
+          <li className='description__element'>
+            <img
+              src={listElementSrc}
+              alt='lista'
+              className='description__list-element'
+            />
+            <p className='description__text'>
+              Aprende cómo{' '}
+              <span className='description__text description__text_accent'>
+                optimizar los recursos y conseguir mejores resultados{' '}
+              </span>
+              para tus proyectos escénicos.
+            </p>
+          </li>
+          <div className='description__division' />
+          <li className='description__element'>
+            <img
+              src={listElementSrc}
+              alt='lista'
+              className='description__list-element'
+            />
+            <p className='description__text'>
+              <span className='description__text description__text_accent'>
+                Conoce técnicas para sobreponerte
+              </span>{' '}
+              a la procrastinación y autosabotaje siendo artista
+            </p>
+          </li>
+          <div className='description__division' />
+          <li className='description__element'>
+            <img
+              src={listElementSrc}
+              alt='lista'
+              className='description__list-element'
+            />
+            <p className='description__text'>
+              Descubre cómo{' '}
+              <span className='description__text description__text_accent'>
+                la producción
+              </span>{' '}
+              también{' '}
+              <span className='description__text description__text_accent'>
+                es un acto creativo.
+              </span>
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }

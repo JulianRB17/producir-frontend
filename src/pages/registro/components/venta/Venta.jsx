@@ -1,20 +1,43 @@
+import listElementSrc from '../../../../assets/imgs/triangulo-azul.svg';
+
 export default function Venta() {
   return (
-    <section className="venta">
-      <h2 className="venta__title">Esta clase es para ti si:</h2>
-      <ul className="venta__list">
-        <li className="venta__element">
-          Quieres desarrollar tus propios proyectos de artes escénicas -circo,
-          danza o teatro- y no sabes por dónde empezar.
+    <section className='venta'>
+      <h2 className='venta__title'>Esta clase es para ti si:</h2>
+      <ul className='venta__list'>
+        <li className='venta__element'>
+          <img src={listElementSrc} alt='lista' className='venta__list-style' />
+          <p className='venta__text'>
+            <span className='venta__text venta__text_accent'>
+              Quieres desarrollar tus propios proyectos
+            </span>{' '}
+            de artes escénicas -circo, danza o teatro- y no sabes por dónde
+            empezar.
+          </p>
         </li>
-        <li className="venta__element">
-          No entiendes conceptos de las convocatorias como Desglose de taquilla
-          o Presupuesto, mucho menos tienes idea de cómo hacerlo y eso te impide
-          materializar tus ideas.
+        <div className='venta__divition' />
+        <li className='venta__element'>
+          <img src={listElementSrc} alt='lista' className='venta__list-style' />
+          <p className='venta__text'>
+            <span className='venta__text venta__text_accent'>
+              No entiendes conceptos
+            </span>{' '}
+            de las convocatorias como &quot;Desglose de taquilla&quot; o
+            &quot;Presupuesto&quot;, mucho menos tienes idea de cómo hacerlo
+            <span className='venta__text venta__text_accent'>
+              y eso te impide materializar tus ideas.
+            </span>
+          </p>
         </li>
-        <li className="venta__element">
-          Planeas y creas con recursos propios pero terminas perdiendo tiempo,
-          esfuerzo y dinero.
+        <div className='venta__divition' />
+        <li className='venta__element'>
+          <img src={listElementSrc} alt='lista' className='venta__list-style' />
+          <p className='venta__text'>
+            Planeas y creas con recursos propios pero terminas{' '}
+            <span className='venta__text venta__text_accent'>
+              perdiendo tiempo, esfuerzo y dinero.
+            </span>
+          </p>
         </li>
       </ul>
     </section>
