@@ -1,0 +1,90 @@
+.bios {
+  display: flex;
+  background-image: url('../../assets/imgs/fondo-bios.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3% 5%;
+  position: relative;
+}
+
+.bios__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.bios__container_name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.bios__container_bio {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.bios__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #aca6e4;
+  padding: 5%;
+}
+
+.bios__element {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0.5em 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.bios__list-style {
+  width: 0.9em;
+  margin: 0.3em 1em 0 0;
+  position: relative;
+  align-self: flex-start;
+}
+
+.bios__photo {
+  width: 50%;
+  min-width: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #4438d8;
+}
+
+.bios__name {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: anton;
+}
+
+.bios__name_accent {
+  font-family: GandhiSans-Italic;
+  color: #aca6e4;
+}
+
+.bios__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  /* mix-blend-mode: color-dodge; */
+  mix-blend-mode: exclusion;
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    138deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
+}

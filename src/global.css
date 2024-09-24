@@ -1,5 +1,6 @@
 @import url('./components/bios/bios.css');
 @import url('./components/about/about.css');
+@import url('./components/allies/allies.css');
 
 @import url('./pages/registro/components/date/date.css');
 @import url('./pages/registro/components/description/description.css');
@@ -13,7 +14,7 @@
 @import url('./pages/ventas/components/bonos/bonos.css');
 @import url('./pages/ventas/components/cta/cta.css');
 @import url('./pages/ventas/components/ctaLargo/ctaLargo.css');
-@import url('./pages/ventas/components/descripcion/descripcion.css');
+@import url('./pages/ventas/components/descriptionVentas/descriptionVentas.css');
 @import url('./pages/ventas/components/disclaimer/disclaimer.css');
 @import url('./pages/ventas/components/faqs/faqs.css');
 @import url('./pages/ventas/components/garantia/garantia.css');

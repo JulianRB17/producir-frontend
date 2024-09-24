@@ -7,6 +7,7 @@ import About from '../../components/about/About';
 import Form from './components/form/Form';
 import Header from './components/header/Header';
 import Bios from '../../components/bios/Bios';
+import Allies from '../../components/allies/Allies';
 
 import PropTypes from 'prop-types';
 
@@ -33,6 +34,7 @@ export default function Registro({
       <Description />
       <About />
       <Bios />
+      <Allies />
       <Form
         onSubmit={onSubmit}
         onChange={onChange}

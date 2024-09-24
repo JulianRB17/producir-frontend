@@ -1,40 +1,77 @@
+import veroSrc from '../../assets/imgs/vero.webp';
+import julianSrc from '../../assets/imgs/julian.webp';
+import triangleSrc from '../../assets/imgs/triangulo-azul.svg';
+
 export default function Bios() {
   return (
     <section className='bios'>
-      <div className='bios__element'>
-        <div className='bios__text-container'>
-          <p className='bios__text'>
-            Egresada de la carrera de Literatura Dramática y Teatro de la UNAM.
-          </p>
-          <p className='bios__text'>
-            Coordinadora de producción del Colectivo Escénico El Arce
-            beneficiario del programa México en Escena del Sistema de Apoyos a
-            la Creación de Proyectos Culturales (MEGA).
-          </p>
-          <p className='bios__text'>
-            Productora ejecutiva de Los obscenos de Silere/Vórtex proyecto
-            beneficiario de EFIARTES.
-          </p>
+      <div className='bios__container bios__container_bio'>
+        <img src={veroSrc} alt='Vero Ramos' className='bios__photo' />
+        <div className='bios__container bios__container_name'>
+          <p className='bios__name'>Verónica</p>
+          <p className='bios__name bios__name_accent'>Ramos</p>
         </div>
-        <p className='bios__photo'>Foto Vero</p>
+        <ul className='bios__list'>
+          <li className='bios__element'>
+            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <p className='bios__text'>
+              Egresada de la carrera de Literatura Dramática y Teatro de la
+              UNAM.
+            </p>
+          </li>
+          <li className='bios__element'>
+            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <p className='bios__text'>
+              Coordinadora de producción del Colectivo Escénico El Arce
+              beneficiario del programa México en Escena del Sistema de Apoyos a
+              la Creación de Proyectos Culturales (MEGA).
+            </p>
+          </li>
+          <li className='bios__element'>
+            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <p className='bios__text'>
+              Productora ejecutiva de Los obscenos de Silere/Vórtex proyecto
+              beneficiario de EFIARTES.
+            </p>
+          </li>
+        </ul>
       </div>
-      <div className='bios__element'>
-        <div className='bios__text-container'>
-          <p className='bios__text'>
-            Egresado de la carrera de Literatura Dramática y Teatro de la UNAM.
-          </p>
-          <p className='bios__text'>
-            Con un diplomado en Creación/Investigación por la UBA (Argentina) y
-            la UNAM y otro en Perfeccionamiento en Dirección Escénica por la
-            Secretaría de Cultura
-          </p>
-          <p className='bios__text'>
-            Formó parte del equipo de producción de Los obscenos de
-            Silere/Vórtex proyecto beneficiario de EFIARTES.
-          </p>
+      <div className='bios__container bios__container_bio'>
+        <img
+          src={julianSrc}
+          alt='Julián Reyes Botello'
+          className='bios__photo'
+        />
+        <div className='bios__container bios__container_name'>
+          <p className='bios__name'>Julián</p>
+          <p className='bios__name bios__name_accent'>Reyes Botello</p>
         </div>
-        <p className='bios__photo'>Foto Julián</p>
+        <ul className='bios__list'>
+          <li className='bios__element'>
+            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <p className='bios__text'>
+              Egresado de la carrera de Literatura Dramática y Teatro de la
+              UNAM.
+            </p>
+          </li>
+          <li className='bios__element'>
+            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <p className='bios__text'>
+              Con un diplomado en Creación/Investigación por la UBA (Argentina)
+              y la UNAM y otro en Perfeccionamiento en Dirección Escénica por la
+              Secretaría de Cultura
+            </p>
+          </li>
+          <li className='bios__element'>
+            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <p className='bios__text'>
+              Formó parte del equipo de producción de Los obscenos de
+              Silere/Vórtex proyecto beneficiario de EFIARTES.
+            </p>
+          </li>
+        </ul>
       </div>
+      <div className='bios__overlay' />
     </section>
   );
 }
