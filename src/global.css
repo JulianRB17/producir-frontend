@@ -1,4 +1,5 @@
 @import url('./components/bios/bios.css');
+@import url('./components/about/about.css');
 
 @import url('./pages/registro/components/date/date.css');
 @import url('./pages/registro/components/description/description.css');
