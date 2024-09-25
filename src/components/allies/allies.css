@@ -1,0 +1,24 @@
+.allies {
+  background-color: #4438d8;
+  padding: 3% 7%;
+}
+
+.allies__grid-element {
+  width: 10%;
+}
+
+.allies__logo {
+  width: 80%;
+}
+
+.allies__title {
+  color: #e1f102;
+  font-family: anton;
+  font-size: 4rem;
+}
+
+.allies__title_shadow {
+  color: #05022b;
+  font-size: 6rem;
+  font-family: GandhiSans-BoldItalic;
+}

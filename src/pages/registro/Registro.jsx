@@ -8,6 +8,7 @@ import Form from './components/form/Form';
 import Header from './components/header/Header';
 import Bios from '../../components/bios/Bios';
 import Allies from '../../components/allies/Allies';
+import Footer from '../../components/footer/Footer';
 
 import PropTypes from 'prop-types';
 
@@ -45,6 +46,7 @@ export default function Registro({
         setSentUser={setSentUser}
         formValues={formValues}
       />
+      <Footer />
     </section>
   );
 }

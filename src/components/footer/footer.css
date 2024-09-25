@@ -1,0 +1,48 @@
+.footer {
+  font-weight: bold;
+  background-color: #4438d8;
+  display: flex;
+  color: white;
+  height: 6em;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__container {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+}
+
+.footer__container_rrss {
+  justify-content: end;
+}
+
+.footer__container_copy {
+  justify-content: flex-start;
+}
+
+.footer__logo {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.footer__logo_rrss {
+  margin: 0;
+}
+
+.footer__link {
+  display: flex;
+  width: fit-content;
+}
+
+.footer__link_rrss {
+  width: 20%;
+}
+
+.footer__text {
+  font-size: 0.9rem;
+  font-family: GandhiSans-Italic;
+  font-weight: 100;
+}

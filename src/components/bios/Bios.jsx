@@ -1,5 +1,5 @@
 import veroSrc from '../../assets/imgs/vero.webp';
-import julianSrc from '../../assets/imgs/julian.webp';
+import julianSrc from '../../assets/imgs/julian-bn.webp';
 import triangleSrc from '../../assets/imgs/triangulo-azul.svg';
 
 export default function Bios() {
