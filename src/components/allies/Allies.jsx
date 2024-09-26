@@ -17,9 +17,11 @@ import apagaSrc from '../../assets/logos/aliados/apaga.png';
 export default function Allies() {
   return (
     <section className='allies'>
-      <div className='allies__container allies__container_title'>
-        <p className='allies__title allies__title_shadow'>Aliados</p>
-        <p className='allies__title'>Aliados</p>
+      <div className='allies__title-container'>
+        <p className='allies__title'>
+          <span className='allies__title allies__title_shadow'>Aliados</span>
+          Aliados
+        </p>
       </div>
       <div className='allies__grid-container'>
         <div className='allies__grid-element'>

@@ -9,11 +9,12 @@ export default function Header() {
         className='header__logo'
       />
       <p className='header__text'>
-        <span className='header__text header__accent'>
+        <span className='header__text header__text_accent'>
           ¡Atención, artista escénico!
         </span>{' '}
         ¿Quieres aprender a consolidar tus proyectos escénicos y materializar
-        tus ideas? <span className='header__accent'>Esto es para tí...</span>
+        tus ideas?{' '}
+        <span className='header__text_accent'>Esto es para tí...</span>
       </p>
     </header>
   );

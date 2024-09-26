@@ -30,6 +30,7 @@
 
 .footer__logo_rrss {
   margin: 0;
+  max-width: 4em;
 }
 
 .footer__link {
