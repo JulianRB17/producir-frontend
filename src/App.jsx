@@ -1,30 +1,30 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Ventas from "./pages/ventas/Ventas";
-import CierreRegistro from "./pages/cierreRegistro/CierreRegistro";
-import CierreVenta from "./pages/cierreVenta/CierreVenta";
-import Registro from "./pages/registro/Registro";
-import Repeticion from "./pages/repeticion/Repeticion";
-import { countdown } from "./utils/countdown.js";
-import NotFound from "./pages/notFound/NotFound";
-import api from "./utils/api";
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Ventas from './pages/ventas/Ventas';
+import CierreRegistro from './pages/cierreRegistro/CierreRegistro';
+import CierreVenta from './pages/cierreVenta/CierreVenta';
+import Registro from './pages/registro/Registro';
+import Repeticion from './pages/repeticion/Repeticion';
+import { countdown } from './utils/countdown.js';
+import NotFound from './pages/notFound/NotFound';
+import api from './utils/api';
 // import { Pixel } from "./utils/metaPixel";
 // import Privacidad from "./routes/privacidad/Privacidad";
 // import CookiesNotice from "./components/cookiesNotice/CookiesNotice";
 
 function App() {
   const [formValues, setFormValues] = useState({
-    firstName: "",
-    email: "",
+    firstName: '',
+    email: '',
   });
   const [loading, setLoading] = useState(false);
   const [isValidForm, setValidForm] = useState(false);
   const [msgSuccess, setMsgSuccess] = useState(true);
   const [sentUser, setSentUser] = useState(false);
   const [count, setCount] = useState(0);
-  const [localDate, setLocalDate] = useState("");
-  const [hour, setHour] = useState("");
-  const [timestamp, setTimestamp] = useState("");
+  const [localDate, setLocalDate] = useState('');
+  const [hour, setHour] = useState('');
+  const [timestamp, setTimestamp] = useState('');
   const [urls, setUrls] = useState({});
   const [dates, setDates] = useState({});
   // const [cookiesEstablished, setCookiesEstablished] = useState(true);
@@ -42,8 +42,8 @@ function App() {
     setTimestamp(new Date(dates.webinarDate).getTime());
     const webinarHour = new Date(dates.webinarDate).getHours();
     const webinarMinutes = new Date(dates.webinarDate).getSeconds();
-    setLocalDate(new Date(dates.webinarDate).toLocaleDateString("es-ES"));
-    setHour(`${webinarHour}:${webinarMinutes ? 0 : "00"}`);
+    setLocalDate(new Date(dates.webinarDate).toLocaleDateString('es-ES'));
+    setHour(`${webinarHour}:${webinarMinutes ? 0 : '00'}`);
     countdown(timestamp, setCount);
     return;
   }, [hour, timestamp, dates.webinarDate]);
@@ -70,13 +70,13 @@ function App() {
       if (contactData.contactList) {
         setMsgSuccess(true);
         setSentUser(true);
-        navigate("/cierre-r");
+        navigate('/cierre-r');
       } else {
         setMsgSuccess(false);
       }
       setFormValues({
-        firstName: "",
-        email: "",
+        firstName: '',
+        email: '',
       });
       setLoading(false);
       return;
@@ -84,10 +84,10 @@ function App() {
       setLoading(false);
       console.error(error);
       setFormValues({
-        firstName: "",
-        email: "",
+        firstName: '',
+        email: '',
       });
-      alert("Ahh, algo salió malo, por favor vuelve a intentarlo.");
+      alert('Ahh, algo salió malo, por favor vuelve a intentarlo.');
     }
   };
 
@@ -104,10 +104,10 @@ function App() {
   // };
 
   return (
-    <div className="app">
+    <div className='app'>
       <Routes>
         <Route
-          path="/"
+          path='/'
           element={
             <>
               {/* <Pixel /> */}
@@ -121,7 +121,7 @@ function App() {
           }
         />
         <Route
-          path="/cierre-r"
+          path='/cierre-r'
           element={
             <CierreRegistro
               localDate={localDate}
@@ -132,7 +132,7 @@ function App() {
           }
         />
         <Route
-          path="/cierre-v"
+          path='/cierre-v'
           element={
             <CierreVenta
               cursoDate={dates.programaDate}
@@ -141,7 +141,7 @@ function App() {
           }
         />
         <Route
-          path="/registro"
+          path='/registro'
           element={
             <>
               {/* <CookiesNotice
@@ -165,9 +165,9 @@ function App() {
             </>
           }
         />
-        <Route path="/repeticion" element={<Repeticion urls={urls} />} />
+        <Route path='/repeticion' element={<Repeticion urls={urls} />} />
         {/* <Route path="/privacidad" element={<Privacidad />} /> */}
-        <Route path="*" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );

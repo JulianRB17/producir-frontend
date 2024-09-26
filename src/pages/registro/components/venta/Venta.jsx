@@ -3,10 +3,17 @@ import listElementSrc from '../../../../assets/imgs/triangulo-azul.svg';
 export default function Venta() {
   return (
     <section className='venta'>
-      <h2 className='venta__title'>Esta clase es para ti si:</h2>
+      <h2 className='venta__title'>
+        <span className='venta__title venta__title_shadow'>para ti si</span>
+        Esta clase es para ti si:
+      </h2>
       <ul className='venta__list'>
         <li className='venta__element'>
-          <img src={listElementSrc} alt='lista' className='venta__list-style' />
+          <img
+            src={listElementSrc}
+            alt='lista'
+            className='venta__list-vector'
+          />
           <p className='venta__text'>
             <span className='venta__text venta__text_accent'>
               Quieres desarrollar tus propios proyectos
@@ -17,7 +24,11 @@ export default function Venta() {
         </li>
         <div className='venta__divition' />
         <li className='venta__element'>
-          <img src={listElementSrc} alt='lista' className='venta__list-style' />
+          <img
+            src={listElementSrc}
+            alt='lista'
+            className='venta__list-vector'
+          />
           <p className='venta__text'>
             <span className='venta__text venta__text_accent'>
               No entiendes conceptos
@@ -31,7 +42,11 @@ export default function Venta() {
         </li>
         <div className='venta__divition' />
         <li className='venta__element'>
-          <img src={listElementSrc} alt='lista' className='venta__list-style' />
+          <img
+            src={listElementSrc}
+            alt='lista'
+            className='venta__list-vector'
+          />
           <p className='venta__text'>
             Planeas y creas con recursos propios pero terminas{' '}
             <span className='venta__text venta__text_accent'>
