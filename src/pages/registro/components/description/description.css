@@ -50,7 +50,6 @@
 
 .description__division {
   position: relative;
-
   height: 5px;
   background-color: #e1f102;
   z-index: 1;
@@ -75,10 +74,64 @@
   font-weight: 300;
   margin: 0;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.2;
 }
 
 .description__text_accent {
   font-family: GandhiSans-BoldItalic;
   color: #e1f102;
+}
+
+@media screen and (max-width: 1000px) {
+  .description__element {
+    font-size: 0.5rem;
+  }
+
+  .description__title {
+    font-size: 3rem;
+  }
+
+  .description__title_accent {
+    font-size: 2rem;
+  }
+
+  .description__text {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .description__element {
+    font-size: 0.4rem;
+  }
+
+  .description__title {
+    font-size: 2rem;
+  }
+
+  .description__title_accent {
+    font-size: 1.7rem;
+  }
+
+  .description__text {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description__element {
+    font-size: 0.4rem;
+  }
+
+  .description__title {
+    font-size: 1.5rem;
+  }
+
+  .description__title_accent {
+    font-size: 1rem;
+  }
+
+  .description__text {
+    font-size: 1.3rem;
+  }
 }

@@ -4,7 +4,7 @@ import mascarasSrc from '../../assets/imgs/mascaras.svg';
 export default function About() {
   return (
     <section className='about'>
-      <div className='about__container about__container_top'>
+      <div className='about__container about__container_grid'>
         <div className='about__container about__container_text'>
           <div className='about__container about__container_title'>
             <p className='about__title'>¿Quiénes somos</p>
@@ -50,7 +50,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className='about__container about__container_bottom'>
+      <div className='about__container about__container_grid'>
         <div className='about__container about__container_svg'>
           <img
             src={mascarasSrc}
@@ -92,16 +92,25 @@ export default function About() {
       </div>
 
       <div className='about__container about__container_quote'>
-        <p className='about__quote'>
-          Invierte en ti mismo, en tu conocimiento y en tus habilidades
-        </p>
+        <div className='about__container about__container_svg about__container_quote-svg'>
+          <img
+            src={mascarasSrc}
+            alt='Vector de máscaras'
+            className='about__svg about__svg_quote'
+          />
+        </div>
+        <div className='about__container about__container_quote-text'>
+          <p className='about__quote'>
+            Invierte en ti mismo, en tu conocimiento y en tus habilidades
+          </p>
 
-        <p className='about__quote about__quote_accent'>
-          para que no esperes que las oportunidades lleguen a ti,
-        </p>
-        <p className='about__quote about__quote_right-align'>
-          crea tus propias oportunidades.
-        </p>
+          <p className='about__quote about__quote_accent'>
+            para que no esperes que las oportunidades lleguen a ti,
+          </p>
+          <p className='about__quote about__quote_right-align'>
+            crea tus propias oportunidades.
+          </p>
+        </div>
       </div>
     </section>
   );
