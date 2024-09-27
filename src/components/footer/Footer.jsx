@@ -2,7 +2,9 @@ import logoSrc from '../../assets/logos/iso-largo-eap.png';
 import fbSrc from '../../assets/logos/fb.svg';
 import igSrc from '../../assets/logos/ig.svg';
 
-export default function Footer() {
+import PropTypes from 'prop-types';
+
+export default function Footer({ urls }) {
   return (
     <footer className='footer'>
       <div className='footer__container footer__container_copy'>
@@ -18,14 +20,14 @@ export default function Footer() {
         </a>
       </div>
       <div className='footer__container footer__container_rrss'>
-        <a href='facebook.com' className='footer__link footer__link_rrss'>
+        <a href={urls.fbPermaUrl} className='footer__link footer__link_rrss'>
           <img
             src={fbSrc}
             alt='Link a nuestro Facebook'
             className='footer__logo footer__logo_rrss'
           />
         </a>
-        <a href='instagram.com' className='footer__link footer__link_rrss'>
+        <a href={urls.igUrl} className='footer__link footer__link_rrss'>
           <img
             src={igSrc}
             alt='Link a nuestro Instagram'
@@ -36,3 +38,7 @@ export default function Footer() {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  urls: PropTypes.object,
+};

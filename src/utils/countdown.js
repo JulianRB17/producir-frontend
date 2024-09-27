@@ -10,10 +10,15 @@ export const countdown = function (timestamp, setCount) {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     if (distance > 0)
-      setCount(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+      setCount({
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds,
+      });
     if (distance < 0) {
       clearInterval(interval);
-      setCount("");
+      setCount(null);
     }
   }, 1000);
 };

@@ -7,6 +7,7 @@ import Registro from './pages/registro/Registro';
 import Repeticion from './pages/repeticion/Repeticion';
 import { countdown } from './utils/countdown.js';
 import NotFound from './pages/notFound/NotFound';
+import Footer from './components/footer/Footer.jsx';
 import api from './utils/api';
 // import { Pixel } from "./utils/metaPixel";
 // import Privacidad from "./routes/privacidad/Privacidad";
@@ -169,6 +170,7 @@ function App() {
         {/* <Route path="/privacidad" element={<Privacidad />} /> */}
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer urls={urls} />
     </div>
   );
 }

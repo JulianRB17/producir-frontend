@@ -1,20 +1,20 @@
-import { data } from "./dataDummie.js";
+import { data } from './dataDummie.js';
 
 class Api {
   constructor() {
-    this._baseUrl = "https://elartedeproducir.com/api/";
+    this._baseUrl = 'https://elartedeproducir.com/api/';
     // this._baseUrl = 'http://localhost:3001/';
     this._options = {
       headers: {
-        accept: "application/json",
-        "content-type": "application/json",
+        accept: 'application/json',
+        'content-type': 'application/json',
       },
     };
   }
 
   async postContact({ firstName, email }) {
-    this._options.method = "POST";
-    this._specificUrl = "users";
+    this._options.method = 'POST';
+    this._specificUrl = 'users';
     this._options.body = JSON.stringify({ firstName, email });
     console.log(this);
     const data = await this._fetchData();
@@ -22,8 +22,8 @@ class Api {
   }
 
   async getData() {
-    this._options.method = "GET";
-    this._specificUrl = "data";
+    this._options.method = 'GET';
+    this._specificUrl = 'data';
     this._options.body = null;
     const data = await this._fetchData();
     return data;

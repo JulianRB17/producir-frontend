@@ -40,6 +40,9 @@
 .date__element {
   margin: 0 0.5em;
   font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .date__container_gradient {
@@ -80,7 +83,7 @@
   color: #e1f102;
   text-shadow: 1px 1px 4px #05022b;
   font-family: anton;
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 0.5em auto;
   text-align: center;
 }
@@ -91,6 +94,14 @@
   right: 6em;
   width: 8em;
   z-index: 1;
+}
+
+.date__text {
+  font-family: anton;
+  color: #e1f102;
+  text-shadow: 3px 3px 3px #05022b;
+  font-size: 4rem;
+  margin: 0.5em 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -120,5 +131,9 @@
   .date__vector {
     font-size: 0.5rem;
     right: 1em;
+  }
+
+  .date__text {
+    font-size: 3rem;
   }
 }
