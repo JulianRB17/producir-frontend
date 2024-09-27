@@ -35,22 +35,26 @@ export default function Form({
         onSubmit={onSubmit}
         onChange={onChange}
       >
-        <div className='form__container form__container_form'>
+        <div className='form__container form__container_inputs'>
           <div className='form__element'>
-            <p className='form__label'>Primer nombre:</p>
-            <input
-              type='text'
-              className='form__input'
-              placeholder='Escribe aquí tu primer nombre...'
-            />
+            <div className='form__container form__container_input'>
+              <p className='form__label'>Primer nombre:</p>
+              <input
+                type='text'
+                className='form__input'
+                placeholder='Escribe aquí tu primer nombre...'
+              />
+            </div>
           </div>
           <div className='form__element'>
-            <p className='form__label'>Email:</p>
-            <input
-              type='email'
-              className='form__input'
-              placeholder='Escribe aquí tu email para mandarte la info.'
-            />
+            <div className='form__container form__container_input'>
+              <p className='form__label'>Email:</p>
+              <input
+                type='email'
+                className='form__input'
+                placeholder='Escribe aquí tu email para mandarte la info.'
+              />
+            </div>
           </div>
         </div>
         <div className='form__container form__container_btn'>

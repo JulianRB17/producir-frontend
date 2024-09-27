@@ -6,7 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10% 10% 3%;
+  padding: 5% 5% 3%;
   color: white;
   z-index: 0;
 }
@@ -29,20 +29,14 @@
   align-items: center;
 }
 
-.form__container_form {
+.form__container_inputs {
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 
 .form__container_btn {
   align-items: center;
-}
-
-.form__hook {
-  font-style: italic;
-  font-weight: bold;
-  font-size: 20px;
-  margin: auto;
 }
 
 .form__form {
@@ -51,7 +45,7 @@
 }
 
 .form__btn {
-  margin: 10% auto 7% auto;
+  margin: 5% auto 7% auto;
   width: fit-content;
   padding: 0.3em 0.7em;
   font-size: 2.5rem;
@@ -65,7 +59,7 @@
 }
 
 .form__logo {
-  width: 20%;
+  width: 13em;
   position: relative;
   z-index: 3;
 }
@@ -119,7 +113,8 @@
 
 .form__input {
   border: 2px solid #e1f102;
-  width: 15em;
+  /* width: 15em; */
+  width: 100%;
   font-size: 1.5rem;
   padding: 2%;
   border-radius: 0.5em;
@@ -127,7 +122,7 @@
 
 .form__element {
   position: relative;
-  margin: 0 1em;
+  margin: 0 3em;
 }
 
 .form__input_overlay {
@@ -143,8 +138,7 @@
 }
 
 .form__input:focus {
-  border: 6px solid #4438d8;
-  outline: none;
+  outline: 6px groove #4438d8;
   transition: border 0.4s ease-in-out;
 }
 
@@ -165,4 +159,60 @@
   /* mix-blend-mode: soft-light; */
   background-color: #05022b;
   z-index: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .form__hook {
+    font-size: 1.5rem;
+  }
+
+  .form__hook_accent {
+    font-size: 2.5rem;
+  }
+
+  .form__container_inputs {
+    flex-direction: column;
+  }
+
+  .form__cta {
+    font-size: 2rem;
+  }
+
+  .form__label {
+    margin: 1em 0 0.5em;
+    font-size: 1.3rem;
+  }
+
+  .form__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .form__input {
+    font-size: 1.2rem;
+  }
+
+  .form__btn {
+    font-size: 1.5rem;
+  }
+
+  .form__logo {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form__logo {
+    width: 6em;
+    align-self: center;
+  }
+
+  .form__hook_shadow {
+    font-size: 2.8rem;
+    max-width: 83%;
+    top: -0.5em;
+    left: 1.5em;
+  }
 }

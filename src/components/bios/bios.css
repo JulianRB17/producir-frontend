@@ -72,6 +72,10 @@
   color: #aca6e4;
 }
 
+.bios__text {
+  font-size: 1.2rem;
+}
+
 .bios__overlay {
   position: absolute;
   top: 0;
@@ -87,4 +91,38 @@
     rgba(5, 2, 43, 1) 0%,
     rgba(68, 56, 216, 1) 120%
   );
+}
+
+@media screen and (max-width: 800px) {
+  .bios {
+    flex-direction: column;
+  }
+
+  .bios__container_bio {
+    width: 80%;
+    margin: 1em auto;
+  }
+
+  .bios__photo {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bios {
+    flex-direction: column;
+  }
+
+  .bios__container_bio {
+    width: 95%;
+    margin: 1em auto;
+  }
+
+  .bios__text {
+    font-size: 1rem;
+  }
+
+  .bios__photo {
+    width: 40%;
+  }
 }
