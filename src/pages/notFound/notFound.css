@@ -1,0 +1,47 @@
+.not-found {
+  background: linear-gradient(
+    138deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
+  height: calc(100vh - 100px);
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found__text {
+  color: #e1f102;
+  font-family: anton;
+  font-size: 4rem;
+}
+
+.not-found__text_accent {
+  color: white;
+  font-family: GandhiSans-BoldItalic;
+  font-size: 1.3em;
+}
+
+.not-found__link {
+  height: 25%;
+  padding: 10% 0;
+}
+
+.not-found__logo {
+  width: 25%;
+}
+
+@media screen and (max-width: 800px) {
+  .not-found__text {
+    font-size: 3rem;
+  }
+}

@@ -1,27 +1,57 @@
-export default function Hero() {
+import logoSrc from '../../../../assets/logos/imag-eap.png';
+import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
+import flechaSrc from '../../../../assets/imgs/flecha.svg';
+
+export default function heroVentas() {
   return (
-    <section className="heroVentas">
-      <div className="heroVentasVentas__container">
-        <div className="heroVentas__text-container">
-          <p className="heroVentas__logo">Insertar logo</p>
-          <h1 className="heroVentas__title">
-            Aprende el método para que tus ideas se transformen en el proyecto
-            escénico -danza, circo o teatro- que siempre soñaste sin perder
-            dinero.
-          </h1>
-          <h2 className="heroVentas__subtitle">
-            Producir es materializar sueños.
-          </h2>
+    <section className='heroVentas'>
+      <div className='heroVentas__container heroVentas__container_grid'>
+        <div className='heroVentas__container heroVentas__container_title'>
+          <div className='heroVentas__container heroVentas__container_title'>
+            <h1 className='heroVentas__title heroVentas__title_accent'>
+              <span className='heroVentas__title_accent heroVentas__title_shadow'>
+                Aprende
+              </span>
+              Aprende el método
+            </h1>
+            <h1 className='heroVentas__title'>
+              para que tus ideas se transformen en el proyecto escénico{' '}
+              <span className='heroVentas__title heroVentas__title_accent-sm'>
+                -danza, circo o teatro-
+              </span>{' '}
+              que siempre soñaste sin perder dinero.
+            </h1>
+          </div>
         </div>
-        <p className="heroVentas__img">(Aquí podría ir una imagen)</p>
+        <div className='heroVentas__container heroVentas__container_logo'>
+          <img
+            src={logoSrc}
+            alt='logo-el-arte-de-producir'
+            className='heroVentas__logo'
+          />
+        </div>
+        <div className='heroVentas__container heroVentas__container_btn'>
+          <a className='heroVentas_btn heroVentas__btn_cta' href='#form'>
+            Haz click aquí para unirte
+          </a>
+        </div>
+        <div className='heroVentas__container heroVentas__container_disclaimer'>
+          <img
+            src={logoDisclaimerSrc}
+            alt='logo-del-arte-de-producir'
+            className='heroVentas__logo heroVentas__logo_disclaimer'
+          />
+          <p className='heroVentas__disclaimer'>
+            Tu información está segura y no será compartida con nadie.
+          </p>
+        </div>
+        <div className='heroVentas__container heroVentas__container_arrow'>
+          <a href='#date' className='heroVentas_btn heroVentas__btn_arrow'>
+            <img src={flechaSrc} alt='flecha' className='heroVentas__arrow' />
+          </a>
+        </div>
       </div>
-      <p className="heroVentas__text">
-        El grupo de esta generación se está armando.
-      </p>
-      <button className="heroVentas__btn">Haz click aquí para unirte</button>
-      <p className="heroVentas__disclaimer">
-        Tu información está segura y no será compartida con nadie.
-      </p>
+      <div className='heroVentas__overlay' />
     </section>
   );
 }

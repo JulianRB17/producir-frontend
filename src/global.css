@@ -23,5 +23,7 @@
 @import url('./pages/ventas/components/presentacion/presentacion.css');
 @import url('./pages/ventas/components/situaciones/situaciones.css');
 
+@import url('./pages/notFound/notFound.css');
+
 @import url('./vendor/normalize.css');
 @import url('./vendor/vendor.css');
