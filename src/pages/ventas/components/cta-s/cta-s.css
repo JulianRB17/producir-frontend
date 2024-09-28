@@ -1,0 +1,133 @@
+.cta-s {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 3em;
+  background-image: url('../../../../assets/imgs/fondo-cta-s.webp');
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+}
+
+.cta-s__container {
+  display: flex;
+  z-index: 3;
+}
+
+.cta-s__container_quote {
+  width: 30%;
+  flex-direction: column;
+}
+
+.cta-s__container_btn {
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-s__quote {
+  color: #e1f102;
+  font-size: 1.7rem;
+  font-family: GandhiSans-BoldItalic;
+}
+
+.cta-s__quote_author {
+  font-size: 1.2rem;
+}
+
+.cta-s__hook {
+  color: white;
+  width: 45%;
+  text-align: right;
+  margin: 2em 0 2em auto;
+  font-size: 1.8rem;
+  font-family: GandhiSans-Bold;
+  line-height: 1.2;
+}
+
+.cta-s__btn {
+  width: fit-content;
+  max-width: 100%;
+  background-color: #e1f102;
+  background: linear-gradient(0deg, #e1f102, white);
+  font-size: 2rem;
+  font-family: anton;
+  color: #4438d8;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  box-shadow: 3px 3px 6px #4438d8;
+  display: flex;
+}
+
+.cta-s__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: exclusion;
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 2, 43, 1) 30%,
+    rgba(68, 56, 216, 1) 120%
+  );
+}
+
+@media screen and (max-width: 900px) {
+  .cta-s__container_quote {
+    width: 35%;
+  }
+
+  .cta-s__quote {
+    font-size: 1.5rem;
+  }
+
+  .cta-s__quote_author {
+    font-size: 1rem;
+  }
+
+  .cta-s__hook {
+    width: 65%;
+    font-size: 1.5rem;
+  }
+
+  .cta-s__btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cta-s {
+    padding: 2em 3em;
+  }
+
+  .cta-s__container_top {
+    flex-direction: column;
+  }
+
+  .cta-s__container_quote {
+    width: 75%;
+  }
+
+  .cta-s__quote {
+    font-size: 1.7rem;
+  }
+
+  .cta-s__quote_author {
+    font-size: 1.2rem;
+  }
+
+  .cta-s__hook {
+    width: 100%;
+    text-align: center;
+    margin: 2em 0 2em auto;
+    font-size: 1.5rem;
+  }
+
+  .cta-s__btn {
+    max-width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+  }
+}

@@ -1,6 +1,7 @@
 import HeroVentas from './components/heroVentas/HeroVentas';
 import Situaciones from './components/situaciones/Situaciones';
-import Cta from './components/cta/Cta';
+import Quote from './components/quote/Quote';
+import Cta from './components/cta-s/Cta-s';
 import About from '../../components/about/About';
 import Bios from '../../components/bios/Bios';
 import Presentacion from './components/presentacion/Presentacion';
@@ -16,7 +17,7 @@ export default function Ventas() {
     <section className='ventas'>
       <HeroVentas />
       <Situaciones />
-      <Cta />
+      <Quote />
       <About />
       <Bios />
       <Presentacion />

@@ -13,7 +13,7 @@
 @import url('./pages/registro/components/venta/venta.css');
 
 @import url('./pages/ventas/components/bonos/bonos.css');
-@import url('./pages/ventas/components/cta/cta.css');
+@import url('./pages/ventas/components/cta-s/cta-s.css');
 @import url('./pages/ventas/components/ctaLargo/ctaLargo.css');
 @import url('./pages/ventas/components/descriptionVentas/descriptionVentas.css');
 @import url('./pages/ventas/components/disclaimer/disclaimer.css');
@@ -22,6 +22,7 @@
 @import url('./pages/ventas/components/heroVentas/heroVentas.css');
 @import url('./pages/ventas/components/presentacion/presentacion.css');
 @import url('./pages/ventas/components/situaciones/situaciones.css');
+@import url('./pages/ventas/components/quote/quote.css');
 
 @import url('./pages/notFound/notFound.css');
 
