@@ -1,8 +1,181 @@
+.bonos {
+  display: flex;
+  flex-direction: column;
+  background-color: #e1f102;
+}
+
+.bonos__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bonos__container_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.bonos__container_text {
+  grid-column: 1/3;
+  padding: 1em 0;
+}
+
+.bonos__container_title {
+  background-color: #05022b;
+  width: 100%;
+  margin: 1em 0;
+  padding: 1em;
+  line-height: 1;
+}
+
+.bonos__container_text {
+  align-items: center;
+}
+
+.bonos__container_bonos {
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  align-self: center;
+  margin-bottom: 2em;
+  max-width: 1000px;
+}
+
+.bonos__logo {
+  width: 12em;
+  margin: 0.5em 0 0 2em;
+}
+
 .bonos__element {
-  margin: 40px 0;
+  background-color: #aca6e4;
+  padding: 1em;
+  height: 400px;
+  width: 300px;
+  margin: 0.5em 0.5em;
+  color: #aca6e4;
+}
+
+.bonos__element_azul {
+  background-color: #4438d8;
+  color: #05022b;
+}
+
+.bonos__element-title {
+  font-family: anton;
+  text-align: center;
+  color: #4438d8;
+  font-size: 1.3rem;
+}
+
+.bonos__element-title_amarillo {
+  color: #e1f102;
+}
+
+.bonos__title {
+  font-size: 3.5rem;
+  color: #e1f102;
+  font-family: GandhiSans-BoldItalic;
+  margin: 0 2rem 0 auto;
+}
+
+.bonos__title_accent {
+  font-size: 2.2rem;
+  color: white;
+  font-family: anton;
+  margin-right: 5rem;
+}
+
+.bonos__subtitle {
+  text-align: center;
+  font-family: anton;
+  color: #4438d8;
+  font-size: 2rem;
+  margin-bottom: 1em;
 }
 
 .bonos__text {
-  font-weight: 500;
-  font-size: 20px;
+  text-align: center;
+  font-size: 2rem;
+  align-self: center;
+  font-family: anton;
+  color: #05022b;
+}
+
+.bonos__text_accent {
+  color: #4438d8;
+  margin-bottom: 2em;
+}
+
+.bonos__text_element {
+  margin: 1em 0 0;
+  font-size: 1.2rem;
+  font-family: GandhiSans-Regular;
+  line-height: 1.2;
+  color: #05022b;
+}
+
+.bonos__text_blanco {
+  color: white;
+}
+
+.bonos__text_element-accent {
+  font-family: GandhiSans-BoldItalic;
+}
+
+@media screen and (max-width: 1000px) {
+  .bonos {
+    position: relative;
+  }
+
+  .bonos__title {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .bonos__title_accent {
+    font-size: 1.7rem;
+  }
+
+  .bonos__text {
+    font-size: 1.5rem;
+  }
+
+  .bonos__logo {
+    width: 9em;
+    margin: 0.5em 0 0 2em;
+  }
+
+  .bonos__text_element {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bonos__container_text {
+    grid-column: 1/4;
+    align-items: center;
+  }
+
+  .bonos__title {
+    font-size: 2rem;
+  }
+
+  .bonos__title_accent {
+    font-size: 1.5rem;
+  }
+
+  .bonos__text {
+    font-size: 1.3rem;
+  }
+
+  .bonos__logo {
+    margin: 0.5em auto 1em;
+    grid-column: 2/3;
+  }
+
+  .bonos__text_element {
+    font-size: 1.2rem;
+  }
 }

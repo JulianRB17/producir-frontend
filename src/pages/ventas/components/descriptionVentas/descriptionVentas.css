@@ -1,3 +1,176 @@
+.description-ventas {
+  display: flex;
+  flex-direction: column;
+  background-color: #aca6e4;
+}
+
+.description-ventas__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-ventas__container_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.description-ventas__container_text {
+  grid-column: 1/3;
+  padding: 1em 0;
+}
+
+.description-ventas__container_title {
+  background-color: #05022b;
+  width: 100%;
+  margin: 1em 0;
+  padding: 1em;
+  line-height: 1;
+}
+
+.description-ventas__container_text {
+  align-items: center;
+}
+
+.description-ventas__container_modules {
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  align-self: center;
+  margin-bottom: 2em;
+  max-width: 1000px;
+}
+
+.description-ventas__title {
+  font-size: 3.5rem;
+  color: #e1f102;
+  font-family: GandhiSans-BoldItalic;
+  margin: 0 2rem 0 auto;
+}
+
+.description-ventas__title_accent {
+  font-size: 2.2rem;
+  color: white;
+  font-family: anton;
+  margin-right: 5rem;
+}
+
+.description-ventas__text {
+  margin: 0.5em 0;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.description-ventas__text_accent {
+  font-family: GandhiSans-Bold;
+}
+
+.description-ventas__text_accent {
+  margin: 0;
+}
+
+.description-ventas__logo {
+  width: 12em;
+  margin: 0.5em 0 0 2em;
+}
+
 .description-ventas__element {
-  margin: 60px 0;
+  background-color: #05022b;
+  padding: 1em;
+  height: 300px;
+  width: 300px;
+  margin: 0.5em 0.5em;
+  color: #aca6e4;
+}
+
+.description-ventas__element_amarillo {
+  background-color: #e1f102;
+  color: #05022b;
+}
+
+.description-ventas__label {
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: GandhiSans-Italic;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.description-ventas__element-title {
+  font-family: anton;
+  text-align: center;
+  color: #e1f102;
+}
+
+.description-ventas__element-title_azul {
+  color: #4438d8;
+}
+
+.description-ventas__list {
+  margin: 1.3em 0 0;
+  padding-left: 1.5em;
+  list-style: none;
+}
+
+.description-ventas__list-element {
+  margin: 0.7em 0;
+  font-weight: 200;
+  display: flex;
+}
+
+.description-ventas__list-style {
+  width: 0.6em;
+  margin: 0.2em 0.5em auto 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .description-ventas {
+    position: relative;
+  }
+
+  .description-ventas__title {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .description-ventas__title_accent {
+    font-size: 1.7rem;
+  }
+
+  .description-ventas__text {
+    font-size: 1.2rem;
+  }
+
+  .description-ventas__logo {
+    width: 9em;
+    margin: 0.5em 0 0 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .description-ventas__container_text {
+    grid-column: 1/4;
+    align-items: center;
+  }
+
+  .description-ventas__title {
+    font-size: 2rem;
+  }
+
+  .description-ventas__title_accent {
+    font-size: 1.5rem;
+  }
+
+  .description-ventas__text {
+    font-size: 1rem;
+  }
+
+  .description-ventas__logo {
+    margin: 0.5em auto 1em;
+    grid-column: 2/3;
+  }
 }

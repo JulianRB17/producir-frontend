@@ -1,0 +1,97 @@
+.cta-m {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    138deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
+  padding: 2em 3em;
+}
+
+.cta-m__text {
+  color: #e1f102;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: anton;
+  max-width: 900px;
+}
+
+.cta-m__text_top {
+  font-size: 1.7rem;
+  font-family: GandhiSans-BoldItalic;
+}
+
+.cta-m__text_venta {
+  color: white;
+  margin-top: 1em;
+  font-size: 1.8rem;
+}
+
+.cta-m__text_accent {
+  color: #aca6e4;
+}
+
+.cta-m__text_hook {
+  color: white;
+  font-family: GandhiSans-Italic;
+  margin: 1em 0 0.2em;
+  font-size: 1.8rem;
+}
+.cta-m__btn {
+  width: fit-content;
+  max-width: 100%;
+  background-color: #e1f102;
+  background: linear-gradient(0deg, #e1f102, white);
+  font-size: 2rem;
+  font-family: anton;
+  color: #4438d8;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  box-shadow: 0 0 5px white;
+  display: flex;
+}
+
+.cta-m__text_cta {
+  margin: 0.5em 0;
+  color: #e1f102;
+  font-size: 1.8rem;
+}
+
+.cta-m__logo {
+  width: 13em;
+  margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 700px) {
+  .cta-m__text {
+    font-size: 1.2rem;
+  }
+
+  .cta-m__text_top {
+    font-size: 1.4rem;
+  }
+
+  .cta-m__text_venta {
+    font-size: 1.4rem;
+  }
+
+  .cta-m__text_hook {
+    font-size: 1.4rem;
+  }
+
+  .cta-m__btn {
+    font-size: 1.5rem;
+  }
+
+  .cta-m__text_cta {
+    font-size: 1.4rem;
+  }
+
+  .cta-m__logo {
+    width: 9em;
+  }
+}

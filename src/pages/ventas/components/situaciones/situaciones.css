@@ -19,7 +19,7 @@
 }
 
 .situaciones__title_shadow {
-  color: #383455;
+  color: #030166;
   position: absolute;
   z-index: -1;
   top: -0.8em;
@@ -45,7 +45,7 @@
 }
 
 .situaciones__text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -85,7 +85,7 @@
 
 .situaciones__hook_accent {
   font-family: GandhiSans-BoldItalic;
-  color: #383455;
+  color: #030166;
   font-size: 3.5rem;
 }
 
@@ -101,7 +101,7 @@
 
 .situaciones__btn {
   max-width: 100%;
-  background-color: #383455;
+  background-color: #030166;
   background: linear-gradient(
     0deg,
     rgba(5, 2, 43, 1) 0%,
@@ -127,7 +127,7 @@
   }
 
   .situaciones__text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .situaciones__list-vector {
@@ -166,7 +166,7 @@
   }
 
   .situaciones__text {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .situaciones__hook {
