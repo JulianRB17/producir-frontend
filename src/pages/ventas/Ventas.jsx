@@ -1,17 +1,16 @@
 import HeroVentas from './components/heroVentas/HeroVentas';
 import Situaciones from './components/situaciones/Situaciones';
 import Quote from './components/quote/Quote';
-import Cta from './components/ctaS/CtaS';
+import CtaS from './components/ctaS/CtaS';
 import About from '../../components/about/About';
 import Bios from '../../components/bios/Bios';
 import Presentacion from './components/presentacion/Presentacion';
 import DescriptionVentas from './components/descriptionVentas/DescriptionVentas';
-import CtaLargo from './components/ctaLargo/CtaLargo';
 import Bonos from './components/bonos/Bonos';
 import Garantia from './components/garantia/Garantia';
 import Faqs from './components/faqs/Faqs';
 import Disclaimer from './components/disclaimer/Disclaimer';
-import CtaM from './components/ctaM/CtaM';
+import CtaL from './components/ctaL/CtaL';
 
 export default function Ventas() {
   return (
@@ -22,15 +21,15 @@ export default function Ventas() {
       <About />
       <Bios />
       <Presentacion />
-      <Cta />
+      <CtaS />
       <DescriptionVentas />
-      <CtaM />
+      <CtaL />
       <Bonos />
       <Garantia />
-      <Cta />
+      <CtaS />
       <Faqs />
       <Disclaimer />
-      <CtaLargo />
+      <CtaL />
     </section>
   );
 }

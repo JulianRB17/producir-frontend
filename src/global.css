@@ -11,11 +11,9 @@
 @import url('./pages/registro/components/host/host.css');
 @import url('./pages/registro/components/quote/quote.css');
 @import url('./pages/registro/components/venta/venta.css');
-@import url('./pages/ventas/components/ctaM/ctaM.css');
 
 @import url('./pages/ventas/components/bonos/bonos.css');
 @import url('./pages/ventas/components/ctaS/ctaS.css');
-@import url('./pages/ventas/components/ctaLargo/ctaLargo.css');
 @import url('./pages/ventas/components/descriptionVentas/descriptionVentas.css');
 @import url('./pages/ventas/components/disclaimer/disclaimer.css');
 @import url('./pages/ventas/components/faqs/faqs.css');
@@ -24,6 +22,8 @@
 @import url('./pages/ventas/components/presentacion/presentacion.css');
 @import url('./pages/ventas/components/situaciones/situaciones.css');
 @import url('./pages/ventas/components/quote/quote.css');
+@import url('./pages/ventas/components/ctaL/ctaL.css');
+@import url('./pages/ventas/components/faq/faq.css');
 
 @import url('./pages/notFound/notFound.css');
 

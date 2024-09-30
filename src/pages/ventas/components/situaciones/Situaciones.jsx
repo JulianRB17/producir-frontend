@@ -1,4 +1,4 @@
-import listElementSrc from '../../../../assets/imgs/triangulo.svg';
+import listElementSrc from '../../../../assets/imgs/triangulo-amarillo.svg';
 
 export default function Situaciones() {
   return (

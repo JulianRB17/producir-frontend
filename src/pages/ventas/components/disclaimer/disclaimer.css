@@ -1,0 +1,42 @@
+.disclaimer {
+  background-color: #e1f102;
+  padding: 2% 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.disclaimer__container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.disclaimer__title {
+  font-size: 2rem;
+  font-family: GandhiSans-BoldItalic;
+  color: #05022b;
+}
+
+.disclaimer__text {
+  color: #4438d8;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .disclaimer__title {
+    font-size: 1.8rem;
+  }
+
+  .disclaimer__text {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .disclaimer__title {
+    font-size: 1.5rem;
+  }
+
+  .disclaimer__text {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,52 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__pregunta {
+  font-size: 1.5rem;
+  font-family: GandhiSans-BoldItalic;
+  color: #05022b;
+  margin-bottom: 0.2em;
+}
+
+.faq__respuesta {
+  display: block;
+  font-size: 1.2rem;
+  color: #383455;
+}
+
+.faq__respuesta_inactive {
+  display: none;
+}
+
+.faq__division {
+  height: 2px;
+  width: 100%;
+  margin: 0.5em 0;
+  background-color: #e1f102;
+}
+
+.faq__btn {
+  background-color: transparent;
+  border: none;
+}
+
+.faq__arrow {
+  width: 1em;
+}
+
+.faq__arrow_inactive {
+  transform: rotateX(180deg);
+}
+
+@media screen and (max-width: 600px) {
+  .faq__pregunta {
+    font-size: 1.2rem;
+  }
+}

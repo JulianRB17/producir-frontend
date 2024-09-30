@@ -41,7 +41,8 @@
   list-style-type: none;
   display: flex;
   margin: 2em 0;
-  width: 90%;
+  padding-right: 2em;
+  width: 100%;
 }
 
 .situaciones__text {
@@ -50,7 +51,7 @@
 }
 
 .situaciones__list-vector {
-  width: 2em;
+  width: 1em;
   margin-right: 1em;
   position: relative;
   align-self: flex-start;
