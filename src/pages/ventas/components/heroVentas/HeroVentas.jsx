@@ -3,17 +3,29 @@ import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-export default function heroVentas() {
+export default function HeroVentas({ shadowVariants, btnVariants }) {
   return (
     <section className='heroVentas'>
-      <div className='heroVentas__container heroVentas__container_grid'>
+      <motion.div
+        className='heroVentas__container heroVentas__container_grid'
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+      >
         <div className='heroVentas__container heroVentas__container_title'>
           <div className='heroVentas__container heroVentas__container_title'>
             <h1 className='heroVentas__title heroVentas__title_accent'>
-              <span className='heroVentas__title_accent heroVentas__title_shadow'>
+              <motion.span
+                className='heroVentas__title_accent heroVentas__title_shadow'
+                variants={shadowVariants}
+                initial='initial'
+                whileInView='view'
+                animate='loop'
+              >
                 Aprende
-              </span>
+              </motion.span>
               Aprende el método
             </h1>
             <h1 className='heroVentas__title'>
@@ -32,16 +44,17 @@ export default function heroVentas() {
             className='heroVentas__logo'
           />
         </div>
-        <motion.div
-          className='heroVentas__container heroVentas__container_btn'
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
-        >
-          <a className='heroVentas_btn heroVentas__btn_cta' href='#form'>
+        <div className='heroVentas__container heroVentas__container_btn'>
+          <motion.a
+            className='heroVentas_btn heroVentas__btn_cta'
+            href='#form'
+            variants={btnVariants}
+            whileHover='hover'
+            whileTap='tap'
+          >
             Haz click aquí para unirte
-          </a>
-        </motion.div>
+          </motion.a>
+        </div>
         <div className='heroVentas__container heroVentas__container_disclaimer'>
           <img
             src={logoDisclaimerSrc}
@@ -57,8 +70,13 @@ export default function heroVentas() {
             <img src={flechaSrc} alt='flecha' className='heroVentas__arrow' />
           </a>
         </div>
-      </div>
+      </motion.div>
       <div className='heroVentas__overlay' />
     </section>
   );
 }
+
+HeroVentas.propTypes = {
+  shadowVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
+};

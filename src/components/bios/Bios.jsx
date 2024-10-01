@@ -3,8 +3,9 @@ import julianSrc from '../../assets/imgs/julian-bn.webp';
 import triangleSrc from '../../assets/imgs/triangulo-azul.svg';
 
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-export default function Bios() {
+export default function Bios({ listElementVariants }) {
   return (
     <section className='bios'>
       <div className='bios__container bios__container_bio'>
@@ -19,9 +20,9 @@ export default function Bios() {
               src={triangleSrc}
               alt='lista'
               className='bios__list-style'
-              initial={{ opacity: 0.5, rotate: '-30deg' }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+              variants={listElementVariants}
+              initial='initial'
+              whileInView='view'
             />
             <p className='bios__text'>
               Egresada de la carrera de Literatura Dramática y Teatro de la
@@ -33,9 +34,9 @@ export default function Bios() {
               src={triangleSrc}
               alt='lista'
               className='bios__list-style'
-              initial={{ opacity: 0.5, rotate: '-30deg' }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+              variants={listElementVariants}
+              initial='initial'
+              whileInView='view'
             />
             <p className='bios__text'>
               Coordinadora de producción del Colectivo Escénico El Arce
@@ -48,9 +49,9 @@ export default function Bios() {
               src={triangleSrc}
               alt='lista'
               className='bios__list-style'
-              initial={{ opacity: 0.5, rotate: '-30deg' }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+              variants={listElementVariants}
+              initial='initial'
+              whileInView='view'
             />
             <p className='bios__text'>
               Productora ejecutiva de Los obscenos de Silere/Vórtex proyecto
@@ -75,9 +76,9 @@ export default function Bios() {
               src={triangleSrc}
               alt='lista'
               className='bios__list-style'
-              initial={{ opacity: 0.5, rotate: '-30deg' }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+              variants={listElementVariants}
+              initial='initial'
+              whileInView='view'
             />
             <p className='bios__text'>
               Egresado de la carrera de Literatura Dramática y Teatro de la
@@ -89,9 +90,9 @@ export default function Bios() {
               src={triangleSrc}
               alt='lista'
               className='bios__list-style'
-              initial={{ opacity: 0.5, rotate: '-30deg' }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+              variants={listElementVariants}
+              initial='initial'
+              whileInView='view'
             />
             <p className='bios__text'>
               Con un diplomado en Creación/Investigación por la UBA (Argentina)
@@ -104,9 +105,9 @@ export default function Bios() {
               src={triangleSrc}
               alt='lista'
               className='bios__list-style'
-              initial={{ opacity: 0.5, rotate: '-30deg' }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+              variants={listElementVariants}
+              initial='initial'
+              whileInView='view'
             />
             <p className='bios__text'>
               Formó parte del equipo de producción de Los obscenos de
@@ -119,3 +120,7 @@ export default function Bios() {
     </section>
   );
 }
+
+Bios.propTypes = {
+  listElementVariants: PropTypes.object,
+};

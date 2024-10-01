@@ -19,10 +19,16 @@
   display: block;
   font-size: 1.2rem;
   color: #383455;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s, visibility 0s, height 1s;
 }
 
 .faq__respuesta_inactive {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.5s, visibility 0s, height 1s;
 }
 
 .faq__division {

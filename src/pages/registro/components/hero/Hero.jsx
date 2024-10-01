@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
-export default function Hero() {
+export default function Hero({ shadowVariants, btnVariants }) {
   return (
     <section className='hero'>
       <motion.div
@@ -16,9 +17,15 @@ export default function Hero() {
         <div className='hero__container hero__container_title'>
           <div className='hero__container hero__container_title'>
             <h1 className='hero__title hero__title_accent'>
-              <span className='hero__title_accent hero__title_shadow'>
+              <motion.span
+                className='hero__title_accent hero__title_shadow'
+                variants={shadowVariants}
+                initial='initial'
+                whileInView='view'
+                animate='loop'
+              >
                 Aprende
-              </span>
+              </motion.span>
               Aprende las 3 claves
             </h1>
             <h1 className='hero__title'>
@@ -35,9 +42,15 @@ export default function Hero() {
           />
         </div>
         <div className='hero__container hero__container_btn'>
-          <a className='hero_btn hero__btn_registro' href='#form'>
+          <motion.a
+            className='hero_btn hero__btn_registro'
+            href='#form'
+            variants={btnVariants}
+            whileHover='hover'
+            whileTap='tap'
+          >
             Regístrate gratis
-          </a>
+          </motion.a>
         </div>
         <div className='hero__container hero__container_disclaimer'>
           <img
@@ -59,3 +72,8 @@ export default function Hero() {
     </section>
   );
 }
+
+Hero.propTypes = {
+  shadowVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
+};

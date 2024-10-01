@@ -7,6 +7,8 @@ import PropTypes from 'prop-types';
 export default function Form({
   onSubmit,
   onChange,
+  shadowVariants,
+  btnVariants,
   // sentUser,
   // isValidForm,
   // loading,
@@ -19,7 +21,7 @@ export default function Form({
       <motion.img
         initial={{ rotate: 0 }}
         animate={{ rotate: '360deg' }}
-        transition={{ duration: 10, repeat: Infinity }}
+        transition={{ duration: 20, repeat: Infinity }}
         src={logoSrc}
         alt='Logo del Arte de producir'
         className='form__logo'
@@ -27,9 +29,10 @@ export default function Form({
       <div className='form__container form__container_hook'>
         <motion.p
           className='form__hook form__hook_accent form__hook_shadow'
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+          variants={shadowVariants}
+          initial='initial'
+          whileInView='view'
+          animate='loop'
         >
           siguiente paso
         </motion.p>
@@ -70,9 +73,9 @@ export default function Form({
         <div className='form__container form__container_btn'>
           <motion.button
             className='form__btn'
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
-            transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
+            variants={btnVariants}
+            whileHover='hover'
+            whileTap='tap'
           >
             ¡Registrate ahora!
           </motion.button>
@@ -92,4 +95,6 @@ Form.propTypes = {
   sentUser: PropTypes.bool,
   setSentUser: PropTypes.func,
   formValues: PropTypes.object,
+  shadowVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
 };

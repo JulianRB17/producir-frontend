@@ -1,20 +1,36 @@
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 import listElementSrc from '../../../../assets/imgs/triangulo-amarillo.svg';
 
-export default function Situaciones() {
+export default function Situaciones({
+  shadowVariants,
+  listElementVariants,
+  btnVariants,
+}) {
   return (
     <section className='situaciones'>
       <h2 className='situaciones__title'>
-        <span className='situaciones__title situaciones__title_shadow'>
+        <motion.span
+          className='situaciones__title situaciones__title_shadow'
+          variants={shadowVariants}
+          initial='initial'
+          whileInView='view'
+          animate='loop'
+        >
           pasado qué
-        </span>
+        </motion.span>
         ¿Te ha pasado qué?:
       </h2>
       <ul className='situaciones__list'>
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             <span className='situaciones__text situaciones__text_accent'>
@@ -26,10 +42,13 @@ export default function Situaciones() {
         </li>
         <div className='situaciones__divition' />
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             Ya no sabes a quien más de tu familia invitar a tus obras porque
@@ -41,10 +60,13 @@ export default function Situaciones() {
         </li>
         <div className='situaciones__divition' />
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             Con tal de “hacer arte”{' '}
@@ -56,10 +78,13 @@ export default function Situaciones() {
         </li>
         <div className='situaciones__divition' />
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             Confías que con lo ganado en taquilla saldrá para
@@ -71,10 +96,13 @@ export default function Situaciones() {
         </li>
         <div className='situaciones__divition' />
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             Consideras que{' '}
@@ -92,10 +120,13 @@ export default function Situaciones() {
         </li>
         <div className='situaciones__divition' />
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             <span className='situaciones__text situaciones__text_accent'>
@@ -106,10 +137,13 @@ export default function Situaciones() {
         </li>
         <div className='situaciones__divition' />
         <li className='situaciones__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='situaciones__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='situaciones__text'>
             Crees que siempre eligen a los mismos para los apoyos
@@ -132,11 +166,23 @@ export default function Situaciones() {
             las herramientas que te permitirán concretar tus ideas
           </span>
         </p>
-        <a href='/' className='situaciones__btn'>
+        <motion.a
+          href='/'
+          className='situaciones__btn'
+          variants={btnVariants}
+          whileHover='hover'
+          whileTap='tap'
+        >
           Haz click aquí
-        </a>
+        </motion.a>
         <p className='situaciones__cta'>Para formar parte de este grupo.</p>
       </div>
     </section>
   );
 }
+
+Situaciones.propTypes = {
+  shadowVariants: PropTypes.object,
+  listElementVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
+};

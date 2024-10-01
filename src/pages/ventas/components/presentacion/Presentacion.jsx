@@ -1,20 +1,32 @@
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 import listElementSrc from '../../../../assets/imgs/triangulo-azul.svg';
 
-export default function Presentacion() {
+export default function Presentacion({ listElementVariants, shadowVariants }) {
   return (
     <section className='presentacion'>
       <h2 className='presentacion__title'>
-        <span className='presentacion__title presentacion__title_shadow'>
+        <motion.span
+          className='presentacion__title presentacion__title_shadow'
+          variants={shadowVariants}
+          initial='initial'
+          whileInView='view'
+          animate='loop'
+        >
           para ti si
-        </span>
+        </motion.span>
         Este programa es para ti si
       </h2>
       <ul className='presentacion__list'>
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             Sueñas con desarrollar tus propios{' '}
@@ -26,10 +38,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             Quieres desarrollar proyectos sólidos que te permitan
@@ -41,10 +56,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             Quisieras aprender qué existen{' '}
@@ -56,10 +74,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             Deseas generar nuevas estrategias de
@@ -71,10 +92,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             Quieres tener
@@ -87,10 +111,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             <span className='presentacion__text presentacion__text_accent'>
@@ -101,10 +128,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             <span className='presentacion__text presentacion__text_accent'>
@@ -116,10 +146,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             Deseas saber{' '}
@@ -136,10 +169,13 @@ export default function Presentacion() {
         </li>
         <div className='presentacion__divition' />
         <li className='presentacion__element'>
-          <img
+          <motion.img
             src={listElementSrc}
             alt='lista'
             className='presentacion__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='presentacion__text'>
             <span className='presentacion__text presentacion__text_accent'>
@@ -153,3 +189,8 @@ export default function Presentacion() {
     </section>
   );
 }
+
+Presentacion.propTypes = {
+  listElementVariants: PropTypes.object,
+  shadowVariants: PropTypes.object,
+};

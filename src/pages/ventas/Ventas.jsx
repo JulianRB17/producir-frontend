@@ -12,24 +12,48 @@ import Faqs from './components/faqs/Faqs';
 import Disclaimer from './components/disclaimer/Disclaimer';
 import CtaL from './components/ctaL/CtaL';
 
-export default function Ventas() {
+import PropTypes from 'prop-types';
+
+export default function Ventas({
+  shadowVariants,
+  listElementVariants,
+  btnVariants,
+  titleVariants,
+}) {
   return (
     <section className='ventas'>
-      <HeroVentas />
-      <Situaciones />
+      <HeroVentas shadowVariants={shadowVariants} btnVariants={btnVariants} />
+      <Situaciones
+        shadowVariants={shadowVariants}
+        listElementVariants={listElementVariants}
+        btnVariants={btnVariants}
+      />
       <Quote />
-      <About />
-      <Bios />
-      <Presentacion />
-      <CtaS />
-      <DescriptionVentas />
-      <CtaL />
-      <Bonos />
-      <Garantia />
-      <CtaS />
-      <Faqs />
+      <About titleVariants={titleVariants} />
+      <Bios listElementVariants={listElementVariants} />
+      <Presentacion
+        shadowVariants={shadowVariants}
+        listElementVariants={listElementVariants}
+      />
+      <CtaS btnVariants={btnVariants} />
+      <DescriptionVentas
+        titleVariants={titleVariants}
+        listElementVariants={listElementVariants}
+      />
+      <CtaL btnVariants={btnVariants} />
+      <Bonos titleVariants={titleVariants} />
+      <Garantia shadowVariants={shadowVariants} />
+      <CtaS btnVariants={btnVariants} />
+      <Faqs titleVariants={titleVariants} />
       <Disclaimer />
-      <CtaL />
+      <CtaL btnVariants={btnVariants} />
     </section>
   );
 }
+
+Ventas.propTypes = {
+  shadowVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
+  listElementVariants: PropTypes.object,
+  titleVariants: PropTypes.object,
+};

@@ -1,6 +1,9 @@
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 
-export default function CtaM() {
+export default function CtaL({ btnVariants }) {
   return (
     <section className='cta-m'>
       <p className='cta-m__text cta-m__text_top'>
@@ -23,9 +26,14 @@ export default function CtaM() {
         className='cta-m__logo'
       />
       <p className='cta-m__text cta-m__text_cta'>Haz click aquí:</p>
-      <button className='cta-m__btn'>
+      <motion.button
+        className='cta-m__btn'
+        variants={btnVariants}
+        whileHover='hover'
+        whileTap='tap'
+      >
         Quiero formar parte de este programa
-      </button>
+      </motion.button>
       <p className='cta-m__text cta-m__text_hook'>
         Imagina tomar ese sueño y modelarlo hasta convertirlo en un proyecto
         sólido y real. La posibilidad está a tu alcance.
@@ -37,3 +45,7 @@ export default function CtaM() {
     </section>
   );
 }
+
+CtaL.propTypes = {
+  btnVariants: PropTypes.object,
+};

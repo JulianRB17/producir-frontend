@@ -1,12 +1,21 @@
-export default function Garantia() {
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
+export default function Garantia({ shadowVariants }) {
   return (
     <section className='garantia'>
       <div className='garantia__container'>
         <p className='garantia__title'>
           ¿Aún tienes dudas?
-          <span className='garantia__title garantia__title_shadow'>
+          <motion.span
+            className='garantia__title garantia__title_shadow'
+            variants={shadowVariants}
+            initial='initial'
+            whileInView='view'
+            animate='loop'
+          >
             tienes dudas?
-          </span>
+          </motion.span>
         </p>
         <p className='garantia__subtitle'>
           <span className='garantia__subtitle garantia__subtitle_accent'>
@@ -31,3 +40,7 @@ export default function Garantia() {
     </section>
   );
 }
+
+Garantia.propTypes = {
+  shadowVariants: PropTypes.object,
+};

@@ -2,17 +2,40 @@ import logoSrc from '../../../../assets/logos/imag-eap.png';
 import trianguloAzulSrc from '../../../../assets/imgs/triangulo-azul.svg';
 import trianguloAmarilloSrc from '../../../../assets/imgs/triangulo-amarillo.svg';
 
-export default function DescriptionVentas() {
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+
+export default function DescriptionVentas({
+  listElementVariants,
+  titleVariants,
+}) {
   return (
     <section className='description-ventas'>
       <div className='description-ventas__container description-ventas__container_grid'>
         <div className='description-ventas__container description-ventas__container_text'>
-          <div className='description-ventas__container description-ventas__container_title'>
-            <p className='description-ventas__title'>¿Qué se verá</p>
-            <p className='description-ventas__title description-ventas__title_accent'>
+          <motion.div
+            className='description-ventas__container description-ventas__container_title'
+            variants={titleVariants}
+            initial='initialContainer'
+            whileInView='viewContainer'
+          >
+            <motion.p
+              className='description-ventas__title'
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
+            >
+              ¿Qué se verá
+            </motion.p>
+            <motion.p
+              className='description-ventas__title description-ventas__title_accent'
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
+            >
               dentro del programa?
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
         <img
           src={logoSrc}
@@ -54,30 +77,39 @@ export default function DescriptionVentas() {
           </h3>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 ¿Qué es y para qué sirve la producción?
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 La producción como acto creativo.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Una mirada ética de la producción.
@@ -92,10 +124,13 @@ export default function DescriptionVentas() {
           </h3>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 {' '}
@@ -103,30 +138,39 @@ export default function DescriptionVentas() {
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Planeación de proyectos.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 La materialización: pre, pro y post producción.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 La vida después del estreno.
@@ -141,48 +185,63 @@ export default function DescriptionVentas() {
           </h3>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Valores de mi proyecto.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Proyectos culturales vs Proyectos artísticos.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Convocatorias: mitos y realidades.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>Financiamientos.</p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>Alianzas</p>
             </li>
@@ -195,40 +254,52 @@ export default function DescriptionVentas() {
           </h3>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 ¿Quién es mi público?
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Creación de públicos.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Difusión vs publicidad.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAzulSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Cómo hacer publicidad sin vaciar mi cuenta.
@@ -246,30 +317,39 @@ export default function DescriptionVentas() {
           </h3>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Clarifica tus ideas.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Define tus objetivos.
               </p>
             </li>
             <li className='description-ventas__list-element'>
-              <img
+              <motion.img
                 src={trianguloAmarilloSrc}
                 alt='Vector de lista'
                 className='description-ventas__list-style'
+                variants={listElementVariants}
+                initial='initial'
+                whileInView='view'
               />
               <p className='description-ventas__list-text'>
                 Arma tu carpeta paso a paso.
@@ -281,3 +361,8 @@ export default function DescriptionVentas() {
     </section>
   );
 }
+
+DescriptionVentas.propTypes = {
+  listElementVariants: PropTypes.object,
+  titleVariants: PropTypes.object,
+};

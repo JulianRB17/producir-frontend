@@ -1,16 +1,36 @@
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 import logoSrc from '../../../../assets/logos/imag-eap-negativo.png';
 
-export default function Bonos() {
+export default function Bonos({ titleVariants }) {
   return (
     <section className='bonos'>
       <div className='bonos__container bonos__container_grid'>
         <div className='bonos__container bonos__container_text'>
-          <div className='bonos__container bonos__container_title'>
-            <p className='bonos__title'>¡Además el programa incluye</p>
-            <p className='bonos__title bonos__title_accent'>
+          <motion.div
+            className='bonos__container bonos__container_title'
+            variants={titleVariants}
+            initial='initialContainer'
+            whileInView='viewContainer'
+          >
+            <motion.p
+              className='bonos__title'
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
+            >
+              ¡Además el programa incluye
+            </motion.p>
+            <motion.p
+              className='bonos__title bonos__title_accent'
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
+            >
               los siguientes elementos exclusivos para la comunidad!
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
         <img
           src={logoSrc}
@@ -140,3 +160,5 @@ export default function Bonos() {
     </section>
   );
 }
+
+Bonos.propTypes = { titleVariants: PropTypes.object };

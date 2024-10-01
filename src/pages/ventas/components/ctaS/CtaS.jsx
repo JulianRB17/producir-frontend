@@ -1,4 +1,7 @@
-export default function CtaS() {
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
+export default function CtaS({ btnVariants }) {
   return (
     <section className='cta-s'>
       <div className='cta-s__container cta-s__container_top'>
@@ -14,11 +17,20 @@ export default function CtaS() {
         </p>
       </div>
       <div className='cta-s__container cta-s__container_btn'>
-        <button className='cta-s__btn'>
+        <motion.button
+          className='cta-s__btn'
+          variants={btnVariants}
+          whileHover='hover'
+          whileTap='tap'
+        >
           Quiero formar parte de este grupo
-        </button>
+        </motion.button>
       </div>
       <div className='cta-s__overlay' />
     </section>
   );
 }
+
+CtaS.propTypes = {
+  btnVariants: PropTypes.object,
+};

@@ -23,18 +23,25 @@ export default function Registro({
   msgSuccess,
   setSentUser,
   formValues,
+  shadowVariants,
+  btnVariants,
+  listElementVariants,
+  titleVariants,
 }) {
   return (
     <section className='registro'>
       <Header />
-      <Hero />
+      <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
       <Date localDate={localDate} count={count} hour={hour} />
       <Host />
-      <Venta />
+      <Venta
+        shadowVariants={shadowVariants}
+        listElementVariants={listElementVariants}
+      />
       <Description />
-      <About />
-      <Bios />
-      <Allies />
+      <About titleVariants={titleVariants} />
+      <Bios listElementVariants={listElementVariants} />
+      <Allies shadowVariants={shadowVariants} />
       <Form
         onSubmit={onSubmit}
         onChange={onChange}
@@ -44,6 +51,8 @@ export default function Registro({
         msgSuccess={msgSuccess}
         setSentUser={setSentUser}
         formValues={formValues}
+        shadowVariants={shadowVariants}
+        btnVariants={btnVariants}
       />
     </section>
   );
@@ -61,4 +70,8 @@ Registro.propTypes = {
   sentUser: PropTypes.bool,
   setSentUser: PropTypes.func,
   formValues: PropTypes.object,
+  shadowVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
+  listElementVariants: PropTypes.object,
+  titleVariants: PropTypes.object,
 };

@@ -1,8 +1,11 @@
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 import Faq from '../faq/Faq';
 
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 
-export default function Faqs() {
+export default function Faqs({ titleVariants }) {
   const faqsData = [
     {
       index: 1,
@@ -97,10 +100,29 @@ export default function Faqs() {
     <section className='faqs'>
       <div className='faqs__container faqs__container_grid'>
         <div className='faqs__container faqs__container_text'>
-          <div className='faqs__container faqs__container_title'>
-            <p className='faqs__title'>Aquí tenemos las preguntas</p>
-            <p className='faqs__title faqs__title_accent'>más comunes sobre</p>
-          </div>
+          <motion.div
+            className='faqs__container faqs__container_title'
+            variants={titleVariants}
+            initial='initialContainer'
+            whileInView='viewContainer'
+          >
+            <motion.p
+              className='faqs__title'
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
+            >
+              Aquí tenemos las preguntas
+            </motion.p>
+            <motion.p
+              className='faqs__title faqs__title_accent'
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
+            >
+              más comunes sobre
+            </motion.p>
+          </motion.div>
         </div>
         <img
           src={logoSrc}
@@ -116,3 +138,7 @@ export default function Faqs() {
     </section>
   );
 }
+
+Faqs.propTypes = {
+  titleVariants: PropTypes.object,
+};

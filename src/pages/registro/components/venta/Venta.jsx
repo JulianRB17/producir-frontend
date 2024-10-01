@@ -1,16 +1,18 @@
 import listElementSrc from '../../../../assets/imgs/triangulo-azul.svg';
 
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-export default function Venta() {
+export default function Venta({ shadowVariants, listElementVariants }) {
   return (
     <section className='venta'>
       <h2 className='venta__title'>
         <motion.span
           className='venta__title venta__title_shadow'
-          initial={{ opacity: 0, x: 10, y: 30 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+          variants={shadowVariants}
+          initial='initial'
+          whileInView='view'
+          animate='loop'
         >
           para ti si
         </motion.span>
@@ -19,12 +21,12 @@ export default function Venta() {
       <ul className='venta__list'>
         <li className='venta__element'>
           <motion.img
-            initial={{ opacity: 0.5, rotate: '-30deg' }}
-            whileInView={{ opacity: 1, rotate: 0 }}
-            transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
             src={listElementSrc}
             alt='lista'
             className='venta__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='venta__text'>
             <span className='venta__text venta__text_accent'>
@@ -37,12 +39,12 @@ export default function Venta() {
         <div className='venta__divition' />
         <li className='venta__element'>
           <motion.img
-            initial={{ opacity: 0.5, rotate: '-30deg' }}
-            whileInView={{ opacity: 1, rotate: 0 }}
-            transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
             src={listElementSrc}
             alt='lista'
             className='venta__list-vector'
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
           />
           <p className='venta__text'>
             <span className='venta__text venta__text_accent'>
@@ -58,9 +60,9 @@ export default function Venta() {
         <div className='venta__divition' />
         <li className='venta__element'>
           <motion.img
-            initial={{ opacity: 0.5, rotate: '-30deg' }}
-            whileInView={{ opacity: 1, rotate: 0 }}
-            transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            variants={listElementVariants}
+            initial='initial'
+            whileInView='view'
             src={listElementSrc}
             alt='lista'
             className='venta__list-vector'
@@ -76,3 +78,8 @@ export default function Venta() {
     </section>
   );
 }
+
+Venta.propTypes = {
+  shadowVariants: PropTypes.object,
+  listElementVariants: PropTypes.object,
+};

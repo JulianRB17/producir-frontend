@@ -93,6 +93,63 @@ function App() {
     }
   };
 
+  const shadowVariants = {
+    initial: { opacity: 0, y: -10, scale: 1 },
+    view: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 4, ease: 'easeInOut', type: 'spring' },
+    },
+    loop: {
+      scale: [0.95, 1, 0.95],
+      opacity: [0.5, 1, 0.5],
+      transition: {
+        duration: 15,
+        ease: 'easeInOut',
+        repeat: Infinity,
+      },
+    },
+  };
+
+  const btnVariants = {
+    hover: {
+      scale: 1.2,
+      transition: { duration: 1, ease: 'easeInOut', type: 'spring' },
+    },
+    tap: {
+      scale: 0.8,
+      transition: { duration: 1, ease: 'easeInOut', type: 'spring' },
+    },
+  };
+
+  const listElementVariants = {
+    initial: { opacity: 0.5, rotate: '-30deg' },
+    view: {
+      opacity: 1,
+      rotate: 0,
+      transition: { duration: 2, ease: 'easeInOut', type: 'spring' },
+    },
+  };
+
+  const titleVariants = {
+    initialContainer: { opacity: 0 },
+    viewContainer: {
+      opacity: 1,
+      transition: { duration: 2, ease: 'easeInOut', type: 'spring' },
+    },
+    initial: { x: -50, opacity: 0 },
+    view: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: 'easeInOut',
+        type: 'spring',
+        delay: 0.5,
+      },
+    },
+  };
+
   // const handleCookiesAccept = (e) => {
   //   e.preventDefault();
   //   // Pixel.grantConsent();
@@ -119,7 +176,14 @@ function App() {
                 onCookiesAccept={handleCookiesAccept}
                 onCookiesReject={handleCookiesReject}
               /> */}
-              <Ventas urls={urls} dates={dates} />
+              <Ventas
+                urls={urls}
+                dates={dates}
+                shadowVariants={shadowVariants}
+                btnVariants={btnVariants}
+                listElementVariants={listElementVariants}
+                titleVariants={titleVariants}
+              />
             </>
           }
         />
@@ -164,6 +228,10 @@ function App() {
                 msgSuccess={msgSuccess}
                 setSentUser={setSentUser}
                 formValues={formValues}
+                shadowVariants={shadowVariants}
+                btnVariants={btnVariants}
+                listElementVariants={listElementVariants}
+                titleVariants={titleVariants}
               />
             </>
           }

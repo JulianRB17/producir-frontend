@@ -15,17 +15,19 @@ import mosSrc from '../../assets/logos/aliados/mos.png';
 import apagaSrc from '../../assets/logos/aliados/apaga.png';
 
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-export default function Allies() {
+export default function Allies({ shadowVariants }) {
   return (
     <section className='allies'>
       <div className='allies__title-container'>
         <p className='allies__title'>
           <motion.span
             className='allies__title allies__title_shadow'
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+            variants={shadowVariants}
+            initial='initial'
+            whileInView='view'
+            animate='loop'
           >
             Aliados
           </motion.span>
@@ -111,3 +113,7 @@ export default function Allies() {
     </section>
   );
 }
+
+Allies.propTypes = {
+  shadowVariants: PropTypes.object,
+};

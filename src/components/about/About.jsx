@@ -1,46 +1,37 @@
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import luminariasSrc from '../../assets/imgs/luminarias.svg';
 import mascarasSrc from '../../assets/imgs/mascaras.svg';
 
-export default function About() {
+export default function About({ titleVariants }) {
   return (
     <section className='about'>
-      <motion.div
-        className='about__container about__container_grid'
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.3, ease: 'easeInOut', type: 'spring' }}
-      >
+      <motion.div className='about__container about__container_grid'>
         <div className='about__container about__container_text'>
-          <div className='about__container about__container_title'>
+          <motion.div
+            className='about__container about__container_title'
+            variants={titleVariants}
+            initial='initialContainer'
+            whileInView='viewContainer'
+          >
             <motion.p
               className='about__title'
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.5,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.5,
-              }}
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
             >
               ¿Quiénes somos
             </motion.p>
             <motion.p
               className='about__title about__title_accent'
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.2,
-                ease: 'easeInOut',
-                type: 'spring',
-                delay: 0.8,
-              }}
+              variants={titleVariants}
+              initial='initial'
+              whileInView='view'
             >
               para enseñar esto?
             </motion.p>
-          </div>
+          </motion.div>
           <p className='about__text'>
             <span className='about__text about__text_accent'>
               ¡Hola! Somos Verónica Ramos y Julián Reyes Botello
@@ -136,10 +127,10 @@ export default function About() {
 
       <motion.div
         className='about__container about__container_quote'
-        initial={{ y: 50, opacity: 0.5 }}
+        initial={{ y: -20, opacity: 0.7 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 3,
+          duration: 5,
           ease: 'easeInOut',
           type: 'spring',
           delay: 1,
@@ -175,3 +166,7 @@ export default function About() {
     </section>
   );
 }
+
+About.propTypes = {
+  titleVariants: PropTypes.object,
+};
