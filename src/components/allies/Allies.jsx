@@ -14,16 +14,30 @@ import arceSrc from '../../assets/logos/aliados/arce.png';
 import mosSrc from '../../assets/logos/aliados/mos.png';
 import apagaSrc from '../../assets/logos/aliados/apaga.png';
 
+import { motion } from 'framer-motion';
+
 export default function Allies() {
   return (
     <section className='allies'>
       <div className='allies__title-container'>
         <p className='allies__title'>
-          <span className='allies__title allies__title_shadow'>Aliados</span>
+          <motion.span
+            className='allies__title allies__title_shadow'
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+          >
+            Aliados
+          </motion.span>
           Aliados
         </p>
       </div>
-      <div className='allies__grid-container'>
+      <motion.div
+        className='allies__grid-container'
+        initial={{ opacity: 0.5 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+      >
         <div className='allies__grid-element'>
           <img src={efiSrc} alt='logo efiartes' className='allies__logo' />
         </div>
@@ -93,7 +107,7 @@ export default function Allies() {
             className='allies__logo'
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

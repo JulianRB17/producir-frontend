@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
@@ -5,7 +7,12 @@ import flechaSrc from '../../../../assets/imgs/flecha.svg';
 export default function Hero() {
   return (
     <section className='hero'>
-      <div className='hero__container hero__container_grid'>
+      <motion.div
+        className='hero__container hero__container_grid'
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+      >
         <div className='hero__container hero__container_title'>
           <div className='hero__container hero__container_title'>
             <h1 className='hero__title hero__title_accent'>
@@ -47,7 +54,7 @@ export default function Hero() {
             <img src={flechaSrc} alt='flecha' className='hero__arrow' />
           </a>
         </div>
-      </div>
+      </motion.div>
       <div className='hero__overlay' />
     </section>
   );

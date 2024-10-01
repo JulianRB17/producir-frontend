@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import listElementSrc from '../../../../assets/imgs/triangulo.svg';
 
 export default function Description() {
@@ -12,7 +13,10 @@ export default function Description() {
         </div>
         <ul className='description__list'>
           <li className='description__element'>
-            <img
+            <motion.img
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
               src={listElementSrc}
               alt='lista'
               className='description__list-element'
@@ -27,7 +31,10 @@ export default function Description() {
           </li>
           <div className='description__division' />
           <li className='description__element'>
-            <img
+            <motion.img
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
               src={listElementSrc}
               alt='lista'
               className='description__list-element'
@@ -41,7 +48,10 @@ export default function Description() {
           </li>
           <div className='description__division' />
           <li className='description__element'>
-            <img
+            <motion.img
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
               src={listElementSrc}
               alt='lista'
               className='description__list-element'

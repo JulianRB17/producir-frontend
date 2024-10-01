@@ -2,6 +2,7 @@
 @import url('./components/about/about.css');
 @import url('./components/allies/allies.css');
 @import url('./components/footer/footer.css');
+@import url('./components/progressBar/progressBar.css');
 
 @import url('./pages/registro/components/hero/hero.css');
 @import url('./pages/registro/components/date/date.css');

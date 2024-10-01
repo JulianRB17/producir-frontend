@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import clockSrc from '../../../../assets/imgs/reloj.svg';
 import PropTypes from 'prop-types';
 
@@ -57,7 +59,20 @@ export default function Date({ localDate, hour, count }) {
       </p>
       {renderCounter(count)}
 
-      <img src={clockSrc} alt='reloj' className='date__vector' />
+      <motion.img
+        src={clockSrc}
+        alt='reloj'
+        className='date__vector'
+        initial={{ rotate: 0 }}
+        animate={{ rotate: '10deg' }}
+        transition={{
+          duration: 0.2,
+          delay: 3,
+          type: 'spring',
+          stiffness: 100,
+          repeat: Infinity,
+        }}
+      />
     </section>
   );
 }

@@ -1,6 +1,8 @@
 import veroSrc from '../../../../assets/imgs/vero.webp';
 import julianSrc from '../../../../assets/imgs/julian.webp';
 
+import { motion } from 'framer-motion';
+
 export default function Host() {
   return (
     <section className='host'>
@@ -31,10 +33,32 @@ export default function Host() {
         </div>
       </div>
       <div className='host__container host__container_quote'>
-        <p className='host__quote'>
+        <motion.p
+          className='host__quote'
+          initial={{ x: -30, y: -30, opacit: 0.5 }}
+          transition={{
+            duration: 3,
+            type: 'spring',
+            stiffness: 60,
+            ease: 'easeInOut',
+          }}
+          whileInView={{ x: 0, y: 0, opacity: 1 }}
+        >
           &quot;Una idea no ejecutada es un sueño&quot;
-        </p>
-        <p className='host__quote host__quote_author'>Louis de Rouvroy</p>
+        </motion.p>
+        <motion.p
+          className='host__quote host__quote_author'
+          initial={{ y: 30, opacit: 0.5 }}
+          transition={{
+            duration: 3,
+            type: 'spring',
+            stiffness: 60,
+            ease: 'easeInOut',
+          }}
+          whileInView={{ y: 0, opacity: 1 }}
+        >
+          Louis de Rouvroy
+        </motion.p>
       </div>
       <div className='host__overlay' />
     </section>

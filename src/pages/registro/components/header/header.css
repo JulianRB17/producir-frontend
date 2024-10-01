@@ -1,13 +1,15 @@
 .header {
   font-weight: bold;
   background-color: #4438d8;
+}
+
+.header__container {
   display: flex;
-  color: white;
-  /* height: 4em; */
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   padding: 0.4em;
+  color: white;
 }
 
 .header__text {

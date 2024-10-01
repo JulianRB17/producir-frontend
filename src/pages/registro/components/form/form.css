@@ -92,10 +92,10 @@
   color: #4438d8;
   z-index: 2;
   top: -0.5em;
-  left: 2em;
+  left: 3.5em;
   font-family: GandhiSans-BoldItalic;
   font-size: 5rem;
-  width: 90%;
+  width: fit-content;
 }
 
 .form__cta {
@@ -183,6 +183,11 @@
     font-size: 1.3rem;
   }
 
+  .form__hook_shadow {
+    top: -0.5em;
+    left: 5em;
+  }
+
   .form__element {
     display: flex;
     flex-direction: column;
@@ -211,8 +216,7 @@
 
   .form__hook_shadow {
     font-size: 2.8rem;
-    max-width: 83%;
     top: -0.5em;
-    left: 1.5em;
+    left: 0;
   }
 }

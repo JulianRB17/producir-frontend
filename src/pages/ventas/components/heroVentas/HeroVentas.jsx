@@ -2,6 +2,8 @@ import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
+import { motion } from 'framer-motion';
+
 export default function heroVentas() {
   return (
     <section className='heroVentas'>
@@ -30,11 +32,16 @@ export default function heroVentas() {
             className='heroVentas__logo'
           />
         </div>
-        <div className='heroVentas__container heroVentas__container_btn'>
+        <motion.div
+          className='heroVentas__container heroVentas__container_btn'
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
+        >
           <a className='heroVentas_btn heroVentas__btn_cta' href='#form'>
             Haz click aquí para unirte
           </a>
-        </div>
+        </motion.div>
         <div className='heroVentas__container heroVentas__container_disclaimer'>
           <img
             src={logoDisclaimerSrc}

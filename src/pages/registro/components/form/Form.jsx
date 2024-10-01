@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 
 import PropTypes from 'prop-types';
@@ -14,15 +16,23 @@ export default function Form({
 }) {
   return (
     <section className='form' id='form'>
-      <img
+      <motion.img
+        initial={{ rotate: 0 }}
+        animate={{ rotate: '360deg' }}
+        transition={{ duration: 10, repeat: Infinity }}
         src={logoSrc}
         alt='Logo del Arte de producir'
         className='form__logo'
       />
       <div className='form__container form__container_hook'>
-        <p className='form__hook form__hook_accent form__hook_shadow'>
+        <motion.p
+          className='form__hook form__hook_accent form__hook_shadow'
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+        >
           siguiente paso
-        </p>
+        </motion.p>
         <p className='form__hook form__hook_accent'> Da el siguiente paso </p>
         <p className='form__hook'>
           para poder materializar tus ideas, tus sueños.
@@ -58,7 +68,14 @@ export default function Form({
           </div>
         </div>
         <div className='form__container form__container_btn'>
-          <button className='form__btn'>¡Registrate ahora!</button>
+          <motion.button
+            className='form__btn'
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
+          >
+            ¡Registrate ahora!
+          </motion.button>
         </div>
       </form>
       <div className='form__overlay' />

@@ -8,6 +8,7 @@ import Repeticion from './pages/repeticion/Repeticion';
 import { countdown } from './utils/countdown.js';
 import NotFound from './pages/notFound/NotFound';
 import Footer from './components/footer/Footer.jsx';
+import ProgressBar from './components/progressBar/ProgressBar.jsx';
 import api from './utils/api';
 // import { Pixel } from "./utils/metaPixel";
 // import Privacidad from "./routes/privacidad/Privacidad";
@@ -106,6 +107,7 @@ function App() {
 
   return (
     <div className='app'>
+      <ProgressBar />
       <Routes>
         <Route
           path='/'

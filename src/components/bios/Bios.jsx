@@ -2,6 +2,8 @@ import veroSrc from '../../assets/imgs/vero.webp';
 import julianSrc from '../../assets/imgs/julian-bn.webp';
 import triangleSrc from '../../assets/imgs/triangulo-azul.svg';
 
+import { motion } from 'framer-motion';
+
 export default function Bios() {
   return (
     <section className='bios'>
@@ -13,14 +15,28 @@ export default function Bios() {
         </div>
         <ul className='bios__list'>
           <li className='bios__element'>
-            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <motion.img
+              src={triangleSrc}
+              alt='lista'
+              className='bios__list-style'
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            />
             <p className='bios__text'>
               Egresada de la carrera de Literatura Dramática y Teatro de la
               UNAM.
             </p>
           </li>
           <li className='bios__element'>
-            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <motion.img
+              src={triangleSrc}
+              alt='lista'
+              className='bios__list-style'
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            />
             <p className='bios__text'>
               Coordinadora de producción del Colectivo Escénico El Arce
               beneficiario del programa México en Escena del Sistema de Apoyos a
@@ -28,7 +44,14 @@ export default function Bios() {
             </p>
           </li>
           <li className='bios__element'>
-            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <motion.img
+              src={triangleSrc}
+              alt='lista'
+              className='bios__list-style'
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            />
             <p className='bios__text'>
               Productora ejecutiva de Los obscenos de Silere/Vórtex proyecto
               beneficiario de EFIARTES.
@@ -48,14 +71,28 @@ export default function Bios() {
         </div>
         <ul className='bios__list'>
           <li className='bios__element'>
-            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <motion.img
+              src={triangleSrc}
+              alt='lista'
+              className='bios__list-style'
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            />
             <p className='bios__text'>
               Egresado de la carrera de Literatura Dramática y Teatro de la
               UNAM.
             </p>
           </li>
           <li className='bios__element'>
-            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <motion.img
+              src={triangleSrc}
+              alt='lista'
+              className='bios__list-style'
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            />
             <p className='bios__text'>
               Con un diplomado en Creación/Investigación por la UBA (Argentina)
               y la UNAM y otro en Perfeccionamiento en Dirección Escénica por la
@@ -63,7 +100,14 @@ export default function Bios() {
             </p>
           </li>
           <li className='bios__element'>
-            <img src={triangleSrc} alt='lista' className='bios__list-style' />
+            <motion.img
+              src={triangleSrc}
+              alt='lista'
+              className='bios__list-style'
+              initial={{ opacity: 0.5, rotate: '-30deg' }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
+            />
             <p className='bios__text'>
               Formó parte del equipo de producción de Los obscenos de
               Silere/Vórtex proyecto beneficiario de EFIARTES.

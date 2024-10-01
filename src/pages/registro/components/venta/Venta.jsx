@@ -1,15 +1,27 @@
 import listElementSrc from '../../../../assets/imgs/triangulo-azul.svg';
 
+import { motion } from 'framer-motion';
+
 export default function Venta() {
   return (
     <section className='venta'>
       <h2 className='venta__title'>
-        <span className='venta__title venta__title_shadow'>para ti si</span>
+        <motion.span
+          className='venta__title venta__title_shadow'
+          initial={{ opacity: 0, x: 10, y: 30 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 3, ease: 'easeInOut', type: 'spring' }}
+        >
+          para ti si
+        </motion.span>
         Esta clase es para ti si:
       </h2>
       <ul className='venta__list'>
         <li className='venta__element'>
-          <img
+          <motion.img
+            initial={{ opacity: 0.5, rotate: '-30deg' }}
+            whileInView={{ opacity: 1, rotate: 0 }}
+            transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
             src={listElementSrc}
             alt='lista'
             className='venta__list-vector'
@@ -24,7 +36,10 @@ export default function Venta() {
         </li>
         <div className='venta__divition' />
         <li className='venta__element'>
-          <img
+          <motion.img
+            initial={{ opacity: 0.5, rotate: '-30deg' }}
+            whileInView={{ opacity: 1, rotate: 0 }}
+            transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
             src={listElementSrc}
             alt='lista'
             className='venta__list-vector'
@@ -42,7 +57,10 @@ export default function Venta() {
         </li>
         <div className='venta__divition' />
         <li className='venta__element'>
-          <img
+          <motion.img
+            initial={{ opacity: 0.5, rotate: '-30deg' }}
+            whileInView={{ opacity: 1, rotate: 0 }}
+            transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
             src={listElementSrc}
             alt='lista'
             className='venta__list-vector'

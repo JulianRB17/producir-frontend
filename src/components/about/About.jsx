@@ -1,16 +1,45 @@
+import { motion } from 'framer-motion';
+
 import luminariasSrc from '../../assets/imgs/luminarias.svg';
 import mascarasSrc from '../../assets/imgs/mascaras.svg';
 
 export default function About() {
   return (
     <section className='about'>
-      <div className='about__container about__container_grid'>
+      <motion.div
+        className='about__container about__container_grid'
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.3, ease: 'easeInOut', type: 'spring' }}
+      >
         <div className='about__container about__container_text'>
           <div className='about__container about__container_title'>
-            <p className='about__title'>¿Quiénes somos</p>
-            <p className='about__title about__title_accent'>
+            <motion.p
+              className='about__title'
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 0.5,
+              }}
+            >
+              ¿Quiénes somos
+            </motion.p>
+            <motion.p
+              className='about__title about__title_accent'
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.2,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 0.8,
+              }}
+            >
               para enseñar esto?
-            </p>
+            </motion.p>
           </div>
           <p className='about__text'>
             <span className='about__text about__text_accent'>
@@ -42,17 +71,31 @@ export default function About() {
           </p>
         </div>
         <div className='about__container about__container_svg'>
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+            }}
             src={luminariasSrc}
             alt='luminarias teatrales'
             className='about__svg about__svg_top'
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className='about__container about__container_grid'>
         <div className='about__container about__container_svg'>
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+            }}
             src={mascarasSrc}
             alt=''
             className='about__svg about__svg_bottom'
@@ -91,9 +134,26 @@ export default function About() {
         </div>
       </div>
 
-      <div className='about__container about__container_quote'>
+      <motion.div
+        className='about__container about__container_quote'
+        initial={{ y: 50, opacity: 0.5 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 3,
+          ease: 'easeInOut',
+          type: 'spring',
+          delay: 1,
+        }}
+      >
         <div className='about__container about__container_svg about__container_quote-svg'>
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+              type: 'spring',
+            }}
             src={mascarasSrc}
             alt='Vector de máscaras'
             className='about__svg about__svg_quote'
@@ -111,7 +171,7 @@ export default function About() {
             crea tus propias oportunidades.
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
