@@ -120,6 +120,14 @@ function App() {
       scale: 0.8,
       transition: { duration: 1, ease: 'easeInOut', type: 'spring' },
     },
+    loop: {
+      scale: [0.95, 1, 0.95],
+      transition: {
+        duration: 2,
+        ease: 'easeInOut',
+        repeat: Infinity,
+      },
+    },
   };
 
   const listElementVariants = {

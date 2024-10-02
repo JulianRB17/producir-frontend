@@ -22,6 +22,7 @@ export default function CtaS({ btnVariants }) {
           variants={btnVariants}
           whileHover='hover'
           whileTap='tap'
+          animate='loop'
         >
           Quiero formar parte de este grupo
         </motion.button>

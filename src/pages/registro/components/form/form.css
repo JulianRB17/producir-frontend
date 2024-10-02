@@ -154,9 +154,9 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
   /* mix-blend-mode: screen; */
-  /* mix-blend-mode: soft-light; */
+  mix-blend-mode: soft-light;
   background-color: #05022b;
   z-index: 1;
 }

@@ -108,6 +108,7 @@
   text-shadow: 3px 3px 4px #05022b;
   color: #e1f102;
   text-align: center;
+  margin-right: 3em;
 }
 
 .about__quote_accent {
@@ -210,6 +211,7 @@
 
   .about__quote {
     font-size: 1.2rem;
+    margin-right: 0;
   }
 
   .about__quote_accent {

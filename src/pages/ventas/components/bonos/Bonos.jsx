@@ -157,6 +157,7 @@ export default function Bonos({ titleVariants }) {
       <p className='bonos__text bonos__text_accent'>
         sin embargo puedes adquirirlo ahora por sólo $3,500mxn.
       </p>
+      <div className='bonos__overlay' />
     </section>
   );
 }

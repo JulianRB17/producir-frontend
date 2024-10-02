@@ -99,6 +99,7 @@
   align-self: flex-end;
   text-align: right;
   color: white;
+  text-shadow: 3px 3px 1px #4438d8;
 }
 
 .host__overlay {
@@ -109,11 +110,12 @@
   bottom: 0;
   z-index: 1;
   /* mix-blend-mode: color-dodge; */
-  mix-blend-mode: exclusion;
+  mix-blend-mode: soft-light;
+  /* mix-blend-mode: exclusion; */
   background: rgb(5, 2, 43);
   background: linear-gradient(
     138deg,
-    rgba(5, 2, 43, 1) 40%,
+    rgba(5, 2, 43, 1) 70%,
     rgba(68, 56, 216, 1) 120%
   );
 }

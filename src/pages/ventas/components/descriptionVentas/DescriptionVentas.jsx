@@ -8,7 +8,9 @@ import { motion } from 'framer-motion';
 export default function DescriptionVentas({
   listElementVariants,
   titleVariants,
+  urls,
 }) {
+  console.log(urls);
   return (
     <section className='description-ventas'>
       <div className='description-ventas__container description-ventas__container_grid'>
@@ -46,7 +48,7 @@ export default function DescriptionVentas({
       <div className='description-ventas__container description-ventas__container_text'>
         <p className='description-ventas__text'>
           <span className='description-ventas__text description-ventas__text_accent'>
-            Éste es un curso online sobre producción de artes escénicas
+            Éste es un curso online sobre producción de artes escénicas{' '}
           </span>
           en el que se trabajará para poder materializar proyectos y darles vida
           a tus ideas y sueños.
@@ -63,7 +65,7 @@ export default function DescriptionVentas({
           </span>{' '}
           Sin embargo, te invitamos a que en la medida de lo posible,{' '}
           <span className='description-ventas__text description-ventas__text_accent'>
-            asistas a las sesiones en vivo
+            asistas a las sesiones en vivo{' '}
           </span>
           para que no te pierdas el diálogo y las rondas de
           preguntas/respuestas.
@@ -72,9 +74,10 @@ export default function DescriptionVentas({
       <div className='description-ventas__container description-ventas__container_modules'>
         <div className='description-ventas__element'>
           <h3 className='description-ventas__label'>Módulo 1:</h3>
-          <h3 className='description-ventas__element-title'>
-            ProduSer (ÉTICA Y PRODUCCIÓN)
-          </h3>
+          <h3 className='description-ventas__element-title'>ProduSer</h3>
+          <p className='description-ventas__element-title'>
+            (ÉTICA Y PRODUCCIÓN)
+          </p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -120,8 +123,11 @@ export default function DescriptionVentas({
         <div className='description-ventas__element description-ventas__element_amarillo'>
           <h3 className='description-ventas__label'>Módulo 2:</h3>
           <h3 className='description-ventas__element-title description-ventas__element-title_azul'>
-            Elige tu rumbo (PRODUCCIÓN)
+            Elige tu rumbo
           </h3>
+          <p className='description-ventas__element-title description-ventas__element-title_azul'>
+            (PRODUCCIÓN)
+          </p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -181,8 +187,9 @@ export default function DescriptionVentas({
         <div className='description-ventas__element'>
           <h3 className='description-ventas__label'>Módulo 3:</h3>
           <h3 className='description-ventas__element-title'>
-            Descubre posibilidades (GESTIÓN)
+            Descubre posibilidades
           </h3>
+          <p className='description-ventas__element-title'>(GESTIÓN)</p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -250,8 +257,11 @@ export default function DescriptionVentas({
         <div className='description-ventas__element description-ventas__element_amarillo'>
           <h3 className='description-ventas__label'>Módulo 4:</h3>
           <h3 className='description-ventas__element-title description-ventas__element-title_azul'>
-            Date a conocer (DIFUSIÓN)
+            Date a conocer
           </h3>
+          <p className='description-ventas__element-title description-ventas__element-title_azul'>
+            (DIFUSIÓN)
+          </p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -312,9 +322,9 @@ export default function DescriptionVentas({
           <h3 className='description-ventas__element-title'>
             Aterriza tu proyecto
           </h3>
-          <h3 className='description-ventas__element-title'>
+          <p className='description-ventas__element-title'>
             (CONSOLIDAR EL PROYECTO)
-          </h3>
+          </p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -365,4 +375,5 @@ export default function DescriptionVentas({
 DescriptionVentas.propTypes = {
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
+  urls: PropTypes.object,
 };

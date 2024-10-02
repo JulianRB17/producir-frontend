@@ -21,7 +21,7 @@ export default function Form({
       <motion.img
         initial={{ rotate: 0 }}
         animate={{ rotate: '360deg' }}
-        transition={{ duration: 20, repeat: Infinity }}
+        transition={{ duration: 20 }}
         src={logoSrc}
         alt='Logo del Arte de producir'
         className='form__logo'
@@ -77,7 +77,7 @@ export default function Form({
             whileHover='hover'
             whileTap='tap'
           >
-            ¡Registrate ahora!
+            ¡Regístrate ahora!
           </motion.button>
         </div>
       </form>

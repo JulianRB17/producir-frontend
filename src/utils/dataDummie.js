@@ -1,6 +1,6 @@
 export const data = {
   dates: {
-    webinarDate: 'October 5, 2024 15:00:00',
+    webinarDate: 'October 10, 2024 15:00:00',
     programaDate: '11 de noviembre a 11 de diciembre de 2024',
     moduleDates: '11 de noviembre a 11 de diciembre de 2024',
 

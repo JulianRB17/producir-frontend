@@ -19,6 +19,7 @@ export default function Ventas({
   listElementVariants,
   btnVariants,
   titleVariants,
+  urls,
 }) {
   return (
     <section className='ventas'>
@@ -37,6 +38,7 @@ export default function Ventas({
       />
       <CtaS btnVariants={btnVariants} />
       <DescriptionVentas
+        urls={urls}
         titleVariants={titleVariants}
         listElementVariants={listElementVariants}
       />
@@ -56,4 +58,5 @@ Ventas.propTypes = {
   btnVariants: PropTypes.object,
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
+  urls: PropTypes.object,
 };

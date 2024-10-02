@@ -21,8 +21,8 @@ export default function Garantia({ shadowVariants }) {
           <span className='garantia__subtitle garantia__subtitle_accent'>
             ¡No te preocupes!
           </span>{' '}
-          Como parte de este programa tenemos una garantía para asegurarnos de
-          que tu experiencia sea la mejor posible.
+          Tenemos una garantía para asegurarnos de que tu experiencia sea la
+          mejor posible.
         </p>
         <p className='garantia__text'>
           Estamos constantemente evolucionando para que el contenido de este

@@ -1,6 +1,7 @@
 .bios {
   display: flex;
-  background-image: url('../../assets/imgs/fondo-bios.webp');
+  /* background-image: url('../../assets/imgs/fondo-bios.webp'); */
+  background-image: url('../../assets/imgs/11.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3% 5%;
@@ -85,6 +86,8 @@
   z-index: 1;
   /* mix-blend-mode: color-dodge; */
   mix-blend-mode: exclusion;
+  /* mix-blend-mode: hard-light; */
+  /* mix-blend-mode: soft-light; */
   background: rgb(5, 2, 43);
   background: linear-gradient(
     138deg,
@@ -96,6 +99,7 @@
 @media screen and (max-width: 800px) {
   .bios {
     flex-direction: column;
+    background-position: right;
   }
 
   .bios__container_bio {

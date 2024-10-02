@@ -34,10 +34,9 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 80%;
   align-self: center;
   margin-bottom: 2em;
-  max-width: 1000px;
+  max-width: 1440px;
 }
 
 .description-ventas__title {
@@ -78,8 +77,8 @@
 .description-ventas__element {
   background-color: #05022b;
   padding: 1em;
-  height: 300px;
-  width: 300px;
+  width: 350px;
+  height: 350px;
   margin: 0.5em 0.5em;
   color: #aca6e4;
 }
@@ -90,7 +89,7 @@
 }
 
 .description-ventas__label {
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-align: center;
   font-family: GandhiSans-Italic;
   font-style: italic;
@@ -101,6 +100,7 @@
   font-family: anton;
   text-align: center;
   color: #e1f102;
+  font-size: 1.5rem;
 }
 
 .description-ventas__element-title_azul {
@@ -122,6 +122,10 @@
 .description-ventas__list-style {
   width: 0.6em;
   margin: 0.2em 0.5em auto 0;
+}
+
+.description-ventas__list-text {
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -155,6 +159,11 @@
     align-items: center;
   }
 
+  .description-ventas__element {
+    width: 90%;
+    height: auto;
+  }
+
   .description-ventas__title {
     font-size: 2rem;
   }
@@ -170,5 +179,17 @@
   .description-ventas__logo {
     margin: 0.5em auto 1em;
     grid-column: 2/3;
+  }
+
+  .description-ventas__label {
+    font-size: 1.5rem;
+  }
+
+  .description-ventas__element-title {
+    font-size: 1.3rem;
+  }
+
+  .description-ventas__list-text {
+    font-size: 1.1rem;
   }
 }

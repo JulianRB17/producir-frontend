@@ -31,6 +31,7 @@ export default function CtaL({ btnVariants }) {
         variants={btnVariants}
         whileHover='hover'
         whileTap='tap'
+        animate='loop'
       >
         Quiero formar parte de este programa
       </motion.button>

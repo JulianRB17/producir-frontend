@@ -160,12 +160,14 @@ export default function Situaciones({
           Estás en el lugar correcto,
         </p>
         <p className='situaciones__hook'> tenemos una solución para ti.</p>
+
         <p className='situaciones__cta'>
           Únete a esta generación para aprender{' '}
           <span className='situaciones__cta situaciones__cta_accent'>
             las herramientas que te permitirán concretar tus ideas
           </span>
         </p>
+        <p className='situaciones__cta'>Para formar parte de este grupo.</p>
         <motion.a
           href='/'
           className='situaciones__btn'
@@ -175,7 +177,6 @@ export default function Situaciones({
         >
           Haz click aquí
         </motion.a>
-        <p className='situaciones__cta'>Para formar parte de este grupo.</p>
       </div>
     </section>
   );
