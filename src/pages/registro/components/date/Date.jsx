@@ -1,19 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import clockSrc from '../../../../assets/imgs/reloj.svg';
 import PropTypes from 'prop-types';
 
-export default function Date({
-  localDate,
-  hour,
-  count,
-  countdown,
-  timestamp,
-  setCount,
-}) {
+export default function Date({ localDate, hour, countdown, timestamp }) {
+  const [count, setCount] = useState(0);
+
   useEffect(() => {
-    countdown(timestamp, setCount);
+    const interval = countdown(timestamp, setCount);
+    return () => clearInterval(interval);
   }, [timestamp, countdown, setCount]);
 
   const renderCounter = (count) => {
@@ -63,6 +59,7 @@ export default function Date({
       );
     }
   };
+
   return (
     <section className='date' id='date'>
       <h2 className='date__title'>¿Cuándo?</h2>
@@ -91,8 +88,6 @@ export default function Date({
 Date.propTypes = {
   localDate: PropTypes.any,
   hour: PropTypes.string,
-  count: PropTypes.any,
   countdown: PropTypes.func,
   timestamp: PropTypes.number,
-  setCount: PropTypes.func,
 };

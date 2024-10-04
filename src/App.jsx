@@ -23,7 +23,6 @@ function App() {
   const [isValidForm, setValidForm] = useState(false);
   const [msgSuccess, setMsgSuccess] = useState(true);
   const [sentUser, setSentUser] = useState(false);
-  const [count, setCount] = useState(0);
   const [localDate, setLocalDate] = useState('');
   const [hour, setHour] = useState('');
   const [timestamp, setTimestamp] = useState(0);
@@ -195,12 +194,7 @@ function App() {
         <Route
           path='/cierre-r'
           element={
-            <CierreRegistro
-              localDate={localDate}
-              hour={hour}
-              count={count}
-              urls={urls}
-            />
+            <CierreRegistro localDate={localDate} hour={hour} urls={urls} />
           }
         />
         <Route
@@ -224,7 +218,6 @@ function App() {
               <Registro
                 localDate={localDate}
                 hour={hour}
-                count={count}
                 onSubmit={handleSubmit}
                 onChange={handleChange}
                 sentUser={sentUser}
@@ -239,7 +232,6 @@ function App() {
                 titleVariants={titleVariants}
                 countdown={countdown}
                 timestamp={timestamp}
-                setCount={setCount}
               />
             </>
           }

@@ -14,7 +14,6 @@ import PropTypes from 'prop-types';
 export default function Registro({
   localDate,
   hour,
-  count,
   onSubmit,
   onChange,
   sentUser,
@@ -29,7 +28,6 @@ export default function Registro({
   titleVariants,
   countdown,
   timestamp,
-  setCount,
 }) {
   return (
     <section className='registro'>
@@ -37,11 +35,9 @@ export default function Registro({
       <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
       <Date
         localDate={localDate}
-        count={count}
         hour={hour}
         countdown={countdown}
         timestamp={timestamp}
-        setCount={setCount}
       />
       <Host />
       <Venta
@@ -71,7 +67,6 @@ export default function Registro({
 Registro.propTypes = {
   localDate: PropTypes.any,
   hour: PropTypes.string,
-  count: PropTypes.any,
   onSubmit: PropTypes.func,
   onChange: PropTypes.func,
   isValidForm: PropTypes.bool,
@@ -86,5 +81,4 @@ Registro.propTypes = {
   titleVariants: PropTypes.object,
   countdown: PropTypes.func,
   timestamp: PropTypes.number,
-  setCount: PropTypes.func,
 };
