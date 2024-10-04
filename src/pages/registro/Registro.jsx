@@ -27,12 +27,22 @@ export default function Registro({
   btnVariants,
   listElementVariants,
   titleVariants,
+  countdown,
+  timestamp,
+  setCount,
 }) {
   return (
     <section className='registro'>
       <Header />
       <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
-      <Date localDate={localDate} count={count} hour={hour} />
+      <Date
+        localDate={localDate}
+        count={count}
+        hour={hour}
+        countdown={countdown}
+        timestamp={timestamp}
+        setCount={setCount}
+      />
       <Host />
       <Venta
         shadowVariants={shadowVariants}
@@ -74,4 +84,7 @@ Registro.propTypes = {
   btnVariants: PropTypes.object,
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
+  countdown: PropTypes.func,
+  timestamp: PropTypes.number,
+  setCount: PropTypes.func,
 };

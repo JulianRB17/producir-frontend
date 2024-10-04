@@ -20,5 +20,7 @@ export const countdown = function (timestamp, setCount) {
       clearInterval(interval);
       setCount(null);
     }
+
+    return () => clearInterval(interval);
   }, 1000);
 };

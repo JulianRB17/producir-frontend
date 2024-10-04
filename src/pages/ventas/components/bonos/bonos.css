@@ -54,14 +54,22 @@
   background-color: #aca6e4;
   padding: 1em;
   width: 350px;
-  height: 350px;
+  height: 450px;
   margin: 0.5em 0.5em;
   color: #aca6e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bonos__element_azul {
   background-color: #05022b;
   color: #4438d8;
+}
+
+.bonos__icon {
+  height: 14%;
+  margin-bottom: 1em;
 }
 
 .bonos__element-title {
@@ -95,6 +103,8 @@
   color: #4438d8;
   font-size: 2rem;
   margin-bottom: 1em;
+  position: relative;
+  z-index: 3;
 }
 
 .bonos__text {
@@ -103,6 +113,8 @@
   align-self: center;
   font-family: anton;
   color: #05022b;
+  position: relative;
+  z-index: 3;
 }
 
 .bonos__text_accent {
@@ -127,7 +139,7 @@
 }
 
 .bonos__overlay {
-  background-image: url('../../../../assets/imgs/fondo-cools.jpg');
+  background-image: url('../../../../assets/imgs/fondo-cools.webp');
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -178,6 +190,16 @@
     align-items: center;
   }
 
+  .bonos__element {
+    max-width: 300px;
+    width: 90%;
+    height: fit-content;
+  }
+
+  .bonos__icon {
+    width: 20%;
+  }
+
   .bonos__title {
     font-size: 2rem;
   }
@@ -188,6 +210,10 @@
 
   .bonos__text {
     font-size: 1.3rem;
+  }
+
+  .bonos__text_element {
+    font-size: 1rem;
   }
 
   .bonos__logo {

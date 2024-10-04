@@ -23,11 +23,16 @@ export default function Ventas({
 }) {
   return (
     <section className='ventas'>
-      <HeroVentas shadowVariants={shadowVariants} btnVariants={btnVariants} />
+      <HeroVentas
+        shadokwVariants={shadowVariants}
+        btnVariants={btnVariants}
+        urls={urls}
+      />
       <Situaciones
         shadowVariants={shadowVariants}
         listElementVariants={listElementVariants}
         btnVariants={btnVariants}
+        urls={urls}
       />
       <Quote />
       <About titleVariants={titleVariants} />
@@ -36,19 +41,22 @@ export default function Ventas({
         shadowVariants={shadowVariants}
         listElementVariants={listElementVariants}
       />
-      <CtaS btnVariants={btnVariants} />
+      <CtaS btnVariants={btnVariants} urls={urls} />
       <DescriptionVentas
         urls={urls}
         titleVariants={titleVariants}
         listElementVariants={listElementVariants}
       />
-      <CtaL btnVariants={btnVariants} />
+      <CtaL btnVariants={btnVariants} urls={urls} />
       <Bonos titleVariants={titleVariants} />
-      <Garantia shadowVariants={shadowVariants} />
-      <CtaS btnVariants={btnVariants} />
+      <Garantia
+        shadowVakriants={shadowVariants}
+        btnVariants={btnVariants}
+        urls={urls}
+      />
       <Faqs titleVariants={titleVariants} />
       <Disclaimer />
-      <CtaL btnVariants={btnVariants} />
+      <CtaL btnVariants={btnVariants} urls={urls} />
     </section>
   );
 }

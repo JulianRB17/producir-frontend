@@ -1,97 +1,226 @@
-.cta-m {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cta-l {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-position: center;
   background: rgb(5, 2, 43);
   background: linear-gradient(
     138deg,
     rgba(5, 2, 43, 1) 0%,
     rgba(68, 56, 216, 1) 120%
   );
-  padding: 2em 3em;
+  padding: 2em 3em 2em 0;
+  position: relative;
 }
 
-.cta-m__text {
+.cta-l__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-l__container_title {
+  padding: 1em;
+  margin: auto 0;
+  background-color: #e1f102;
+  grid-column: 1/4;
+  height: fit-content;
+}
+
+.cta-l__container_cta {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  align-items: center;
+}
+
+.cta-l__container_text {
+  grid-row: 3/4;
+  grid-column: 1/5;
+  align-items: end;
+  margin-top: auto;
+}
+
+.cta-l__title {
+  font-size: 1.8rem;
+  color: #4438d8;
+  text-align: right;
+}
+
+.cta-l__title_accent {
+  font-family: anton;
+  color: #05022b;
+}
+
+.cta-l__text {
   color: #e1f102;
-  text-align: center;
+  text-align: right;
   font-size: 1.5rem;
   font-family: anton;
-  max-width: 900px;
 }
 
-.cta-m__text_top {
-  font-size: 1.7rem;
-  font-family: GandhiSans-BoldItalic;
-}
-
-.cta-m__text_venta {
+.cta-l__text_venta {
   color: white;
   margin-top: 1em;
   font-size: 1.8rem;
 }
 
-.cta-m__text_accent {
+.cta-l__text_accent {
   color: #aca6e4;
 }
 
-.cta-m__text_hook {
+.cta-l__text_hook {
   color: white;
   font-family: GandhiSans-Italic;
   margin: 1em 0 0.2em;
   font-size: 1.8rem;
 }
-.cta-m__btn {
+.cta-l__btn {
   width: fit-content;
   max-width: 100%;
   background-color: #e1f102;
   background: linear-gradient(0deg, #e1f102, white);
+  border-radius: 2em;
+  box-shadow: 0 0 5px white;
+  display: flex;
+  margin: 1.5em 0 0;
+  max-width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-l__link {
   font-size: 2rem;
   font-family: anton;
   color: #4438d8;
   text-decoration: none;
   padding: 0.5em 1em;
-  border-radius: 2em;
-  box-shadow: 0 0 5px white;
-  display: flex;
+  text-align: center;
 }
 
-.cta-m__text_cta {
-  margin: 0.5em 0;
-  color: #e1f102;
-  font-size: 1.8rem;
+.cta-l__logo {
+  width: 15em;
+  margin: auto auto auto 1.5em;
+  grid-column: 4/5;
+  grid-row: 1/4;
+  position: relative;
+  z-index: 2;
 }
 
-.cta-m__logo {
-  width: 13em;
-  margin: 1.5rem 0;
+.cta-l__overlay {
+  /* background: rgb(5, 2, 43);
+  background: linear-gradient(
+    138deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  ); */
+  background-image: url('../../../../assets/imgs/fondo-cools.webp');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  /* mix-blend-mode: color-burn; */
+  mix-blend-mode: multiply;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
-@media screen and (max-width: 700px) {
-  .cta-m__text {
-    font-size: 1.2rem;
+@media screen and (max-width: 1000px) {
+  .cta-l__container_title {
+    grid-column: 1/5;
   }
 
-  .cta-m__text_top {
-    font-size: 1.4rem;
+  .cta-l__logo {
+    margin: 1em auto auto 2em;
+    width: 10em;
+    grid-column: 4/5;
+    grid-row: 2/4;
   }
 
-  .cta-m__text_venta {
-    font-size: 1.4rem;
-  }
-
-  .cta-m__text_hook {
-    font-size: 1.4rem;
-  }
-
-  .cta-m__btn {
+  .cta-l__title {
     font-size: 1.5rem;
   }
 
-  .cta-m__text_cta {
+  .cta-l__text {
+    font-size: 1.2rem;
+  }
+
+  .cta-l__text_venta {
     font-size: 1.4rem;
   }
 
-  .cta-m__logo {
+  .cta-l__text_hook {
+    font-size: 1.4rem;
+  }
+
+  .cta-l__link {
+    font-size: 1.5rem;
+  }
+
+  .cta-l__logo {
     width: 9em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cta-l {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .cta-l__container_title {
+    margin: 0 0 auto;
+  }
+
+  .cta-l__container_cta {
+    align-items: center;
+  }
+
+  .cta-l__container_text {
+    align-items: end;
+    margin-top: auto;
+  }
+
+  .cta-l__title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .cta-l__text {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .cta-l__text_venta {
+    margin-top: 1em;
+    font-size: 1.5rem;
+  }
+
+  .cta-l__text_hook {
+    margin: 1em;
+    font-size: 1.5rem;
+  }
+
+  .cta-l__btn {
+    margin: 1.5em 0 0;
+    border-radius: 3em;
+  }
+
+  .cta-l__link {
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+  }
+
+  .cta-l__logo {
+    width: 10em;
+    margin: 1em auto;
+  }
+
+  .cta-l__container_text {
+    align-items: end;
+    margin-top: auto;
   }
 }

@@ -2,6 +2,12 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import logoSrc from '../../../../assets/logos/imag-eap-negativo.png';
+import excelSrc from '../../../../assets/imgs/excel.svg';
+import plantillasSrc from '../../../../assets/imgs/plantilla.svg';
+import diseñoSrc from '../../../../assets/imgs/diseño.svg';
+import tipsSrc from '../../../../assets/imgs/tips.svg';
+import redaccionSrc from '../../../../assets/imgs/redaccion.svg';
+import acompañamientoSrc from '../../../../assets/imgs/acompañamiento.svg';
 
 export default function Bonos({ titleVariants }) {
   return (
@@ -42,6 +48,7 @@ export default function Bonos({ titleVariants }) {
 
       <div className='bonos__container bonos__container_bonos'>
         <div className='bonos__element'>
+          <img src={excelSrc} alt='Ícono de excel' className='bonos__icon' />
           <h3 className='bonos__element-title'>Excel para dummies</h3>
           <p className='bonos__text bonos__text_element'>
             <span className='bonos__text_element-accent'>
@@ -59,6 +66,11 @@ export default function Bonos({ titleVariants }) {
         </div>
 
         <div className='bonos__element bonos__element_azul'>
+          <img
+            src={plantillasSrc}
+            alt='Ícono de plantillas'
+            className='bonos__icon'
+          />
           <h3 className='bonos__element-title bonos__element-title_amarillo'>
             Plantillas de presupuesto, checklist, cronograma y más.
           </h3>
@@ -77,6 +89,7 @@ export default function Bonos({ titleVariants }) {
         </div>
 
         <div className='bonos__element'>
+          <img src={diseñoSrc} alt='Ícono de diseño' className='bonos__icon' />
           <h3 className='bonos__element-title'>Diseño gráfico para dummies.</h3>
           <p className='bonos__text bonos__text_element'>
             En el ámbito escénico, ser emprendedores significa aprender diversas
@@ -91,6 +104,7 @@ export default function Bonos({ titleVariants }) {
         </div>
 
         <div className='bonos__element bonos__element_azul'>
+          <img src={tipsSrc} alt='Ícono de tips' className='bonos__icon' />
           <h3 className='bonos__element-title bonos__element-title_amarillo'>
             Tips útiles para la producción desde el gozo
           </h3>
@@ -107,28 +121,36 @@ export default function Bonos({ titleVariants }) {
           </p>
         </div>
 
-        <div className='bonos__container bonos__container_modules'>
-          <div className='bonos__element'>
-            <h3 className='bonos__element-title'>Redacción que triunfa</h3>
-            <p className='bonos__text bonos__text_element'>
-              Crear una carpeta clara y efectiva es crucial para tu proyecto.
-              <span className='bonos__text_element-accent'>
-                {' '}
-                Te daremos consejos prácticos para redactar con claridad,
-                responder preguntas clave y comunicar tus ideas con precisión.
-              </span>
-              También te mostraremos ejemplos de
-              <span className='bonos__text_element-accent'>
-                {' '}
-                proyectos seleccionados en EFIARTES
-              </span>
-              , una convocatoria destacada en México, para que encuentres
-              inspiración y concretes tus ideas.
-            </p>
-          </div>
+        <div className='bonos__element'>
+          <img
+            src={redaccionSrc}
+            alt='Ícono de redaccion'
+            className='bonos__icon'
+          />
+          <h3 className='bonos__element-title'>Redacción que triunfa</h3>
+          <p className='bonos__text bonos__text_element'>
+            Crear una carpeta clara y efectiva es crucial para tu proyecto.
+            <span className='bonos__text_element-accent'>
+              {' '}
+              Te daremos consejos prácticos para redactar con claridad,
+              responder preguntas clave y comunicar tus ideas con precisión.
+            </span>
+            También te mostraremos ejemplos de
+            <span className='bonos__text_element-accent'>
+              {' '}
+              proyectos seleccionados en EFIARTES
+            </span>
+            , una convocatoria destacada en México, para que encuentres
+            inspiración y concretes tus ideas.
+          </p>
         </div>
 
         <div className='bonos__element bonos__element_azul'>
+          <img
+            src={acompañamientoSrc}
+            alt='Ícono de excel'
+            className='bonos__icon'
+          />
           <h3 className='bonos__element-title bonos__element-title_amarillo'>
             Acompañamiento
           </h3>

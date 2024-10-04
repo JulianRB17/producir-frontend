@@ -1,7 +1,6 @@
 .bios {
   display: flex;
-  /* background-image: url('../../assets/imgs/fondo-bios.webp'); */
-  background-image: url('../../assets/imgs/11.jpg');
+  background-image: url('../../assets/imgs/fondo-bios.webp');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3% 5%;
@@ -47,7 +46,7 @@
 
 .bios__list-style {
   width: 0.9em;
-  margin: 0.3em 1em 0 0;
+  margin: 0 1em 0;
   position: relative;
   align-self: flex-start;
 }

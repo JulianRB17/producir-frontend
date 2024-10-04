@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-export default function Garantia({ shadowVariants }) {
+export default function Garantia({ shadowVariants, btnVariants, urls }) {
   return (
     <section className='garantia'>
       <div className='garantia__container'>
@@ -37,10 +38,40 @@ export default function Garantia({ shadowVariants }) {
           devolverá completamente tu dinero.
         </p>{' '}
       </div>
+
+      <div className='garantia__container garantia__container_cta'>
+        <div className='garantia__container garantia__container_quote'>
+          <p className='garantia__quote'>
+            &quot;Una idea no ejecutada es un sueño&quot;
+          </p>
+          <p className='garantia__quote garantia__quote_author'>
+            Louis de Rouvroy
+          </p>
+        </div>
+        <p className='garantia__hook'>
+          Únete a esta generación para aprender las herramientas que te
+          permitirán darle forma a tus ideas.
+        </p>
+      </div>
+      <div className='garantia__container garantia__container_btn'>
+        <motion.div
+          className='garantia__btn'
+          variants={btnVariants}
+          whileHover='hover'
+          whileTap='tap'
+          animate='loop'
+        >
+          <Link className='garantia__link' to={urls.buyoutUrl}>
+            Quiero formar parte de este grupo
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 }
 
 Garantia.propTypes = {
   shadowVariants: PropTypes.object,
+  btnVariants: PropTypes.object,
+  urls: PropTypes.object,
 };

@@ -26,7 +26,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [localDate, setLocalDate] = useState('');
   const [hour, setHour] = useState('');
-  const [timestamp, setTimestamp] = useState('');
+  const [timestamp, setTimestamp] = useState(0);
   const [urls, setUrls] = useState({});
   const [dates, setDates] = useState({});
   // const [cookiesEstablished, setCookiesEstablished] = useState(true);
@@ -46,9 +46,7 @@ function App() {
     const webinarMinutes = new Date(dates.webinarDate).getSeconds();
     setLocalDate(new Date(dates.webinarDate).toLocaleDateString('es-ES'));
     setHour(`${webinarHour}:${webinarMinutes ? 0 : '00'}`);
-    countdown(timestamp, setCount);
-    return;
-  }, [hour, timestamp, dates.webinarDate]);
+  }, [dates.webinarDate]);
 
   const navigate = useNavigate();
 
@@ -169,7 +167,6 @@ function App() {
   //   // Pixel.revokeConsent();
   //   setCookiesEstablished(true);
   // };
-
   return (
     <div className='app'>
       <ProgressBar />
@@ -240,6 +237,9 @@ function App() {
                 btnVariants={btnVariants}
                 listElementVariants={listElementVariants}
                 titleVariants={titleVariants}
+                countdown={countdown}
+                timestamp={timestamp}
+                setCount={setCount}
               />
             </>
           }

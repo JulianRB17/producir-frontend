@@ -1,9 +1,21 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import clockSrc from '../../../../assets/imgs/reloj.svg';
 import PropTypes from 'prop-types';
 
-export default function Date({ localDate, hour, count }) {
+export default function Date({
+  localDate,
+  hour,
+  count,
+  countdown,
+  timestamp,
+  setCount,
+}) {
+  useEffect(() => {
+    countdown(timestamp, setCount);
+  }, [timestamp, countdown, setCount]);
+
   const renderCounter = (count) => {
     if (count) {
       return (
@@ -80,4 +92,7 @@ Date.propTypes = {
   localDate: PropTypes.any,
   hour: PropTypes.string,
   count: PropTypes.any,
+  countdown: PropTypes.func,
+  timestamp: PropTypes.number,
+  setCount: PropTypes.func,
 };

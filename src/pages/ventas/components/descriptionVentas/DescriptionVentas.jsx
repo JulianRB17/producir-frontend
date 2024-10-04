@@ -8,9 +8,8 @@ import { motion } from 'framer-motion';
 export default function DescriptionVentas({
   listElementVariants,
   titleVariants,
-  urls,
+  // urls,
 }) {
-  console.log(urls);
   return (
     <section className='description-ventas'>
       <div className='description-ventas__container description-ventas__container_grid'>

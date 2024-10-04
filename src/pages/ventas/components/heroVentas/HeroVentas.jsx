@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
-
-export default function HeroVentas({ shadowVariants, btnVariants }) {
+export default function HeroVentas({ shadowVariants, btnVariants, urls }) {
   return (
     <section className='heroVentas'>
       <motion.div
@@ -45,15 +46,16 @@ export default function HeroVentas({ shadowVariants, btnVariants }) {
           />
         </div>
         <div className='heroVentas__container heroVentas__container_btn'>
-          <motion.a
+          <motion.div
             className='heroVentas_btn heroVentas__btn_cta'
-            href='#form'
             variants={btnVariants}
             whileHover='hover'
             whileTap='tap'
           >
-            Haz click aquí para unirte
-          </motion.a>
+            <Link to={urls.buyoutUrl} className='heroVentas__link'>
+              Haz click aquí para unirte
+            </Link>
+          </motion.div>
         </div>
         <div className='heroVentas__container heroVentas__container_disclaimer'>
           <img
@@ -79,4 +81,5 @@ export default function HeroVentas({ shadowVariants, btnVariants }) {
 HeroVentas.propTypes = {
   shadowVariants: PropTypes.object,
   btnVariants: PropTypes.object,
+  urls: PropTypes.object,
 };

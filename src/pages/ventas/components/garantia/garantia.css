@@ -1,22 +1,38 @@
 .garantia {
-  background: linear-gradient(
-    170deg,
-    rgba(5, 2, 43, 1) 30%,
-    rgba(68, 56, 216, 1) 120%
-  );
   color: white;
   text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../../../assets/imgs/fondo-garantia.webp');
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  padding: 5%;
 }
 
 .garantia__container {
-  width: 90%;
+  max-width: 90%;
   max-width: 1300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2em;
+  z-index: 3;
+}
+
+.garantia__container_cta {
+  flex-direction: row;
+}
+
+.garantia__container_quote {
+  width: 30%;
+  align-items: flex-start;
+}
+
+.garantia__container_btn {
+  align-items: center;
+  justify-content: center;
 }
 
 .garantia__title {
@@ -44,6 +60,7 @@
   font-size: 2.3rem;
   line-height: 1.3;
   font-family: GandhiSans-Bold;
+  max-width: 90%;
 }
 
 .garantia__subtitle_accent {
@@ -54,6 +71,46 @@
   font-size: 1.6rem;
   margin-top: 1em;
   color: #aca6e4;
+  max-width: 90%;
+}
+
+.garantia__quote {
+  color: #e1f102;
+  font-size: 2.2rem;
+  font-family: GandhiSans-BoldItalic;
+  text-align: left;
+}
+
+.garantia__quote_author {
+  font-size: 1.5rem;
+}
+
+.garantia__hook {
+  color: white;
+  width: 55%;
+  text-align: right;
+  margin: 2em 0 0 auto;
+  font-size: 2.2rem;
+  font-family: GandhiSans-Bold;
+  line-height: 1.2;
+}
+
+.garantia__btn {
+  width: fit-content;
+  max-width: 100%;
+  background-color: #e1f102;
+  background: linear-gradient(0deg, #e1f102, white);
+  border-radius: 2em;
+  box-shadow: 0 0 5px white;
+  display: flex;
+}
+
+.garantia__link {
+  font-size: 2rem;
+  font-family: anton;
+  color: #4438d8;
+  text-decoration: none;
+  padding: 0.5em 1em;
 }
 
 @media screen and (max-width: 1000px) {
@@ -71,6 +128,27 @@
 
   .garantia__text {
     font-size: 1.6rem;
+  }
+
+  .garantia__container_quote {
+    width: 35%;
+  }
+
+  .garantia__quote {
+    font-size: 1.5rem;
+  }
+
+  .garantia__quote_author {
+    font-size: 1rem;
+  }
+
+  .garantia__hook {
+    width: 65%;
+    font-size: 1.5rem;
+  }
+
+  .garantia__link {
+    font-size: 1.5rem;
   }
 }
 
@@ -91,5 +169,41 @@
 
   .garantia__text {
     font-size: 1.3rem;
+  }
+
+  .garantia {
+    padding: 2em 3em;
+  }
+
+  .garantia__container_cta {
+    flex-direction: column;
+  }
+
+  .garantia__container_quote {
+    width: 75%;
+  }
+
+  .garantia__quote {
+    font-size: 1.7rem;
+  }
+
+  .garantia__quote_author {
+    font-size: 1.2rem;
+  }
+
+  .garantia__hook {
+    width: 100%;
+    text-align: center;
+    margin: 2em 0 2em auto;
+    font-size: 1.5rem;
+  }
+
+  .garantia__btn {
+    max-width: 100%;
+    border-radius: 3em;
+  }
+
+  .garantia__link {
+    font-size: 1.5rem;
   }
 }

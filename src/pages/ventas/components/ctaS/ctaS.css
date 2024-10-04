@@ -48,14 +48,19 @@
   max-width: 100%;
   background-color: #e1f102;
   background: linear-gradient(0deg, #e1f102, white);
+  border-radius: 2em;
+  box-shadow: 0 0 5px white;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-s__link {
   font-size: 2rem;
   font-family: anton;
   color: #4438d8;
   text-decoration: none;
   padding: 0.5em 1em;
-  border-radius: 2em;
-  box-shadow: 0 0 5px white;
-  display: flex;
+  text-align: center;
 }
 
 .cta-s__overlay {
@@ -92,7 +97,7 @@
     font-size: 1.5rem;
   }
 
-  .cta-s__btn {
+  .cta-s__link {
     font-size: 1.5rem;
   }
 }
@@ -127,6 +132,10 @@
 
   .cta-s__btn {
     max-width: 100%;
+    border-radius: 3em;
+  }
+
+  .cta-s__link {
     font-size: 1.5rem;
     padding: 0.5em 1em;
   }

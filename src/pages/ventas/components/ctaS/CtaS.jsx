@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-export default function CtaS({ btnVariants }) {
+export default function CtaS({ btnVariants, urls }) {
   return (
     <section className='cta-s'>
       <div className='cta-s__container cta-s__container_top'>
@@ -17,15 +18,17 @@ export default function CtaS({ btnVariants }) {
         </p>
       </div>
       <div className='cta-s__container cta-s__container_btn'>
-        <motion.button
+        <motion.div
           className='cta-s__btn'
           variants={btnVariants}
           whileHover='hover'
           whileTap='tap'
           animate='loop'
         >
-          Quiero formar parte de este grupo
-        </motion.button>
+          <Link className='cta-s__link' to={urls.buyoutUrl}>
+            Quiero formar parte de este grupo
+          </Link>
+        </motion.div>
       </div>
       <div className='cta-s__overlay' />
     </section>
@@ -34,4 +37,5 @@ export default function CtaS({ btnVariants }) {
 
 CtaS.propTypes = {
   btnVariants: PropTypes.object,
+  urls: PropTypes.object,
 };
