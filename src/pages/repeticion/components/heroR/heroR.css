@@ -11,7 +11,7 @@
     rgba(68, 56, 216, 1) 120%
   );
   justify-content: center;
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 220px);
 }
 
 .hero-r__container {

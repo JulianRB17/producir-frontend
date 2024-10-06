@@ -35,6 +35,7 @@
 @import url('./pages/repeticion/components/heroR/heroR.css');
 
 @import url('./pages/notFound/notFound.css');
+@import url('./components/textChunk/textChunk.css');
 
 @import url('./vendor/normalize.css');
 @import url('./vendor/vendor.css');

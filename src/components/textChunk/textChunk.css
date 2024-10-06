@@ -1,0 +1,9 @@
+.text-chunk {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 3% 5%;
+  background: rgb(5, 2, 43);
+  justify-content: center;
+  min-height: calc(100vh - 220px);
+}

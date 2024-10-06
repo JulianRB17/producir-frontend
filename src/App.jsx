@@ -11,8 +11,9 @@ import Footer from './components/footer/Footer.jsx';
 import ProgressBar from './components/progressBar/ProgressBar.jsx';
 import api from './utils/api';
 import Header from './components/header/Header.jsx';
+import textData from './utils/textData.js';
 // import { Pixel } from "./utils/metaPixel";
-// import Privacidad from "./routes/privacidad/Privacidad";
+import TextChunk from './components/textChunk/TextChunk.jsx';
 // import CookiesNotice from "./components/cookiesNotice/CookiesNotice";
 
 function App() {
@@ -271,7 +272,23 @@ function App() {
             />
           }
         />
-        {/* <Route path="/privacidad" element={<Privacidad />} /> */}
+        <Route
+          path='/privacidad'
+          element={
+            <TextChunk text={textData.privacidad} title='Aviso de privacidad' />
+          }
+        />
+        <Route
+          path='/cookies'
+          element={
+            <TextChunk text={textData.cookies} title={'Política de cookies'} />
+          }
+        />
+        <Route
+          path='/legal'
+          element={<TextChunk text={textData.legal} title='Aviso legal' />}
+        />
+
         <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />
       </Routes>
       <Footer urls={urls} />
