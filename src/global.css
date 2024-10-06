@@ -4,11 +4,11 @@
 @import url('./components/footer/footer.css');
 @import url('./components/progressBar/progressBar.css');
 @import url('./components/date/date.css');
+@import url('./components/header/header.css');
 
 @import url('./pages/registro/components/hero/hero.css');
 @import url('./pages/registro/components/description/description.css');
 @import url('./pages/registro/components/form/form.css');
-@import url('./pages/registro/components/header/header.css');
 @import url('./pages/registro/components/host/host.css');
 @import url('./pages/registro/components/quote/quote.css');
 @import url('./pages/registro/components/venta/venta.css');

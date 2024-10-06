@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 import Host from './components/host/Host';
 import Hero from './components/hero/Hero';
@@ -7,7 +8,6 @@ import Venta from './components/venta/Venta';
 import Description from './components/description/Description';
 import About from '../../components/about/About';
 import Form from './components/form/Form';
-import Header from './components/header/Header';
 import Bios from '../../components/bios/Bios';
 import Allies from '../../components/allies/Allies';
 
@@ -28,10 +28,14 @@ export default function Registro({
   titleVariants,
   countdown,
   timestamp,
+  setIsRegistro,
 }) {
+  useEffect(() => {
+    setIsRegistro(true);
+  }, [setIsRegistro]);
+
   return (
     <section className='registro'>
-      <Header />
       <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
       <Date
         localDate={localDate}
@@ -81,4 +85,5 @@ Registro.propTypes = {
   titleVariants: PropTypes.object,
   countdown: PropTypes.func,
   timestamp: PropTypes.number,
+  setIsRegistro: PropTypes.func,
 };

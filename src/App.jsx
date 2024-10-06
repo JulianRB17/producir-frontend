@@ -10,6 +10,7 @@ import NotFound from './pages/notFound/NotFound';
 import Footer from './components/footer/Footer.jsx';
 import ProgressBar from './components/progressBar/ProgressBar.jsx';
 import api from './utils/api';
+import Header from './components/header/Header.jsx';
 // import { Pixel } from "./utils/metaPixel";
 // import Privacidad from "./routes/privacidad/Privacidad";
 // import CookiesNotice from "./components/cookiesNotice/CookiesNotice";
@@ -28,6 +29,7 @@ function App() {
   const [timestamp, setTimestamp] = useState(0);
   const [urls, setUrls] = useState({});
   const [dates, setDates] = useState({});
+  const [isRegistro, setIsRegistro] = useState(false);
   // const [cookiesEstablished, setCookiesEstablished] = useState(true);
 
   useEffect(() => {
@@ -168,6 +170,7 @@ function App() {
   // };
   return (
     <div className='app'>
+      <Header isRegistro={isRegistro} />
       <ProgressBar />
       <Routes>
         <Route
@@ -187,6 +190,7 @@ function App() {
                 btnVariants={btnVariants}
                 listElementVariants={listElementVariants}
                 titleVariants={titleVariants}
+                setIsRegistro={setIsRegistro}
               />
             </>
           }
@@ -203,6 +207,8 @@ function App() {
               titleVariants={titleVariants}
               countdown={countdown}
               timestamp={timestamp}
+              isRegistro={isRegistro}
+              setIsRegistro={setIsRegistro}
             />
           }
         />
@@ -215,6 +221,8 @@ function App() {
               btnVariants={btnVariants}
               titleVariants={titleVariants}
               dates={dates}
+              isRegistro={isRegistro}
+              setIsRegistro={setIsRegistro}
             />
           }
         />
@@ -244,6 +252,7 @@ function App() {
                 titleVariants={titleVariants}
                 countdown={countdown}
                 timestamp={timestamp}
+                setIsRegistro={setIsRegistro}
               />
             </>
           }
@@ -257,11 +266,13 @@ function App() {
               btnVariants={btnVariants}
               titleVariants={titleVariants}
               dates={dates}
+              isRegistro={isRegistro}
+              setIsRegistro={setIsRegistro}
             />
           }
         />
         {/* <Route path="/privacidad" element={<Privacidad />} /> */}
-        <Route path='*' element={<NotFound />} />
+        <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />
       </Routes>
       <Footer urls={urls} />
     </div>

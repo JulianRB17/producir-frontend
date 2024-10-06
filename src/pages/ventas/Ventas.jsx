@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types';
+import { useEffect } from 'react';
+
 import HeroVentas from './components/heroVentas/HeroVentas';
 import Situaciones from './components/situaciones/Situaciones';
 import Quote from './components/quote/Quote';
@@ -12,15 +15,18 @@ import Faqs from './components/faqs/Faqs';
 import Disclaimer from './components/disclaimer/Disclaimer';
 import CtaL from './components/ctaL/CtaL';
 
-import PropTypes from 'prop-types';
-
 export default function Ventas({
   shadowVariants,
   listElementVariants,
   btnVariants,
   titleVariants,
   urls,
+  setIsRegistro,
 }) {
+  useEffect(() => {
+    setIsRegistro(false);
+  }, [setIsRegistro]);
+
   return (
     <section className='ventas'>
       <HeroVentas
@@ -67,4 +73,5 @@ Ventas.propTypes = {
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
   urls: PropTypes.object,
+  setIsRegistro: PropTypes.func,
 };

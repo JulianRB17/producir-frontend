@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 import Date from '../../components/date/Date';
 import HeroCierreR from './components/heroCierreR/HeroCierreR';
@@ -13,7 +14,12 @@ export default function CierreRegistro({
   hour,
   countdown,
   timestamp,
+  setIsRegistro,
 }) {
+  useEffect(() => {
+    setIsRegistro(false);
+  }, [setIsRegistro]);
+
   return (
     <section className='cierre-r'>
       <HeroCierreR shadokwVariants={shadowVariants} urls={urls} />
@@ -41,4 +47,5 @@ CierreRegistro.propTypes = {
   hour: PropTypes.string,
   countdown: PropTypes.func,
   timestamp: PropTypes.number,
+  setIsRegistro: PropTypes.func,
 };
