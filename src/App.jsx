@@ -194,15 +194,27 @@ function App() {
         <Route
           path='/cierre-r'
           element={
-            <CierreRegistro localDate={localDate} hour={hour} urls={urls} />
+            <CierreRegistro
+              localDate={localDate}
+              hour={hour}
+              urls={urls}
+              shadowVariants={shadowVariants}
+              btnVariants={btnVariants}
+              titleVariants={titleVariants}
+              countdown={countdown}
+              timestamp={timestamp}
+            />
           }
         />
         <Route
           path='/cierre-v'
           element={
             <CierreVenta
-              cursoDate={dates.programaDate}
-              fbPermaUrl={urls.fbPermaUrl}
+              urls={urls}
+              shadowVariants={shadowVariants}
+              btnVariants={btnVariants}
+              titleVariants={titleVariants}
+              dates={dates}
             />
           }
         />
@@ -236,7 +248,18 @@ function App() {
             </>
           }
         />
-        <Route path='/repeticion' element={<Repeticion urls={urls} />} />
+        <Route
+          path='/repeticion'
+          element={
+            <Repeticion
+              urls={urls}
+              shadowVariants={shadowVariants}
+              btnVariants={btnVariants}
+              titleVariants={titleVariants}
+              dates={dates}
+            />
+          }
+        />
         {/* <Route path="/privacidad" element={<Privacidad />} /> */}
         <Route path='*' element={<NotFound />} />
       </Routes>

@@ -1,0 +1,160 @@
+.hero-r {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: white;
+  padding: 3% 5%;
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    33deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+}
+
+.hero-r__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-r__container_top {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hero-r__container_btn {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.hero-r__container_video {
+  align-items: center;
+  padding: 2em 0 1em;
+}
+
+.hero-r__container_cta {
+  width: 80%;
+  max-width: 1000px;
+  align-self: center;
+}
+
+.hero-r__title {
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: GandhiSans-Italic;
+  color: white;
+  margin: 0;
+}
+
+.hero-r__title_accent {
+  position: relative;
+  font-family: anton;
+  color: #e1f102;
+  font-size: 3.7rem;
+}
+
+.hero-r__title_shadow {
+  position: absolute;
+  color: #030166;
+  font-style: italic;
+  font-family: GandhiSans-BoldItalic;
+  font-size: 7rem;
+  z-index: -1;
+  top: -0.7em;
+  right: 2.2;
+}
+
+.hero-r__logo {
+  width: 150px;
+  margin: 0 0 0 auto;
+}
+
+.hero-r__video {
+  aspect-ratio: 16/9;
+  width: 60%;
+}
+
+.hero-r__logo_link {
+  width: 300px;
+}
+
+.hero-r__text {
+  font-size: 2rem;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-r__logo {
+    width: 100px;
+  }
+
+  .hero-r__title {
+    font-size: 2rem;
+
+    width: 100%;
+  }
+
+  .hero-r__title_accent {
+    font-size: 3rem;
+  }
+
+  .hero-r__title_shadow {
+    font-size: 6rem;
+    top: -0.9em;
+    right: 2.2;
+  }
+
+  .hero-r__logo_link {
+    width: 200px;
+  }
+
+  .hero-r__text {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-r__container_top {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero-r__video {
+    aspect-ratio: 16/9;
+    width: 90%;
+    margin: 2em 0;
+  }
+
+  .hero-r__logo {
+    margin-top: 1em;
+    width: 150px;
+  }
+
+  .hero-r__title {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0.5em;
+  }
+
+  .hero-r__title_accent {
+    font-size: 2rem;
+  }
+
+  .hero-r__title_shadow {
+    font-size: 4rem;
+  }
+
+  .hero-r__link {
+    font-size: 1.3rem;
+  }
+
+  .hero-r__text {
+    font-size: 1.2rem;
+  }
+}

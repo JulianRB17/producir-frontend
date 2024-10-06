@@ -1,0 +1,146 @@
+.hero-cierre-r {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: white;
+  padding: 3% 5%;
+  background: rgb(5, 2, 43);
+  background: linear-gradient(
+    138deg,
+    rgba(5, 2, 43, 1) 0%,
+    rgba(68, 56, 216, 1) 120%
+  );
+}
+
+.hero-cierre-r__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cierre-r__container_top {
+  flex-direction: row;
+}
+
+.hero-cierre-r__container_btn {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.hero-cierre-r__container_video {
+  align-items: center;
+  padding: 2em 0 1em;
+}
+
+.hero-cierre-r__title {
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: GandhiSans-Italic;
+  color: white;
+  margin: 0;
+}
+
+.hero-cierre-r__title_accent {
+  position: relative;
+  font-family: anton;
+  color: #e1f102;
+  font-size: 3.7rem;
+}
+
+.hero-cierre-r__title_accent-sm {
+  color: #e1f102;
+  font-family: GandhiSans-Italic;
+}
+
+.hero-cierre-r__title_shadow {
+  position: absolute;
+  color: #030166;
+  font-style: italic;
+  font-family: GandhiSans-BoldItalic;
+  font-size: 7rem;
+  z-index: -1;
+  top: -0.7em;
+  right: 2.2;
+}
+
+.hero-cierre-r__logo {
+  width: 150px;
+  margin: 0 0 0 auto;
+}
+
+.hero-cierre-r__video {
+  aspect-ratio: 16/9;
+  width: 60%;
+}
+
+.hero-cierre-r__logo_disclaimer {
+  width: 300px;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-cierre-r__logo {
+    width: 100px;
+  }
+
+  .hero-cierre-r__title {
+    font-size: 2rem;
+
+    width: 100%;
+  }
+
+  .hero-cierre-r__title_accent {
+    font-size: 3rem;
+  }
+
+  .hero-cierre-r__title_shadow {
+    font-size: 6rem;
+    top: -0.6em;
+    right: 2.2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-cierre-r__container_top {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero-cierre-r__video {
+    aspect-ratio: 16/9;
+    width: 90%;
+    margin: 2em 0;
+  }
+
+  .hero-cierre-r__logo {
+    margin-top: 1em;
+    width: 150px;
+  }
+
+  .hero-cierre-r__title {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0.5em;
+  }
+
+  .hero-cierre-r__title_accent {
+    font-size: 2rem;
+  }
+
+  .hero-cierre-r__title_shadow {
+    font-size: 4rem;
+  }
+
+  .hero-cierre-r__link {
+    font-size: 1.3rem;
+  }
+
+  .hero-cierre-r__disclaimer {
+    text-align: center;
+  }
+
+  .hero-cierre-r__arrow {
+    width: 4em;
+  }
+}

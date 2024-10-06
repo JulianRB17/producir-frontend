@@ -9,6 +9,11 @@
   font-family: GandhiSans-Regular;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 .hidden {
   display: none;
   opacity: 0;

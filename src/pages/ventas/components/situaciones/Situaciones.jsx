@@ -11,7 +11,7 @@ export default function Situaciones({
   urls,
 }) {
   return (
-    <section className='situaciones'>
+    <section className='situaciones' id='situaciones'>
       <h2 className='situaciones__title'>
         <motion.span
           className='situaciones__title situaciones__title_shadow'

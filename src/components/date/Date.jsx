@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import clockSrc from '../../../../assets/imgs/reloj.svg';
+import clockSrc from '../../assets/imgs/reloj.svg';
 import PropTypes from 'prop-types';
 
 export default function Date({ localDate, hour, countdown, timestamp }) {

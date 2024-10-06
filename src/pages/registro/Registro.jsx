@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import Host from './components/host/Host';
 import Hero from './components/hero/Hero';
-import Date from './components/date/Date';
+import Date from '../../components/date/Date';
 import Venta from './components/venta/Venta';
 import Description from './components/description/Description';
 import About from '../../components/about/About';
@@ -8,8 +10,6 @@ import Form from './components/form/Form';
 import Header from './components/header/Header';
 import Bios from '../../components/bios/Bios';
 import Allies from '../../components/allies/Allies';
-
-import PropTypes from 'prop-types';
 
 export default function Registro({
   localDate,

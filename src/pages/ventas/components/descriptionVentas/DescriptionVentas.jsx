@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 import trianguloAzulSrc from '../../../../assets/imgs/triangulo-azul.svg';
 import trianguloAmarilloSrc from '../../../../assets/imgs/triangulo-amarillo.svg';
-
-import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
 
 export default function DescriptionVentas({
   listElementVariants,

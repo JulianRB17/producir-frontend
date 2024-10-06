@@ -6,6 +6,16 @@ import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
 export default function Hero({ shadowVariants, btnVariants }) {
+  const handleScrollToDateClick = (e) => {
+    e.preventDefault();
+    document.getElementById('date')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleScrollToFormClick = (e) => {
+    e.preventDefault();
+    document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className='hero'>
       <motion.div
@@ -42,15 +52,16 @@ export default function Hero({ shadowVariants, btnVariants }) {
           />
         </div>
         <div className='hero__container hero__container_btn'>
-          <motion.a
+          <motion.button
             className='hero_btn hero__btn_registro'
             href='#form'
             variants={btnVariants}
             whileHover='hover'
             whileTap='tap'
+            onClick={handleScrollToFormClick}
           >
             Regístrate gratis
-          </motion.a>
+          </motion.button>
         </div>
         <div className='hero__container hero__container_disclaimer'>
           <img
@@ -63,9 +74,16 @@ export default function Hero({ shadowVariants, btnVariants }) {
           </p>
         </div>
         <div className='hero__container hero__container_arrow'>
-          <a href='#date' className='hero_btn hero__btn_arrow'>
+          <motion.button
+            variants={btnVariants}
+            animate='loop'
+            whileHover='hover'
+            whileTap='tap'
+            className='hero_btn hero__btn_arrow'
+            onClick={handleScrollToDateClick}
+          >
             <img src={flechaSrc} alt='flecha' className='hero__arrow' />
-          </a>
+          </motion.button>
         </div>
       </motion.div>
       <div className='hero__overlay' />
