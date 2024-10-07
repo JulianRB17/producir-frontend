@@ -1,9 +1,9 @@
-import veroSrc from '../../assets/imgs/vero.webp';
-import julianSrc from '../../assets/imgs/julian-bn.webp';
-import triangleSrc from '../../assets/imgs/triangulo-azul.svg';
-
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+
+import veroSrc from '../../assets/imgs/vero2.webp';
+import julianSrc from '../../assets/imgs/julian-bn.webp';
+import triangleSrc from '../../assets/imgs/triangulo-azul.svg';
 
 export default function Bios({ listElementVariants }) {
   return (
@@ -25,8 +25,8 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Egresada de la carrera de Literatura Dramática y Teatro de la
-              UNAM.
+              Productora y gestora con 9 años de trayectoria en proyectos
+              culturales y artísticos para instituciones públicas y privadas.
             </p>
           </li>
           <li className='bios__element'>
@@ -81,8 +81,8 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Egresado de la carrera de Literatura Dramática y Teatro de la
-              UNAM.
+              Teatrero: director escénico, actor, productor y gestor con 8 años
+              de experiencia en el medio profesional.
             </p>
           </li>
           <li className='bios__element'>

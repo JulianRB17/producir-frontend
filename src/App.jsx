@@ -14,7 +14,7 @@ import Header from './components/header/Header.jsx';
 import textData from './utils/textData.js';
 // import { Pixel } from "./utils/metaPixel";
 import TextChunk from './components/textChunk/TextChunk.jsx';
-// import CookiesNotice from "./components/cookiesNotice/CookiesNotice";
+import CookiesNotice from './components/cookiesNotice/CookiesNotice';
 
 function App() {
   const [formValues, setFormValues] = useState({
@@ -31,7 +31,7 @@ function App() {
   const [urls, setUrls] = useState({});
   const [dates, setDates] = useState({});
   const [isRegistro, setIsRegistro] = useState(false);
-  // const [cookiesEstablished, setCookiesEstablished] = useState(true);
+  const [cookiesEstablished, setCookiesEstablished] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -158,17 +158,18 @@ function App() {
     },
   };
 
-  // const handleCookiesAccept = (e) => {
-  //   e.preventDefault();
-  //   // Pixel.grantConsent();
-  //   setCookiesEstablished(true);
-  // };
+  const handleCookiesAccept = (e) => {
+    e.preventDefault();
+    // Pixel.grantConsent();
+    setCookiesEstablished(true);
+  };
 
   // const handleCookiesReject = (e) => {
   //   e.preventDefault();
   //   // Pixel.revokeConsent();
   //   setCookiesEstablished(true);
   // };
+
   return (
     <div className='app'>
       <Header isRegistro={isRegistro} />
@@ -179,11 +180,12 @@ function App() {
           element={
             <>
               {/* <Pixel /> */}
-              {/* <CookiesNotice
+              <CookiesNotice
                 cookiesEstablished={cookiesEstablished}
                 onCookiesAccept={handleCookiesAccept}
-                onCookiesReject={handleCookiesReject}
-              /> */}
+                btnVariants={btnVariants}
+                // onCookiesReject={handleCookiesReject}
+              />
               <Ventas
                 urls={urls}
                 dates={dates}
@@ -231,11 +233,12 @@ function App() {
           path='/registro'
           element={
             <>
-              {/* <CookiesNotice
+              <CookiesNotice
                 cookiesEstablished={cookiesEstablished}
                 onCookiesAccept={handleCookiesAccept}
-                onCookiesReject={handleCookiesReject}
-              /> */}
+                btnVariants={btnVariants}
+                // onCookiesReject={handleCookiesReject}
+              />
               <Registro
                 localDate={localDate}
                 hour={hour}
