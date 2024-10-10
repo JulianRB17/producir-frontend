@@ -6,8 +6,10 @@
 //   window.fbq('track', 'PageView');
 // };
 
+// https://www.youtube.com/watch?v=OcWUJ1gOWGs
+
 export const event = (name, options = {}) => {
-  window.fbq("track", name, options);
+  window.fbq('track', name, options);
 };
 
 {

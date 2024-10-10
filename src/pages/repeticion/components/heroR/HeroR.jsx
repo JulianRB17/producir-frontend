@@ -65,7 +65,10 @@ export default function HeroR({
         <p className='hero-r__text'>
           Si quisieras profundizar en la información y tener un acompañamiento
           paso a paso para lograr levantar tu proyecto escénico, te dejamos un
-          link a nuestro curso online, El arte de producir:
+          link a nuestro curso online,{' '}
+          <span className='hero-r__text hero-r__text_accent'>
+            El arte de producir:
+          </span>
         </p>
         <div className='hero-r__container hero-r__container_logo hero-r__container_btn'>
           <motion.button

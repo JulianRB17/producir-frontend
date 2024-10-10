@@ -75,7 +75,7 @@
   background-color: #05022b;
   padding: 1em;
   width: 350px;
-  height: 350px;
+  height: 380px;
   margin: 0.5em 0.5em;
   color: #aca6e4;
 }
@@ -91,6 +91,17 @@
   font-family: GandhiSans-Italic;
   font-style: italic;
   font-weight: 400;
+}
+
+.description-ventas__date {
+  text-align: center;
+  margin: 0.5em 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.description-ventas__date_black {
+  color: black;
 }
 
 .description-ventas__element-title {

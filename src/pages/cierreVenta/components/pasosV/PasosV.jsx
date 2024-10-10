@@ -29,11 +29,11 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
           initial='initial'
           whileInView='view'
         >
-          {dates.programaDate}
+          {dates.modulesDate}
         </motion.p>
       </motion.div>
       <p className='pasos-v__text pasos-v__text_instructions'>
-        El programa será dado los {dates.semanaDays} por la plataforma Zoom.
+        El programa será dado los {dates.diaSemanaDate} por la plataforma Zoom.
       </p>
       <div className='pasos-v__container pasos-v__container_elements'>
         <div className='pasos-v__element'>
@@ -108,7 +108,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             </Link>
           </motion.button>
         </div>
-        <div className='pasos-v__element'>
+        <div className='pasos-v__element hidden'>
           <img
             src={bookmarkSrc}
             alt='Ícono de guardado'

@@ -8,7 +8,7 @@ import trianguloAmarilloSrc from '../../../../assets/imgs/triangulo-amarillo.svg
 export default function DescriptionVentas({
   listElementVariants,
   titleVariants,
-  // urls,
+  dates,
 }) {
   return (
     <section className='description-ventas'>
@@ -54,7 +54,8 @@ export default function DescriptionVentas({
         </p>
         <p className='description-ventas__text'>
           Estos son los módulos que trabajaremos en este programa, éste será en
-          línea y nos veremos los DÍA de HORA INICIO a HORA FINAL.
+          línea y nos veremos los {dates.diaSemanaDate} de {dates.modulesDate}{' '}
+          de {dates.programaHoraDate}.
         </p>
         <p className='description-ventas__text'>
           Además,{' '}
@@ -77,6 +78,7 @@ export default function DescriptionVentas({
           <p className='description-ventas__element-title'>
             (ÉTICA Y PRODUCCIÓN)
           </p>
+          <p className='description-ventas__date'>{dates.moduleDate_1}</p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -126,6 +128,9 @@ export default function DescriptionVentas({
           </h3>
           <p className='description-ventas__element-title description-ventas__element-title_azul'>
             (PRODUCCIÓN)
+          </p>
+          <p className='description-ventas__date description-ventas__date_black '>
+            {dates.moduleDate_2}
           </p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
@@ -189,6 +194,7 @@ export default function DescriptionVentas({
             Descubre posibilidades
           </h3>
           <p className='description-ventas__element-title'>(GESTIÓN)</p>
+          <p className='description-ventas__date'>{dates.moduleDate_3}</p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -261,6 +267,9 @@ export default function DescriptionVentas({
           <p className='description-ventas__element-title description-ventas__element-title_azul'>
             (DIFUSIÓN)
           </p>
+          <p className='description-ventas__date description-ventas__date_black'>
+            {dates.moduleDate_4}
+          </p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -324,6 +333,7 @@ export default function DescriptionVentas({
           <p className='description-ventas__element-title'>
             (CONSOLIDAR EL PROYECTO)
           </p>
+          <p className='description-ventas__date'>{dates.moduleDate_5}</p>
           <ul className='description-ventas__list'>
             <li className='description-ventas__list-element'>
               <motion.img
@@ -374,5 +384,5 @@ export default function DescriptionVentas({
 DescriptionVentas.propTypes = {
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
-  urls: PropTypes.object,
+  dates: PropTypes.object,
 };

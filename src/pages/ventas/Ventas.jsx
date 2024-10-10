@@ -22,6 +22,7 @@ export default function Ventas({
   titleVariants,
   urls,
   setIsRegistro,
+  dates,
 }) {
   useEffect(() => {
     setIsRegistro(false);
@@ -49,7 +50,7 @@ export default function Ventas({
       />
       <CtaS btnVariants={btnVariants} urls={urls} />
       <DescriptionVentas
-        urls={urls}
+        dates={dates}
         titleVariants={titleVariants}
         listElementVariants={listElementVariants}
       />
@@ -74,4 +75,5 @@ Ventas.propTypes = {
   titleVariants: PropTypes.object,
   urls: PropTypes.object,
   setIsRegistro: PropTypes.func,
+  dates: PropTypes.object,
 };

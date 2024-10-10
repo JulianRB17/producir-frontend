@@ -39,8 +39,8 @@ export default function Hero({ shadowVariants, btnVariants }) {
               Aprende las 3 claves
             </h1>
             <h1 className='hero__title'>
-              para desarrollar tus proyectos y profesionalizar tu carrera
-              artística.
+              para desarrollar tus proyectos escénicos y profesionalizar tu
+              carrera artística.
             </h1>
           </div>
         </div>

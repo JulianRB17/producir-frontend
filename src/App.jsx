@@ -69,7 +69,8 @@ function App() {
 
     try {
       const contactData = await api.postContact(formValues);
-      if (contactData.contactList) {
+      // if (contactData.contactList) {
+      if (contactData) {
         setMsgSuccess(true);
         setSentUser(true);
         navigate('/cierre-r');

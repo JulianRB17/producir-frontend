@@ -44,7 +44,6 @@ export default function HeroCierreV({ shadowVariants, urls }) {
           allowFullScreen
         ></iframe>
       </div>
-      <div className='hero-cierre-v__overlay' />
     </section>
   );
 }

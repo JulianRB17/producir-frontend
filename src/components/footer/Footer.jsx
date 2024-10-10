@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 export default function Footer({ urls }) {
   return (
     <footer className='footer'>
-      <div className='footer__container footer__container_rrss'>
+      <div className='footer__container footer__container_rrss hidden'>
         <Link to={urls.fbPermaUrl} className='footer__link footer__link_rrss'>
           <img
             src={fbSrc}

@@ -1,9 +1,7 @@
-import { data } from './dataDummie.js';
-
 class Api {
   constructor() {
-    this._baseUrl = 'https://elartedeproducir.com/api/';
-    // this._baseUrl = 'http://localhost:3001/';
+    // this._baseUrl = 'https://elartedeproducir.com/api/';
+    this._baseUrl = 'http://localhost:3000/';
     this._options = {
       headers: {
         accept: 'application/json',
@@ -30,18 +28,16 @@ class Api {
   }
 
   async _fetchData() {
-    // try {
-    //   const res = await fetch(this._baseUrl + this._specificUrl, this._options);
-    //   console.log(res);
-    //   if (res.ok) {
-    //     return res.json();
-    //   } else {
-    //     return Promise.reject(`Error: ${res.status}`);
-    //   }
-    // } catch (err) {
-    //   console.error(err);
-    // }
-    return data;
+    try {
+      const res = await fetch(this._baseUrl + this._specificUrl, this._options);
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   // Por si algún día regreso a mi backend

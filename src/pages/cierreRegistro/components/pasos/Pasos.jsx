@@ -72,7 +72,7 @@ export default function Pasos({ titleVariants, btnVariants, urls }) {
             </Link>
           </motion.button>
         </div>
-        <div className='pasos__element'>
+        <div className='pasos__element hidden'>
           <img
             src={bookmarkSrc}
             alt='Ícono de guardado'
