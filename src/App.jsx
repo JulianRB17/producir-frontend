@@ -283,15 +283,18 @@ function App() {
           }
         />
         <Route
-          path='/cookies'
+          path='/condiciones'
           element={
-            <TextChunk text={textData.cookies} title={'Política de cookies'} />
+            <TextChunk
+              text={textData.condiciones}
+              title={'Términos y condiciones'}
+            />
           }
         />
-        <Route
+        {/* <Route
           path='/legal'
           element={<TextChunk text={textData.legal} title='Aviso legal' />}
-        />
+        /> */}
 
         <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />
       </Routes>

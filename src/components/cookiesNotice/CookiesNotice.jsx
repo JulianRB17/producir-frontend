@@ -64,12 +64,12 @@ export default function CookiesNotice({
         </motion.button>
         <motion.a
           className='cookies-notice__btn cookies-notice__btn_link'
-          href='/cookies'
+          href='/privacidad'
           variants={btnVariants}
           whileHover='hover'
           whileTap='tap'
         >
-          Terminos y condiciones de cookies
+          Aviso de privacidad
         </motion.a>
       </div>
     </section>

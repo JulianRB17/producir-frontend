@@ -46,11 +46,11 @@ export default function Footer({ urls }) {
           Aviso de privacidad
         </Link>
         <p className='footer__aviso'>|</p>
-        <Link className='footer__aviso' to='/cookies'>
-          Política de cokies
+        <Link className='footer__aviso' to='/condiciones'>
+          Términos y condiciones
         </Link>
         <p className='footer__aviso'>|</p>
-        <Link className='footer__aviso' to='/legal'>
+        <Link className='footer__aviso hidden' to='/legal'>
           Aviso legal
         </Link>
       </div>
