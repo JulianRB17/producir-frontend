@@ -23,6 +23,6 @@ export default function TextChunk({ text, title }) {
 }
 
 TextChunk.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.array,
   title: PropTypes.string,
 };

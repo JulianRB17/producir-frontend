@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 
-export default function CtaL({ btnVariants, urls }) {
+export default function CtaL({ btnVariants, handleBuyClick }) {
   return (
     <section className='cta-l'>
       <div className='cta-l__container cta-l__container_title'>
@@ -23,23 +22,22 @@ export default function CtaL({ btnVariants, urls }) {
       />
       <div className='cta-l__container cta-l__container_cta'>
         <p className='cta-l__text cta-l__text_venta'>
-          Por sólo{' '}
+          Por sólo $3,487 MXN{' '}
           <span className='cta-l__text cta-l__text_venta cta-l__text_accent'>
             (valor real de $10,000)
           </span>{' '}
-          $3,500mxn adquiere:
+          adquiere:
         </p>
-        <motion.div
+        <motion.button
           className='cta-l__btn'
           variants={btnVariants}
           whileHover='hover'
           whileTap='tap'
           animate='loop'
+          onClick={handleBuyClick}
         >
-          <Link className='cta-l__link' to={urls.buyoutUrl}>
-            Quiero formar parte de este programa
-          </Link>
-        </motion.div>
+          Quiero formar parte de este programa
+        </motion.button>
       </div>
       <div className='cta-l__container cta-l__container_text'>
         <p className='cta-l__text cta-l__text_hook'>
@@ -58,5 +56,5 @@ export default function CtaL({ btnVariants, urls }) {
 
 CtaL.propTypes = {
   btnVariants: PropTypes.object,
-  urls: PropTypes.object,
+  handleBuyClick: PropTypes.func,
 };

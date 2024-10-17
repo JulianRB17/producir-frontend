@@ -52,9 +52,7 @@
   box-shadow: 0 0 5px white;
   display: flex;
   justify-content: center;
-}
 
-.cta-s__link {
   font-size: 2rem;
   font-family: anton;
   color: #4438d8;
@@ -97,7 +95,7 @@
     font-size: 1.5rem;
   }
 
-  .cta-s__link {
+  .cta-s__btn {
     font-size: 1.5rem;
   }
 }
@@ -132,10 +130,6 @@
 
   .cta-s__btn {
     max-width: 100%;
-    border-radius: 3em;
-  }
-
-  .cta-s__link {
     font-size: 1.5rem;
     padding: 0.5em 1em;
   }

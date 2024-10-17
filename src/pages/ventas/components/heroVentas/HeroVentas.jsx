@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
@@ -6,7 +5,11 @@ import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
-export default function HeroVentas({ shadowVariants, btnVariants, urls }) {
+export default function HeroVentas({
+  shadowVariants,
+  btnVariants,
+  handleBuyClick,
+}) {
   const handleScrollClick = (e) => {
     e.preventDefault();
     document
@@ -53,16 +56,15 @@ export default function HeroVentas({ shadowVariants, btnVariants, urls }) {
           />
         </div>
         <div className='hero-ventas__container hero-ventas__container_btn'>
-          <motion.div
+          <motion.button
             className='hero-ventas_btn hero-ventas__btn_cta'
             variants={btnVariants}
             whileHover='hover'
             whileTap='tap'
+            onClick={handleBuyClick}
           >
-            <Link to={urls.buyoutUrl} className='hero-ventas__link'>
-              Haz click aquí para unirte
-            </Link>
-          </motion.div>
+            Haz click aquí para unirte
+          </motion.button>
         </div>
         <div className='hero-ventas__container hero-ventas__container_disclaimer'>
           <img
@@ -99,5 +101,5 @@ export default function HeroVentas({ shadowVariants, btnVariants, urls }) {
 HeroVentas.propTypes = {
   shadowVariants: PropTypes.object,
   btnVariants: PropTypes.object,
-  urls: PropTypes.object,
+  handleBuyClick: PropTypes.func,
 };

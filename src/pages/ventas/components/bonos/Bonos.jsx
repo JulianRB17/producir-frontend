@@ -174,10 +174,10 @@ export default function Bonos({ titleVariants }) {
         </div>
       </div>
       <p className='bonos__text'>
-        El valor total de este programa es de $10,000mxn
+        El valor total de este programa es de $10,000 MXN
       </p>
       <p className='bonos__text bonos__text_accent'>
-        sin embargo puedes adquirirlo ahora por sólo $3,500mxn.
+        sin embargo puedes adquirirlo ahora por sólo $3,487 MXN.
       </p>
       <div className='bonos__overlay' />
     </section>

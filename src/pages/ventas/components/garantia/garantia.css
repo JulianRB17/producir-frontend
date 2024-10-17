@@ -103,9 +103,7 @@
   border-radius: 2em;
   box-shadow: 0 0 5px white;
   display: flex;
-}
 
-.garantia__link {
   font-size: 2rem;
   font-family: anton;
   color: #4438d8;
@@ -147,7 +145,7 @@
     font-size: 1.5rem;
   }
 
-  .garantia__link {
+  .garantia__btn {
     font-size: 1.5rem;
   }
 }
@@ -200,10 +198,6 @@
 
   .garantia__btn {
     max-width: 100%;
-    border-radius: 3em;
-  }
-
-  .garantia__link {
     font-size: 1.5rem;
   }
 }

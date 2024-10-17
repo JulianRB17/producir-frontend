@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import listElementSrc from '../../../../assets/imgs/triangulo-amarillo.svg';
 
@@ -8,7 +7,7 @@ export default function Situaciones({
   shadowVariants,
   listElementVariants,
   btnVariants,
-  urls,
+  handleBuyClick,
 }) {
   return (
     <section className='situaciones' id='situaciones'>
@@ -170,16 +169,15 @@ export default function Situaciones({
           </span>
         </p>
         <p className='situaciones__cta'>Para formar parte de este grupo.</p>
-        <motion.div
+        <motion.button
           className='situaciones__btn'
           variants={btnVariants}
           whileHover='hover'
           whileTap='tap'
+          onClick={handleBuyClick}
         >
-          <Link className='situaciones__link' to={urls.buyoutUrl}>
-            Haz click aquí
-          </Link>
-        </motion.div>
+          Haz click aquí
+        </motion.button>
       </div>
     </section>
   );
@@ -189,5 +187,5 @@ Situaciones.propTypes = {
   shadowVariants: PropTypes.object,
   listElementVariants: PropTypes.object,
   btnVariants: PropTypes.object,
-  urls: PropTypes.object,
+  handleBuyClick: PropTypes.func,
 };

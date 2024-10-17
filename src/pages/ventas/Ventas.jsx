@@ -20,9 +20,9 @@ export default function Ventas({
   listElementVariants,
   btnVariants,
   titleVariants,
-  urls,
   setIsRegistro,
   dates,
+  handleBuyClick,
 }) {
   useEffect(() => {
     setIsRegistro(false);
@@ -33,13 +33,13 @@ export default function Ventas({
       <HeroVentas
         shadokwVariants={shadowVariants}
         btnVariants={btnVariants}
-        urls={urls}
+        handleBuyClick={handleBuyClick}
       />
       <Situaciones
         shadowVariants={shadowVariants}
         listElementVariants={listElementVariants}
         btnVariants={btnVariants}
-        urls={urls}
+        handleBuyClick={handleBuyClick}
       />
       <Quote />
       <About titleVariants={titleVariants} />
@@ -48,22 +48,22 @@ export default function Ventas({
         shadowVariants={shadowVariants}
         listElementVariants={listElementVariants}
       />
-      <CtaS btnVariants={btnVariants} urls={urls} />
+      <CtaS btnVariants={btnVariants} handleBuyClick={handleBuyClick} />
       <DescriptionVentas
         dates={dates}
         titleVariants={titleVariants}
         listElementVariants={listElementVariants}
       />
-      <CtaL btnVariants={btnVariants} urls={urls} />
+      <CtaL btnVariants={btnVariants} handleBuyClick={handleBuyClick} />
       <Bonos titleVariants={titleVariants} />
       <Garantia
         shadowVakriants={shadowVariants}
         btnVariants={btnVariants}
-        urls={urls}
+        handleBuyClick={handleBuyClick}
       />
       <Faqs titleVariants={titleVariants} />
       <Disclaimer />
-      <CtaL btnVariants={btnVariants} urls={urls} />
+      <CtaL btnVariants={btnVariants} handleBuyClick={handleBuyClick} />
     </section>
   );
 }
@@ -73,7 +73,7 @@ Ventas.propTypes = {
   btnVariants: PropTypes.object,
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
-  urls: PropTypes.object,
   setIsRegistro: PropTypes.func,
   dates: PropTypes.object,
+  handleBuyClick: PropTypes.func,
 };

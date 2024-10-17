@@ -9,10 +9,10 @@ import { countdown } from './utils/countdown.js';
 import NotFound from './pages/notFound/NotFound';
 import Footer from './components/footer/Footer.jsx';
 import ProgressBar from './components/progressBar/ProgressBar.jsx';
-import api from './utils/api';
+import api from './utils/api.js';
 import Header from './components/header/Header.jsx';
 import textData from './utils/textData.js';
-// import { Pixel } from "./utils/metaPixel";
+import { Pixel } from './utils/metaPixel';
 import TextChunk from './components/textChunk/TextChunk.jsx';
 import CookiesNotice from './components/cookiesNotice/CookiesNotice';
 
@@ -30,14 +30,16 @@ function App() {
   const [timestamp, setTimestamp] = useState(0);
   const [urls, setUrls] = useState({});
   const [dates, setDates] = useState({});
+  const [fbData, setFbData] = useState({});
   const [isRegistro, setIsRegistro] = useState(false);
   const [cookiesEstablished, setCookiesEstablished] = useState(false);
 
   useEffect(() => {
     (async () => {
       const data = await api.getData();
-      setDates(data.dates);
-      setUrls(data.urls);
+      if (data.dates) setDates(data.dates);
+      if (data.urls) setUrls(data.urls);
+      if (data.fbData) setFbData(data.fbData);
       return;
     })();
   }, []);
@@ -67,6 +69,10 @@ function App() {
     e.preventDefault();
     setLoading(true);
 
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead');
+    }
+
     try {
       const contactData = await api.postContact(formValues);
       // if (contactData.contactList) {
@@ -91,6 +97,14 @@ function App() {
         email: '',
       });
       alert('Ahh, algo salió malo, por favor vuelve a intentarlo.');
+    }
+  };
+
+  const handleBuyClick = (e) => {
+    e.preventDefault();
+    window.location.href = urls.buyoutUrl;
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout');
     }
   };
 
@@ -173,6 +187,7 @@ function App() {
 
   return (
     <div className='app'>
+      <Pixel pixelID={fbData.pixelId} />
       <Header isRegistro={isRegistro} />
       <ProgressBar />
       <Routes>
@@ -195,6 +210,7 @@ function App() {
                 listElementVariants={listElementVariants}
                 titleVariants={titleVariants}
                 setIsRegistro={setIsRegistro}
+                handleBuyClick={handleBuyClick}
               />
             </>
           }

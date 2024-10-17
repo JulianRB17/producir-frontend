@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-export default function Garantia({ shadowVariants, btnVariants, urls }) {
+export default function Garantia({
+  shadowVariants,
+  btnVariants,
+  handleBuyClick,
+}) {
   return (
     <section className='garantia'>
       <div className='garantia__container'>
@@ -54,17 +57,16 @@ export default function Garantia({ shadowVariants, btnVariants, urls }) {
         </p>
       </div>
       <div className='garantia__container garantia__container_btn'>
-        <motion.div
+        <motion.button
           className='garantia__btn'
           variants={btnVariants}
           whileHover='hover'
           whileTap='tap'
           animate='loop'
+          onClick={handleBuyClick}
         >
-          <Link className='garantia__link' to={urls.buyoutUrl}>
-            Quiero formar parte de este grupo
-          </Link>
-        </motion.div>
+          Quiero formar parte de este grupo
+        </motion.button>
       </div>
     </section>
   );
@@ -73,5 +75,5 @@ export default function Garantia({ shadowVariants, btnVariants, urls }) {
 Garantia.propTypes = {
   shadowVariants: PropTypes.object,
   btnVariants: PropTypes.object,
-  urls: PropTypes.object,
+  handleBuyClick: PropTypes.func,
 };

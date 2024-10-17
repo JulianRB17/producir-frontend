@@ -92,12 +92,7 @@
   width: fit-content;
   border: 2px solid #e1f102;
   border-radius: 3em;
-  padding: 1em 1.5em;
-  display: flex;
-  align-items: center;
-}
-
-.hero-ventas__link {
+  padding: 0.5em 1em;
   color: white;
   font-size: 2rem;
   font-family: anton;
@@ -225,7 +220,7 @@
     font-size: 4rem;
   }
 
-  .hero-ventas__link {
+  .hero-ventas__btn_cta {
     font-size: 1.3rem;
   }
 
