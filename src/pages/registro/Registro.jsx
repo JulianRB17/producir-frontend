@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import Host from './components/host/Host';
 import Hero from './components/hero/Hero';
@@ -28,43 +28,43 @@ export default function Registro({
   titleVariants,
   countdown,
   timestamp,
-  setIsRegistro,
 }) {
-  useEffect(() => {
-    setIsRegistro(true);
-  }, [setIsRegistro]);
-
   return (
-    <section className='registro'>
-      <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
-      <Date
-        localDate={localDate}
-        hour={hour}
-        countdown={countdown}
-        timestamp={timestamp}
-      />
-      <Host />
-      <Venta
-        shadowVariants={shadowVariants}
-        listElementVariants={listElementVariants}
-      />
-      <Description />
-      <About titleVariants={titleVariants} />
-      <Bios listElementVariants={listElementVariants} />
-      <Allies shadowVariants={shadowVariants} />
-      <Form
-        onSubmit={onSubmit}
-        onChange={onChange}
-        sentUser={sentUser}
-        isValidForm={isValidForm}
-        loading={loading}
-        msgSuccess={msgSuccess}
-        setSentUser={setSentUser}
-        formValues={formValues}
-        shadowVariants={shadowVariants}
-        btnVariants={btnVariants}
-      />
-    </section>
+    <>
+      <Helmet>
+        <title>Registro</title>
+      </Helmet>
+      <section className='registro'>
+        <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
+        <Date
+          localDate={localDate}
+          hour={hour}
+          countdown={countdown}
+          timestamp={timestamp}
+        />
+        <Host />
+        <Venta
+          shadowVariants={shadowVariants}
+          listElementVariants={listElementVariants}
+        />
+        <Description />
+        <About titleVariants={titleVariants} />
+        <Bios listElementVariants={listElementVariants} />
+        <Allies shadowVariants={shadowVariants} />
+        <Form
+          onSubmit={onSubmit}
+          onChange={onChange}
+          sentUser={sentUser}
+          isValidForm={isValidForm}
+          loading={loading}
+          msgSuccess={msgSuccess}
+          setSentUser={setSentUser}
+          formValues={formValues}
+          shadowVariants={shadowVariants}
+          btnVariants={btnVariants}
+        />
+      </section>
+    </>
   );
 }
 
@@ -85,5 +85,4 @@ Registro.propTypes = {
   titleVariants: PropTypes.object,
   countdown: PropTypes.func,
   timestamp: PropTypes.number,
-  setIsRegistro: PropTypes.func,
 };

@@ -32,3 +32,17 @@
 .text-chunk__text {
   margin: 0.5em 0;
 }
+
+.text-chunk__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-chunk__btn {
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 1em;
+  outline: 1px solid white;
+  padding: 0.3em 1em;
+}

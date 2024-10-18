@@ -1,5 +1,7 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
+
 import Ventas from './pages/ventas/Ventas';
 import CierreRegistro from './pages/cierreRegistro/CierreRegistro';
 import CierreVenta from './pages/cierreVenta/CierreVenta';
@@ -14,7 +16,7 @@ import Header from './components/header/Header.jsx';
 import textData from './utils/textData.js';
 import { Pixel } from './utils/metaPixel';
 import TextChunk from './components/textChunk/TextChunk.jsx';
-import CookiesNotice from './components/cookiesNotice/CookiesNotice';
+import CookiesNotice from './components/cookiesNotice/CookiesNotice.jsx';
 
 function App() {
   const [formValues, setFormValues] = useState({
@@ -32,7 +34,9 @@ function App() {
   const [dates, setDates] = useState({});
   const [fbData, setFbData] = useState({});
   const [isRegistro, setIsRegistro] = useState(false);
-  const [cookiesEstablished, setCookiesEstablished] = useState(false);
+  const [showCookiesBanner, setShowCookiesBanner] = useState(false);
+  const [cookiesEnabled, setCookiesEnabled] = useState(false);
+  const [isPrivacidad, setIsPrivacidad] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -53,6 +57,7 @@ function App() {
   }, [dates.webinarDate]);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = (e) => {
     const { target } = e;
@@ -100,12 +105,56 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    const currentPath = location.pathname;
+    if (currentPath === '/privacidad') {
+      setIsPrivacidad(true);
+      setIsRegistro(false);
+    }
+    if (currentPath === '/registro') {
+      setIsPrivacidad(false);
+      setIsRegistro(true);
+    } else {
+      setIsPrivacidad(false);
+      setIsRegistro(false);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const consent = Cookies.get('cookie_consent');
+    console.log(consent);
+    if (!consent) {
+      setShowCookiesBanner(true);
+      setCookiesEnabled(false);
+    }
+  }, [setCookiesEnabled, setShowCookiesBanner]);
+
   const handleBuyClick = (e) => {
     e.preventDefault();
     window.location.href = urls.buyoutUrl;
     if (typeof fbq === 'function') {
       fbq('track', 'InitiateCheckout');
     }
+  };
+
+  const removePixelCookies = () => {
+    Cookies.remove('_fbp');
+    Cookies.remove('_fbc');
+  };
+
+  const handleCookiesAccept = (e) => {
+    e.preventDefault();
+    setShowCookiesBanner(false);
+    setCookiesEnabled(true);
+    Cookies.set('cookie_consent', 'accepted', { expires: 30 });
+  };
+
+  const handleCookiesReject = (e) => {
+    e.preventDefault();
+    setShowCookiesBanner(false);
+    setCookiesEnabled(false);
+    removePixelCookies();
+    Cookies.set('cookie_consent', 'reject', { expires: 30 });
   };
 
   const shadowVariants = {
@@ -173,21 +222,9 @@ function App() {
     },
   };
 
-  const handleCookiesAccept = (e) => {
-    e.preventDefault();
-    // Pixel.grantConsent();
-    setCookiesEstablished(true);
-  };
-
-  // const handleCookiesReject = (e) => {
-  //   e.preventDefault();
-  //   // Pixel.revokeConsent();
-  //   setCookiesEstablished(true);
-  // };
-
   return (
     <div className='app'>
-      <Pixel pixelID={fbData.pixelId} />
+      <Pixel pixelID={fbData.pixelId} cookiesEnabled={cookiesEnabled} />
       <Header isRegistro={isRegistro} />
       <ProgressBar />
       <Routes>
@@ -195,12 +232,11 @@ function App() {
           path='/'
           element={
             <>
-              {/* <Pixel /> */}
               <CookiesNotice
-                cookiesEstablished={cookiesEstablished}
+                showCookiesBanner={showCookiesBanner}
                 onCookiesAccept={handleCookiesAccept}
+                onCookiesReject={handleCookiesReject}
                 btnVariants={btnVariants}
-                // onCookiesReject={handleCookiesReject}
               />
               <Ventas
                 urls={urls}
@@ -251,10 +287,10 @@ function App() {
           element={
             <>
               <CookiesNotice
-                cookiesEstablished={cookiesEstablished}
+                showCookiesBanner={showCookiesBanner}
                 onCookiesAccept={handleCookiesAccept}
+                onCookiesReject={handleCookiesReject}
                 btnVariants={btnVariants}
-                // onCookiesReject={handleCookiesReject}
               />
               <Registro
                 localDate={localDate}
@@ -295,7 +331,15 @@ function App() {
         <Route
           path='/privacidad'
           element={
-            <TextChunk text={textData.privacidad} title='Aviso de privacidad' />
+            <TextChunk
+              text={textData.privacidad}
+              title='Aviso de privacidad'
+              isPrivacidad={isPrivacidad}
+              handleCookiesAccept={handleCookiesAccept}
+              handleCookiesReject={handleCookiesReject}
+              cookiesEnabled={cookiesEnabled}
+              btnVariants={btnVariants}
+            />
           }
         />
         <Route
@@ -304,12 +348,18 @@ function App() {
             <TextChunk
               text={textData.condiciones}
               title={'Términos y condiciones'}
+              handleCookiesAccept={handleCookiesAccept}
+              handleCookiesReject={handleCookiesReject}
+              cookiesEnabled={cookiesEnabled}
+              btnVariants={btnVariants}
             />
           }
         />
         {/* <Route
           path='/legal'
-          element={<TextChunk text={textData.legal} title='Aviso legal' />}
+          element={<TextChunk text={textData.legal} title='Aviso legal' handleCookiesAccept={handleCookiesAccept}
+              handleCookiesReject={handleCookiesReject}
+              cookiesEnabled={cookiesEnabled}/>}
         /> */}
 
         <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />

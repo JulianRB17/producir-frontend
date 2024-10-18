@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 
 export default function CookiesNotice({
   onCookiesAccept,
-  cookiesEstablished,
+  onCookiesReject,
+  showCookiesBanner,
   btnVariants,
 }) {
   return (
-    <section
-      className={
-        cookiesEstablished
-          ? 'cookies-notice cookies-notice_hidden'
-          : 'cookies-notice'
-      }
-    >
+    <section className={showCookiesBanner ? 'cookies-notice' : 'hidden'}>
       <div className='cookies-notice__container cookies-notice__container_title'>
         <h2 className='cookies-notice__title'>Sobre el uso de cookies</h2>
       </div>
@@ -60,7 +55,16 @@ export default function CookiesNotice({
           whileTap='tap'
           animate='loop'
         >
-          Acepto
+          Aceptar
+        </motion.button>
+        <motion.button
+          className='cookies-notice__btn cookies-notice__btn_link'
+          onClick={onCookiesReject}
+          variants={btnVariants}
+          whileHover='hover'
+          whileTap='tap'
+        >
+          Rechazar
         </motion.button>
         <motion.a
           className='cookies-notice__btn cookies-notice__btn_link'
@@ -78,6 +82,7 @@ export default function CookiesNotice({
 
 CookiesNotice.propTypes = {
   onCookiesAccept: PropTypes.func,
-  cookiesEstablished: PropTypes.bool,
+  onCookiesReject: PropTypes.func,
+  showCookiesBanner: PropTypes.bool,
   btnVariants: PropTypes.object,
 };

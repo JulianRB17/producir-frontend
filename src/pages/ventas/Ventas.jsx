@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
 
 import HeroVentas from './components/heroVentas/HeroVentas';
 import Situaciones from './components/situaciones/Situaciones';
@@ -20,14 +19,9 @@ export default function Ventas({
   listElementVariants,
   btnVariants,
   titleVariants,
-  setIsRegistro,
   dates,
   handleBuyClick,
 }) {
-  useEffect(() => {
-    setIsRegistro(false);
-  }, [setIsRegistro]);
-
   return (
     <section className='ventas'>
       <HeroVentas
@@ -73,7 +67,6 @@ Ventas.propTypes = {
   btnVariants: PropTypes.object,
   listElementVariants: PropTypes.object,
   titleVariants: PropTypes.object,
-  setIsRegistro: PropTypes.func,
   dates: PropTypes.object,
   handleBuyClick: PropTypes.func,
 };

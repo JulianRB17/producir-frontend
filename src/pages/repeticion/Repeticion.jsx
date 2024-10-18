@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
 
 import HeroCierreV from './components/heroR/HeroR';
 
@@ -9,12 +8,7 @@ export default function Repeticion({
   btnVariants,
   urls,
   dates,
-  setIsRegistro,
 }) {
-  useEffect(() => {
-    setIsRegistro(false);
-  }, [setIsRegistro]);
-
   return (
     <section className='cierre-r'>
       <HeroCierreV
@@ -35,5 +29,4 @@ Repeticion.propTypes = {
   btnVariants: PropTypes.object,
   urls: PropTypes.object,
   dates: PropTypes.object,
-  setIsRegistro: PropTypes.func,
 };

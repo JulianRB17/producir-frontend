@@ -1,13 +1,6 @@
-import PropTypes from 'prop-types';
-import { useEffect } from 'react';
-
 import logoSrc from '../../assets/logos/imag-eap.png';
 
-export default function NotFound({ setIsRegistro }) {
-  useEffect(() => {
-    setIsRegistro(false);
-  }, [setIsRegistro]);
-
+export default function NotFound() {
   return (
     <section className='not-found'>
       <div className='not-found__container'>
@@ -29,7 +22,3 @@ export default function NotFound({ setIsRegistro }) {
     </section>
   );
 }
-
-NotFound.propTypes = {
-  setIsRegistro: PropTypes.func,
-};

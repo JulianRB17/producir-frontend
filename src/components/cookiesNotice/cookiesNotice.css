@@ -23,11 +23,6 @@
   align-self: flex-start;
 }
 
-.cookies-notice_hidden {
-  opacity: 0;
-  display: none;
-}
-
 .cookies-notice__text {
   margin: 1em 0;
   text-align: justify;
