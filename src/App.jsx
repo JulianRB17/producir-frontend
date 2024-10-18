@@ -136,11 +136,17 @@ function App() {
     }
   }, [setCookiesEnabled, setShowCookiesBanner]);
 
+  const parametrosFbEvent = {
+    vale: 3870,
+    currency: 'MXN',
+    content_name: 'El arte de producir',
+  };
+
   const handleBuyClick = (e) => {
     e.preventDefault();
     window.location.href = urls.buyoutUrl;
     if (typeof fbq === 'function') {
-      fbq('track', 'InitiateCheckout');
+      fbq('track', 'InitiateCheckout', parametrosFbEvent);
     }
   };
 
@@ -258,6 +264,7 @@ function App() {
                 titleVariants={titleVariants}
                 setIsRegistro={setIsRegistro}
                 handleBuyClick={handleBuyClick}
+                parametrosFbEvent={parametrosFbEvent}
               />
             </>
           }

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import HeroVentas from './components/heroVentas/HeroVentas';
@@ -21,7 +22,14 @@ export default function Ventas({
   titleVariants,
   dates,
   handleBuyClick,
+  parametrosFbEvent,
 }) {
+  useEffect(() => {
+    if (typeof fbq === 'function') {
+      fbq('track', 'ViewContent', parametrosFbEvent);
+    }
+  }, [parametrosFbEvent]);
+
   return (
     <section className='ventas'>
       <HeroVentas
@@ -69,4 +77,5 @@ Ventas.propTypes = {
   titleVariants: PropTypes.object,
   dates: PropTypes.object,
   handleBuyClick: PropTypes.func,
+  parametrosFbEvent: PropTypes.func,
 };

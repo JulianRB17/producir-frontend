@@ -2,9 +2,14 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
-export const Pixel = ({ pixelId, cookiesEnabled, pathname }) => {
+export const Pixel = ({
+  pixelId,
+  cookiesEnabled,
+  pathname,
+  parametrosFbEvent,
+}) => {
   useEffect(() => {
-    if (cookiesEnabled) {
+    if (cookiesEnabled && pixelId) {
       (function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
@@ -28,11 +33,10 @@ export const Pixel = ({ pixelId, cookiesEnabled, pathname }) => {
         'script',
         'https://connect.facebook.net/en_US/fbevents.js'
       );
-      fbq('init', pixelId);
+      fbq('init', pixelId, {}, { autoConfig: false, debug: false });
       fbq('track', 'PageView', { page_name: pathname });
-      console.log('trackeada tu página ', pathname);
     }
-  }, [cookiesEnabled, pixelId, pathname]);
+  }, [cookiesEnabled, pixelId, pathname, parametrosFbEvent]);
 
   return cookiesEnabled ? (
     <Helmet>
@@ -49,4 +53,5 @@ Pixel.propTypes = {
   pixelId: PropTypes.string,
   cookiesEnabled: PropTypes.bool,
   pathname: PropTypes.string,
+  parametrosFbEvent: PropTypes.object,
 };
