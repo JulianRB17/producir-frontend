@@ -38,6 +38,9 @@ function App() {
   const [cookiesEnabled, setCookiesEnabled] = useState(false);
   const [isPrivacidad, setIsPrivacidad] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     (async () => {
       const data = await api.getData();
@@ -55,9 +58,6 @@ function App() {
     setLocalDate(new Date(dates.webinarDate).toLocaleDateString('es-ES'));
     setHour(`${webinarHour}:${webinarMinutes ? 0 : '00'}`);
   }, [dates.webinarDate]);
-
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const handleChange = (e) => {
     const { target } = e;
@@ -121,11 +121,18 @@ function App() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const consent = Cookies.get('cookie_consent');
-    console.log(consent);
+    const consent = Cookies.get('cookie_consent_eap');
     if (!consent) {
       setShowCookiesBanner(true);
       setCookiesEnabled(false);
+    }
+    if (consent === 'reject') {
+      setCookiesEnabled(false);
+      setShowCookiesBanner(false);
+    }
+    if (consent === 'accepted') {
+      setCookiesEnabled(true);
+      setShowCookiesBanner(false);
     }
   }, [setCookiesEnabled, setShowCookiesBanner]);
 
@@ -146,7 +153,7 @@ function App() {
     e.preventDefault();
     setShowCookiesBanner(false);
     setCookiesEnabled(true);
-    Cookies.set('cookie_consent', 'accepted', { expires: 30 });
+    Cookies.set('cookie_consent_eap', 'accepted', { expires: 1 });
   };
 
   const handleCookiesReject = (e) => {
@@ -154,7 +161,7 @@ function App() {
     setShowCookiesBanner(false);
     setCookiesEnabled(false);
     removePixelCookies();
-    Cookies.set('cookie_consent', 'reject', { expires: 30 });
+    Cookies.set('cookie_consent_eap', 'reject', { expires: 1 });
   };
 
   const shadowVariants = {
@@ -224,7 +231,11 @@ function App() {
 
   return (
     <div className='app'>
-      <Pixel pixelID={fbData.pixelId} cookiesEnabled={cookiesEnabled} />
+      <Pixel
+        pixelId={fbData.pixelId}
+        cookiesEnabled={cookiesEnabled}
+        pathname={location.pathname}
+      />
       <Header isRegistro={isRegistro} />
       <ProgressBar />
       <Routes>
