@@ -72,6 +72,7 @@
   margin-top: 1em;
   color: #aca6e4;
   max-width: 90%;
+  text-shadow: 2px 2px 2px #05022b;
 }
 
 .garantia__quote {
@@ -111,6 +112,11 @@
   padding: 0.5em 1em;
 }
 
+.garantia__img {
+  width: 300px;
+  margin: 0.5rem 0 2rem;
+}
+
 @media screen and (max-width: 1000px) {
   .garantia__title {
     font-size: 3rem;
@@ -147,6 +153,10 @@
 
   .garantia__btn {
     font-size: 1.5rem;
+  }
+
+  .garantia__img {
+    width: 250px;
   }
 }
 
@@ -199,5 +209,9 @@
   .garantia__btn {
     max-width: 100%;
     font-size: 1.5rem;
+  }
+
+  .garantia__img {
+    width: 200px;
   }
 }

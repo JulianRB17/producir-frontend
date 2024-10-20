@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import warantySrc from '../../../../assets/logos/warranty.svg';
 
 export default function Garantia({
   shadowVariants,
@@ -21,6 +22,13 @@ export default function Garantia({
             tienes dudas?
           </motion.span>
         </p>
+        <motion.img
+          src={warantySrc}
+          alt='Logo de garantía de programa El arte de producir'
+          className='garantia__img'
+          variants={shadowVariants}
+          animate='loop'
+        />
         <p className='garantia__subtitle'>
           <span className='garantia__subtitle garantia__subtitle_accent'>
             ¡No te preocupes!

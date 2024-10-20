@@ -66,6 +66,10 @@
   margin: 0;
 }
 
+.description-ventas__text_accent-l {
+  font-size: 1.1em;
+}
+
 .description-ventas__logo {
   width: 12em;
   margin: 0.5em 0 0 2em;

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import HeroVentas from './components/heroVentas/HeroVentas';
@@ -22,13 +22,16 @@ export default function Ventas({
   titleVariants,
   dates,
   handleBuyClick,
-  parametrosFbEvent,
+  // parametrosFbEvent,
 }) {
-  useEffect(() => {
-    if (typeof fbq === 'function') {
-      fbq('track', 'ViewContent', parametrosFbEvent);
-    }
-  }, [parametrosFbEvent]);
+  // useEffect(() => {
+  //   if (typeof fbq === 'function') {
+  //     fbq('track', 'ViewContent', parametrosFbEvent);
+  //   }
+  //   return () => {
+  //     console.log('Component unmounted');
+  //   };
+  // }, [parametrosFbEvent]);
 
   return (
     <section className='ventas'>

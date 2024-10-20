@@ -40,10 +40,12 @@ export default function Description() {
               className='description__list-element'
             />
             <p className='description__text'>
+              Conoce herramientas para
               <span className='description__text description__text_accent'>
-                Conoce técnicas para sobreponerte
+                {' '}
+                que dejen de rechazarte en las convocatorias
               </span>{' '}
-              a la procrastinación y autosabotaje siendo artista
+              a las que postulas.
             </p>
           </li>
           <div className='description__division' />
@@ -57,13 +59,10 @@ export default function Description() {
               className='description__list-element'
             />
             <p className='description__text'>
-              Descubre cómo{' '}
+              Descubre cómo la &quot;fama&quot; no es lo que necesitas para
               <span className='description__text description__text_accent'>
-                la producción
-              </span>{' '}
-              también{' '}
-              <span className='description__text description__text_accent'>
-                es un acto creativo.
+                {' '}
+                materializar tus ideas dignamente
               </span>
             </p>
           </li>

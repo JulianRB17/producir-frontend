@@ -33,7 +33,13 @@ export const Pixel = ({
         'script',
         'https://connect.facebook.net/en_US/fbevents.js'
       );
-      fbq('init', pixelId, {}, { autoConfig: false, debug: false });
+      fbq('set', 'autoConfig', 'false', pixelId);
+      fbq(
+        'init',
+        pixelId,
+        {},
+        { autoConfig: false, debug: false, manualMode: true }
+      );
       fbq('track', 'PageView', { page_name: pathname });
     }
   }, [cookiesEnabled, pixelId, pathname, parametrosFbEvent]);

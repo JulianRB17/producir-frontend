@@ -159,7 +159,7 @@ function App() {
     e.preventDefault();
     setShowCookiesBanner(false);
     setCookiesEnabled(true);
-    Cookies.set('cookie_consent_eap', 'accepted', { expires: 1 });
+    Cookies.set('cookie_consent_eap', 'accepted', { expires: 365 });
   };
 
   const handleCookiesReject = (e) => {
