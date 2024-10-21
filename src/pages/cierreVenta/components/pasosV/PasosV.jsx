@@ -102,7 +102,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             {' '}
             <Link
               className='pasos-v__text pasos-v__text_link pasos-v__text_link_azul'
-              to={urls.encuestaComprarUrl}
+              to={urls.encuestaUrl}
             >
               Haz click aquí
             </Link>

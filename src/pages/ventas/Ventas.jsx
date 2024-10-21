@@ -1,4 +1,4 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import HeroVentas from './components/heroVentas/HeroVentas';
@@ -22,16 +22,16 @@ export default function Ventas({
   titleVariants,
   dates,
   handleBuyClick,
-  // parametrosFbEvent,
 }) {
-  // useEffect(() => {
-  //   if (typeof fbq === 'function') {
-  //     fbq('track', 'ViewContent', parametrosFbEvent);
-  //   }
-  //   return () => {
-  //     console.log('Component unmounted');
-  //   };
-  // }, [parametrosFbEvent]);
+  useEffect(() => {
+    if (typeof fbq === 'function') {
+      fbq('track', 'ViewContent', {
+        vale: 3870,
+        currency: 'MXN',
+        content_name: 'El arte de producir',
+      });
+    }
+  }, []);
 
   return (
     <section className='ventas'>
@@ -80,5 +80,4 @@ Ventas.propTypes = {
   titleVariants: PropTypes.object,
   dates: PropTypes.object,
   handleBuyClick: PropTypes.func,
-  parametrosFbEvent: PropTypes.func,
 };

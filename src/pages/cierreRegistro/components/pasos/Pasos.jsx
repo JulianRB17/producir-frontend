@@ -66,7 +66,7 @@ export default function Pasos({ titleVariants, btnVariants, urls }) {
           >
             <Link
               className='pasos__text pasos__text_link pasos__text_link_azul'
-              to={urls.encuestaWebinarUrl}
+              to={urls.encuestaUrl}
             >
               Haz click aquí
             </Link>
@@ -101,13 +101,7 @@ export default function Pasos({ titleVariants, btnVariants, urls }) {
             whileHover='hover'
             whileTap='tap'
           >
-            <Link
-              className='pasos__text pasos__text_link'
-              to={urls.tiktokUrl}
-              variants={btnVariants}
-              whileHover='hover'
-              whileTap='tap'
-            >
+            <Link className='pasos__text pasos__text_link' to={urls.tiktokUrl}>
               Tiktok
             </Link>
           </motion.button>
@@ -117,13 +111,7 @@ export default function Pasos({ titleVariants, btnVariants, urls }) {
             whileHover='hover'
             whileTap='tap'
           >
-            <Link
-              className='pasos__text pasos__text_link'
-              to={urls.fbPermaUrl}
-              variants={btnVariants}
-              whileHover='hover'
-              whileTap='tap'
-            >
+            <Link className='pasos__text pasos__text_link' to={urls.fbPermaUrl}>
               Facebook
             </Link>
           </motion.button>

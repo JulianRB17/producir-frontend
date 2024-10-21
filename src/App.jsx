@@ -17,6 +17,7 @@ import textData from './utils/textData.js';
 import { Pixel } from './utils/metaPixel';
 import TextChunk from './components/textChunk/TextChunk.jsx';
 import CookiesNotice from './components/cookiesNotice/CookiesNotice.jsx';
+import { dates, urls } from './utils/data.js';
 
 function App() {
   const [formValues, setFormValues] = useState({
@@ -30,9 +31,7 @@ function App() {
   const [localDate, setLocalDate] = useState('');
   const [hour, setHour] = useState('');
   const [timestamp, setTimestamp] = useState(0);
-  const [urls, setUrls] = useState({});
-  const [dates, setDates] = useState({});
-  const [fbData, setFbData] = useState({});
+  const [privData, setPrivData] = useState({});
   const [isRegistro, setIsRegistro] = useState(false);
   const [showCookiesBanner, setShowCookiesBanner] = useState(false);
   const [cookiesEnabled, setCookiesEnabled] = useState(false);
@@ -44,9 +43,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const data = await api.getData();
-      if (data.dates) setDates(data.dates);
-      if (data.urls) setUrls(data.urls);
-      if (data.fbData) setFbData(data.fbData);
+      if (data.pixelId) setPrivData(data);
       return;
     })();
   }, []);
@@ -57,7 +54,7 @@ function App() {
     const webinarMinutes = new Date(dates.webinarDate).getSeconds();
     setLocalDate(new Date(dates.webinarDate).toLocaleDateString('es-ES'));
     setHour(`${webinarHour}:${webinarMinutes ? 0 : '00'}`);
-  }, [dates.webinarDate]);
+  }, []);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -136,18 +133,16 @@ function App() {
     }
   }, [setCookiesEnabled, setShowCookiesBanner]);
 
-  const parametrosFbEvent = {
-    vale: 3870,
-    currency: 'MXN',
-    content_name: 'El arte de producir',
-  };
-
   const handleBuyClick = (e) => {
     e.preventDefault();
-    window.location.href = urls.buyoutUrl;
     if (typeof fbq === 'function') {
-      fbq('track', 'InitiateCheckout', parametrosFbEvent);
+      fbq('track', 'InitiateCheckout', {
+        vale: 3870,
+        currency: 'MXN',
+        content_name: 'El arte de producir',
+      });
     }
+    window.location.href = urls.buyoutUrl;
   };
 
   const removePixelCookies = () => {
@@ -238,7 +233,7 @@ function App() {
   return (
     <div className='app'>
       <Pixel
-        pixelId={fbData.pixelId}
+        pixelId={privData.pixelId}
         cookiesEnabled={cookiesEnabled}
         pathname={location.pathname}
       />
@@ -264,7 +259,6 @@ function App() {
                 titleVariants={titleVariants}
                 setIsRegistro={setIsRegistro}
                 handleBuyClick={handleBuyClick}
-                parametrosFbEvent={parametrosFbEvent}
               />
             </>
           }

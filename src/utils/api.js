@@ -1,7 +1,7 @@
 class Api {
   constructor() {
-    this._baseUrl = 'https://elartedeproducir.com/api/';
-    // this._baseUrl = 'http://localhost:3000/api/';
+    // this._baseUrl = 'https://elartedeproducir.com/api/';
+    this._baseUrl = 'http://localhost:3000/api/';
     this._options = {
       headers: {
         accept: 'application/json',
