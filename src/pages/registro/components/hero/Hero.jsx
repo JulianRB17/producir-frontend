@@ -86,6 +86,7 @@ export default function Hero({ shadowVariants, btnVariants }) {
           </motion.button>
         </div>
       </motion.div>
+      <p className='hero__credito-foto'>Foto: Carlos Alvar</p>
       <div className='hero__overlay' />
     </section>
   );

@@ -178,6 +178,12 @@
   margin-left: 0;
 }
 
+.form__credito-foto {
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 0.8rem;
+}
+
 .form__overlay {
   position: absolute;
   top: 0;
@@ -264,5 +270,9 @@
     font-size: 2.8rem;
     top: -0.5em;
     left: 0;
+  }
+
+  .form__credito-foto {
+    font-size: 0.6rem;
   }
 }

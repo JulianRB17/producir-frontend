@@ -60,6 +60,7 @@ export default function Host() {
           Louis de Rouvroy
         </motion.p>
       </div>
+      <p className='host__credito-foto'>Foto: Carlos Alvar</p>
       <div className='host__overlay' />
     </section>
   );

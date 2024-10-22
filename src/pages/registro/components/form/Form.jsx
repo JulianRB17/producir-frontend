@@ -144,6 +144,7 @@ export default function Form({
           <div className='form__container form__container_btn'>{SendBtn()}</div>
         </form>
       </div>
+      <p className='form__credito-foto'>Foto: Carlos Alvar</p>
       <div className='form__overlay' />
     </section>
   );

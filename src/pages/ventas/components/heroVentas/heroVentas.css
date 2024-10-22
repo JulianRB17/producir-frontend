@@ -130,6 +130,14 @@
   );
 }
 
+.hero-ventas__container_credito-foto {
+  grid-column: 9/11;
+  grid-row: 5/6;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
 @media screen and (max-width: 1000px) {
   .hero-ventas__container_grid {
     display: flex;
@@ -188,6 +196,14 @@
 
   .hero-ventas__arrow {
     width: 4em;
+  }
+
+  .hero-ventas__container_credito-foto {
+    align-self: flex-end;
+  }
+
+  .hero-ventas__credito-foto {
+    font-size: 0.8rem;
   }
 }
 

@@ -116,6 +116,7 @@ export default function Bios({ listElementVariants }) {
           </li>
         </ul>
       </div>
+      <p className='bios__credito-foto'>Foto: Carlos Alvar</p>
       <div className='bios__overlay' />
     </section>
   );

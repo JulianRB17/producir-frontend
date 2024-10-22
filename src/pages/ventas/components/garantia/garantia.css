@@ -117,6 +117,12 @@
   margin: 0.5rem 0 2rem;
 }
 
+.garantia__credito-foto {
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 1000px) {
   .garantia__title {
     font-size: 3rem;
@@ -213,5 +219,9 @@
 
   .garantia__img {
     width: 200px;
+  }
+
+  .garantia__credito-foto {
+    display: none;
   }
 }

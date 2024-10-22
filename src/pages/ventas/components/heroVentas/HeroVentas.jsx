@@ -92,6 +92,9 @@ export default function HeroVentas({
             />
           </motion.button>
         </div>
+        <div className='hero-ventas__container hero-ventas__container_credito-foto'>
+          <p className='hero-ventas__credito-foto'>Foto: Carlos Alvar</p>
+        </div>
       </motion.div>
       <div className='hero-ventas__overlay' />
     </section>

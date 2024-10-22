@@ -28,6 +28,7 @@ export default function CtaS({ btnVariants, handleBuyClick }) {
           Quiero formar parte de este grupo
         </motion.button>
       </div>
+      <p className='cta-s__credito-foto'>Foto: Carlos Alvar</p>
       <div className='cta-s__overlay' />
     </section>
   );

@@ -1,7 +1,7 @@
 .cta-s {
   display: flex;
   flex-direction: column;
-  padding: 2em 3em;
+  padding: 2em 3em 3em;
   background-image: url('../../../../assets/imgs/fondo-cta-s.webp');
   background-position: bottom;
   background-size: cover;
@@ -59,6 +59,15 @@
   text-decoration: none;
   padding: 0.5em 1em;
   text-align: center;
+}
+
+.cta-s__credito-foto {
+  color: white;
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.2em;
+  font-size: 0.9rem;
+  z-index: 2;
 }
 
 .cta-s__overlay {
@@ -132,5 +141,9 @@
     max-width: 100%;
     font-size: 1.5rem;
     padding: 0.5em 1em;
+  }
+
+  .cta-s__credito-foto {
+    font-size: 0.7rem;
   }
 }

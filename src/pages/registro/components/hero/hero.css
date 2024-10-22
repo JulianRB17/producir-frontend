@@ -109,6 +109,14 @@
   width: 4em;
 }
 
+.hero__credito-foto {
+  position: relative;
+  align-self: flex-end;
+  justify-self: flex-end;
+  z-index: 2;
+  font-size: 0.8rem;
+}
+
 .hero__overlay {
   position: absolute;
   top: 0;
@@ -228,5 +236,9 @@
 
   .hero__arrow {
     width: 4em;
+  }
+
+  .hero__credito-foto {
+    font-size: 0.6rem;
   }
 }

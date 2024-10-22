@@ -76,6 +76,7 @@ export default function Garantia({
           Quiero formar parte de este grupo
         </motion.button>
       </div>
+      <p className='garantia__credito-foto'>Foto: Carlos Alvar</p>
     </section>
   );
 }

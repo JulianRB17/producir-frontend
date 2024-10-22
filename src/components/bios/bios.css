@@ -76,6 +76,15 @@
   font-size: 1.2rem;
 }
 
+.bios__credito-foto {
+  color: white;
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: 0.2em;
+  right: 0.5em;
+  z-index: 2;
+}
+
 .bios__overlay {
   position: absolute;
   top: 0;
@@ -127,5 +136,9 @@
 
   .bios__photo {
     width: 40%;
+  }
+
+  .bios__credito-foto {
+    display: none;
   }
 }
