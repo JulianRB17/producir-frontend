@@ -137,7 +137,7 @@ function App() {
     e.preventDefault();
     if (typeof fbq === 'function') {
       fbq('track', 'InitiateCheckout', {
-        vale: 3870,
+        vale: 3478,
         currency: 'MXN',
         content_name: 'El arte de producir',
       });

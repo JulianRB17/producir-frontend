@@ -25,6 +25,7 @@ export default function Ventas({
 }) {
   useEffect(() => {
     if (typeof fbq === 'function') {
+      console.log(fbq);
       fbq('track', 'ViewContent', {
         vale: 3870,
         currency: 'MXN',

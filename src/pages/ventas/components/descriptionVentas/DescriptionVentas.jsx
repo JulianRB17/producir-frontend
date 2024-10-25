@@ -56,8 +56,8 @@ export default function DescriptionVentas({
           Estos son los módulos que trabajaremos en este programa, éste será en
           línea y nos veremos los{' '}
           <span className='description-ventas__text description-ventas__text_accent description-ventas__text_accent-l'>
-            {dates.diaSemanaDate} de {dates.modulesDate} de{' '}
-            {dates.programaHoraDate}.{' '}
+            {dates.diaSemanaDate} de {dates.programaHoraDate} del{' '}
+            {dates.modulesDate}.
           </span>
         </p>
         <p className='description-ventas__text'>

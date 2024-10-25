@@ -55,7 +55,7 @@ export default function Bonos({ titleVariants }) {
               ¿Le tienes miedo a Excel?{' '}
             </span>
             Descubre cómo automatizar con fórmulas de manera sencilla. Ofrecemos
-            una clase básica de Excel diseñada para el medio escénico, donde
+            una clase básica de Excel diseñada para el medio escénico, donde{' '}
             <span className='bonos__text_element-accent'>
               aprenderás a manejar presupuestos, desgloses de taquilla,
               cronogramas y más
@@ -79,7 +79,7 @@ export default function Bonos({ titleVariants }) {
               No comiences desde cero
             </span>
             , tenemos para ti unas plantillas con fórmulas de excel o datos
-            prellenados que te permitirán
+            prellenados que te permitirán{' '}
             <span className='bonos__text_element-accent'>
               tener más estructura en temas administrativos y contables
             </span>
@@ -95,6 +95,7 @@ export default function Bonos({ titleVariants }) {
             En el ámbito escénico, ser emprendedores significa aprender diversas
             habilidades. Por eso,
             <span className='bonos__text_element-accent'>
+              {' '}
               un diseñador gráfico nos compartirá su experiencia y ofrecerá una
               clase especializada
             </span>
@@ -113,8 +114,8 @@ export default function Bonos({ titleVariants }) {
             satisfactorio, por eso,
             <span className='bonos__text_element-accent'>
               {' '}
-              recibe una serie infografías con consejos útiles y prácticos para
-              que puedas consultarlas de manera eficiente y rápida
+              recibe una serie de infografías con consejos útiles y prácticos
+              para que puedas consultarlas de manera eficiente y rápida
             </span>
             . ¡Te ayudarán a ahorrar tiempo y esfuerzo al encontrar soluciones
             rápidas que eficienticen tu labor!

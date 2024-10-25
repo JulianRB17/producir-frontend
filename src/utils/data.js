@@ -1,9 +1,9 @@
 export const dates = {
-  webinarDate: 'October 29, 2024 18:00:00',
+  webinarDate: 'October 29, 2024 19:00:00',
   modulesDate:
     '25 de noviembre a 18 de diciembre de 2024 y del 6 al 15 de enero de 2025',
   diaSemanaDate: 'Lunes y miércoles',
-  programaHoraDate: '7 pm a 9 pm (hora CDMX)',
+  programaHoraDate: '6 pm a 8 pm (hora CDMX)',
 
   moduleDate_1: '25 de noviembre',
   moduleDate_2: '27 de noviembre a 4 de diciembre',
