@@ -9,7 +9,7 @@ import tipsSrc from '../../../../assets/imgs/tips.svg';
 import redaccionSrc from '../../../../assets/imgs/redaccion.svg';
 import acompañamientoSrc from '../../../../assets/imgs/acompañamiento.svg';
 
-export default function Bonos({ titleVariants }) {
+export default function Bonos({ titleVariants, precios }) {
   return (
     <section className='bonos'>
       <div className='bonos__container bonos__container_grid'>
@@ -175,14 +175,17 @@ export default function Bonos({ titleVariants }) {
         </div>
       </div>
       <p className='bonos__text'>
-        El valor total de este programa es de $10,000 MXN
+        El valor total de este programa es de ${precios.precioCompleto} MXN
       </p>
       <p className='bonos__text bonos__text_accent'>
-        sin embargo puedes adquirirlo ahora por sólo $3,487 MXN.
+        sin embargo puedes adquirirlo ahora por sólo ${precios.precioReal} MXN.
       </p>
       <div className='bonos__overlay' />
     </section>
   );
 }
 
-Bonos.propTypes = { titleVariants: PropTypes.object };
+Bonos.propTypes = {
+  titleVariants: PropTypes.object,
+  precios: PropTypes.object,
+};

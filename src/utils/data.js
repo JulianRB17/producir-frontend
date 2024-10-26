@@ -27,7 +27,7 @@ export const urls = {
   graciasVentaUrl:
     'https://www.youtube-nocookie.com/embed/xc4zlW3Cxds?si=h91HVDNVD_X47tHZ',
 
-  communityUrl: 'https://google.com',
+  communityUrl: 'https://hotmart.com/es/club/el-arte-de-producir',
   buyoutUrl: 'https://pay.hotmart.com/N96133854N?checkoutMode=10',
 
   //Aquí van las de redes
@@ -36,6 +36,8 @@ export const urls = {
   tiktokUrl: '',
 };
 
-export const apis = {
-  activeCampaignListId: 1,
+export const precios = {
+  precioCompleto: '14,000',
+  precioReal: '3,478',
+  precioNumero: 3478,
 };

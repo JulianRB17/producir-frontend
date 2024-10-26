@@ -17,7 +17,7 @@ import textData from './utils/textData.js';
 import { Pixel } from './utils/metaPixel';
 import TextChunk from './components/textChunk/TextChunk.jsx';
 import CookiesNotice from './components/cookiesNotice/CookiesNotice.jsx';
-import { dates, urls } from './utils/data.js';
+import { dates, urls, precios } from './utils/data.js';
 
 function App() {
   const [formValues, setFormValues] = useState({
@@ -259,6 +259,7 @@ function App() {
                 titleVariants={titleVariants}
                 setIsRegistro={setIsRegistro}
                 handleBuyClick={handleBuyClick}
+                precios={precios}
               />
             </>
           }

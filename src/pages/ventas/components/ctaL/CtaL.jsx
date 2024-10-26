@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import logoSrc from '../../../../assets/logos/imag-eap.png';
 
-export default function CtaL({ btnVariants, handleBuyClick }) {
+export default function CtaL({ btnVariants, handleBuyClick, precios }) {
   return (
     <section className='cta-l'>
       <div className='cta-l__container cta-l__container_title'>
@@ -22,9 +22,10 @@ export default function CtaL({ btnVariants, handleBuyClick }) {
       />
       <div className='cta-l__container cta-l__container_cta'>
         <p className='cta-l__text cta-l__text_venta'>
-          Por sólo $3,487 MXN{' '}
+          Por sólo ${precios.precioReal} MXN
           <span className='cta-l__text cta-l__text_venta cta-l__text_accent'>
-            (valor real de $10,000)
+            {' '}
+            (valor real de ${precios.precioCompleto} MXN)
           </span>{' '}
           adquiere:
         </p>
@@ -57,4 +58,5 @@ export default function CtaL({ btnVariants, handleBuyClick }) {
 CtaL.propTypes = {
   btnVariants: PropTypes.object,
   handleBuyClick: PropTypes.func,
+  precios: PropTypes.object,
 };

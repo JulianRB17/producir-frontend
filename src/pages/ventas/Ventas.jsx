@@ -22,17 +22,17 @@ export default function Ventas({
   titleVariants,
   dates,
   handleBuyClick,
+  precios,
 }) {
   useEffect(() => {
     if (typeof fbq === 'function') {
-      console.log(fbq);
       fbq('track', 'ViewContent', {
         vale: 3870,
         currency: 'MXN',
         content_name: 'El arte de producir',
       });
     }
-  }, []);
+  }, [precios]);
 
   return (
     <section className='ventas'>
@@ -60,8 +60,12 @@ export default function Ventas({
         titleVariants={titleVariants}
         listElementVariants={listElementVariants}
       />
-      <CtaL btnVariants={btnVariants} handleBuyClick={handleBuyClick} />
-      <Bonos titleVariants={titleVariants} />
+      <CtaL
+        btnVariants={btnVariants}
+        handleBuyClick={handleBuyClick}
+        precios={precios}
+      />
+      <Bonos titleVariants={titleVariants} precios={precios} />
       <Garantia
         shadowVakriants={shadowVariants}
         btnVariants={btnVariants}
@@ -69,7 +73,11 @@ export default function Ventas({
       />
       <Faqs titleVariants={titleVariants} />
       <Disclaimer />
-      <CtaL btnVariants={btnVariants} handleBuyClick={handleBuyClick} />
+      <CtaL
+        btnVariants={btnVariants}
+        handleBuyClick={handleBuyClick}
+        precios={precios}
+      />
     </section>
   );
 }
@@ -81,4 +89,5 @@ Ventas.propTypes = {
   titleVariants: PropTypes.object,
   dates: PropTypes.object,
   handleBuyClick: PropTypes.func,
+  precios: PropTypes.object,
 };

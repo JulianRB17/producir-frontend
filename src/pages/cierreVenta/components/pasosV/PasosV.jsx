@@ -45,20 +45,19 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             <span className='pasos-v__text_accent'>
               la bandeja de entrada como la de spam
             </span>{' '}
-            te hemos mandado ahí la información sobre tu compra y los pasos a
-            seguir, también la{' '}
-            <span className='pasos-v__text_accent'>
-              liga a la sesión de la plataforma Zoom{' '}
-            </span>
-            a través de la cuál se darán las clases.
+            se te ha mandado un mail de parte de Hotmart donde estarán los datos
+            para crear tu contraseña y poder acceder al{' '}
+            <span className='pasos-v__text_accent'>área de miembros </span>
+            aquí es donde encontrarás todo el contenido que iremos subiendo para
+            la comunidad de El arte de producir. Ahora puedes encontrar un
+            cronograma donde está la liga de la plataforma Zoom por la que
+            daremos las sesiones en vivo.
           </p>
           <p className='pasos-v__text'>
-            De igual manera te compartimos el{' '}
-            <span className='pasos-v__text_accent'>
-              link a la página de la comunidad de Hotmart{' '}
-            </span>
-            a la que puedes acceder con el usuario y contraseña que realizaste
-            la compra:
+            <span className='pasos-v__text_accent'>¡Nos vemos muy pronto!</span>
+          </p>
+          <p className='pasos-v__text'>
+            Te dejamos el link a la página de la comunidad:
           </p>
           <motion.button
             className='pasos-v__btn'
@@ -74,6 +73,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             </Link>
           </motion.button>
         </div>
+
         <div className='pasos-v__element pasos-v__element_amarillo'>
           <img
             src={checkboxSrc}
@@ -108,6 +108,44 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             </Link>
           </motion.button>
         </div>
+
+        <div className='pasos-v__element'>
+          <img src={mailSrc} alt='Ícono de email' className='pasos-v__img' />
+          <h3 className='pasos-v__label'>Paso #3:</h3>
+          <h3 className='pasos-v__element-title'>
+            Únete a la comunidad de Facebook
+          </h3>
+          <p className='pasos-v__text'>
+            Te pido entres a este grupo privado,{' '}
+            <span className='pasos-v__text_accent'>
+              es muy importante que escribas el mail con el que compraste el
+              programa,
+            </span>{' '}
+            en esta comunidad podrás externar las dudas que tengas y te iremos
+            contestando lo antes posible.
+            <span className='pasos-v__text_accent'> </span>
+          </p>
+          <p className='pasos-v__text'>
+            {' '}
+            También podrás tú contestar dudas o dar retro de proyectos de otras
+            personas, y, habiendo terminado el curso, será un lugar donde podrás
+            continuar en contacto con ésta y futuras generaciones.
+          </p>
+          <motion.button
+            className='pasos-v__btn'
+            variants={btnVariants}
+            whileHover='hover'
+            whileTap='tap'
+          >
+            <Link
+              className='pasos-v__text pasos-v__text_link'
+              to={urls.communityUrl}
+            >
+              Haz click aquí
+            </Link>
+          </motion.button>
+        </div>
+
         <div className='pasos-v__element hidden'>
           <img
             src={bookmarkSrc}
