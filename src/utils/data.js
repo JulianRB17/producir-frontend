@@ -17,7 +17,7 @@ export const urls = {
     'https://www.youtube-nocookie.com/embed/xc4zlW3Cxds?si=h91HVDNVD_X47tHZ',
 
   //Aquí van las después de registrar/comprar
-  fbGroupUrl: '',
+  fbGroupUrl: 'www.facebook.com/groups/elartedeproducir/',
   whatsappUrl: '',
   encuestaUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLScD-ZJHGFrqaGchVDIorfHjR3hFiRCyQykINN_HkONyB5pmWA/viewform?usp=sf_link',
