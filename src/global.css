@@ -8,6 +8,7 @@
 @import url('./components/date/date.css');
 @import url('./components/header/header.css');
 @import url('./components/cookiesNotice/cookiesNotice.css');
+@import url('./components/redirect/redirect.css');
 
 @import url('./pages/registro/components/hero/hero.css');
 @import url('./pages/registro/components/description/description.css');

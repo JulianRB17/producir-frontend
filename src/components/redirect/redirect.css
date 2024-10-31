@@ -1,0 +1,12 @@
+.redirect {
+  height: calc(100dvh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #05022b;
+}
+
+.redirect__logo {
+  width: 50%;
+  height: fit-content;
+}

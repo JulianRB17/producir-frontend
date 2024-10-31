@@ -139,7 +139,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
           >
             <Link
               className='pasos-v__text pasos-v__text_link'
-              to={urls.communityUrl}
+              to={urls.fbGroupUrl}
             >
               Haz click aquí
             </Link>

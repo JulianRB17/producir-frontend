@@ -18,6 +18,7 @@ import { Pixel } from './utils/metaPixel';
 import TextChunk from './components/textChunk/TextChunk.jsx';
 import CookiesNotice from './components/cookiesNotice/CookiesNotice.jsx';
 import { dates, urls, precios } from './utils/data.js';
+import Redirect from './components/redirect/Redirect.jsx';
 
 function App() {
   const [formValues, setFormValues] = useState({
@@ -374,7 +375,8 @@ function App() {
               handleCookiesReject={handleCookiesReject}
               cookiesEnabled={cookiesEnabled}/>}
         /> */}
-
+        <Route path='/live' element={<Redirect url={urls.live} />} />
+        <Route path='/form' element={<Redirect url={urls.checkout} />} />
         <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />
       </Routes>
       <Footer urls={urls} />
