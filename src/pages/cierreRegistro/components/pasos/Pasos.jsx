@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import bookmarkSrc from '../../../../assets/imgs/bookmark.svg';
 import checkboxSrc from '../../../../assets/imgs/checkbox.svg';
 import mailSrc from '../../../../assets/imgs/mail.svg';
+import whatsappSrc from '../../../../assets/imgs/whatsapp.svg';
 
 export default function Pasos({ titleVariants, btnVariants, urls }) {
   return (
@@ -41,14 +42,47 @@ export default function Pasos({ titleVariants, btnVariants, urls }) {
         </div>
         <div className='pasos__element pasos__element_amarillo'>
           <img
-            src={checkboxSrc}
+            src={whatsappSrc}
             alt='Ícono de encuesta'
             className='pasos__img'
           />
           <h3 className='pasos__label'>Paso #2:</h3>
           <h3 className='pasos__element-title pasos__element-title_azul'>
-            Contesta esta encuesta
+            Únete a nuestro grupo de Whatsapp
           </h3>
+          <p className='pasos__text'>
+            <span className='pasos__text_accent'>
+              ¡No te pierdas ninguna actualización!
+            </span>{' '}
+            Únete para recibir recordatorios de la clase e información
+            importante que te ayudará{' '}
+            <span className='pasos__text_accent'>
+              a llevar tu proyecto escénico al siguiente nivel.
+            </span>
+          </p>
+          <motion.button
+            className='pasos__btn'
+            variants={btnVariants}
+            whileHover='hover'
+            whileTap='tap'
+          >
+            <Link
+              className='pasos__text pasos__text_link pasos__text_link_azul'
+              to={urls.whatsappGroupUrl}
+            >
+              Haz click aquí
+            </Link>
+          </motion.button>
+        </div>
+
+        <div className='pasos__element'>
+          <img
+            src={checkboxSrc}
+            alt='Ícono de encuesta'
+            className='pasos__img'
+          />
+          <h3 className='pasos__label'>Paso #3:</h3>
+          <h3 className='pasos__element-title'>Contesta esta encuesta</h3>
           <p className='pasos__text'>
             Queremos darte la información más útil que podamos en esta clase.
             Para ello, te pido que nos ayudes contestando esta encuesta que{' '}
@@ -65,20 +99,21 @@ export default function Pasos({ titleVariants, btnVariants, urls }) {
             whileTap='tap'
           >
             <Link
-              className='pasos__text pasos__text_link pasos__text_link_azul'
+              className='pasos__text pasos__text_link'
               to={urls.encuestaUrl}
             >
               Haz click aquí
             </Link>
           </motion.button>
         </div>
+
         <div className='pasos__element hidden'>
           <img
             src={bookmarkSrc}
             alt='Ícono de guardado'
             className='pasos__img'
           />
-          <h3 className='pasos__label'>Paso #3:</h3>
+          <h3 className='pasos__label'>Paso #4:</h3>
           <h3 className='pasos__element-title'>Síguenos en redes</h3>
           <p className='pasos__text'>
             Estamos empezando a levantar nuestras redes, aquí estaremos

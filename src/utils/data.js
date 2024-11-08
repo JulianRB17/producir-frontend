@@ -1,5 +1,7 @@
 export const dates = {
-  webinarDate: 'November 5, 2024 18:00:00',
+  //date que cambia
+  webinarDate: 'November 11, 2024 18:00:00',
+
   modulesDate:
     '25 de noviembre a 18 de diciembre de 2024 y del 6 al 15 de enero de 2025',
   diaSemanaDate: 'Lunes y miércoles',
@@ -15,8 +17,10 @@ export const dates = {
 export const urls = {
   //URLS que se cambian
   repetitionUrl:
-    'https://www.youtube.com/embed/OC0whWBNUwY?si=m08DkYru-CiDkGtG',
-  live: 'https://youtube.com/live/kboAinWEjN0',
+    'https://www.youtube.com/embed/kboAinWEjN0?si=hOWFOi5Rqg9L-0DT',
+
+  live: 'https://www.youtube.com/live/R0FQSMo4-EM',
+  whatsappGroupUrl: 'https://chat.whatsapp.com/E034OONoo1WGm7HyyMb4MO',
 
   //Aquí van las después de registrar/comprar
   fbGroupUrl: 'https://www.facebook.com/groups/elartedeproducir/',
@@ -27,7 +31,7 @@ export const urls = {
   graciasRegistroUrl:
     'https://www.youtube-nocookie.com/embed/xc4zlW3Cxds?si=h91HVDNVD_X47tHZ',
   graciasVentaUrl:
-    'https://www.youtube-nocookie.com/embed/xc4zlW3Cxds?si=h91HVDNVD_X47tHZ',
+    'https://www.youtube-nocookie.com/embed/rH0qln1ddiM?si=IL2bu_1vedrQ-V-l',
 
   communityUrl: 'https://hotmart.com/es/club/el-arte-de-producir',
   buyoutUrl: 'https://pay.hotmart.com/N96133854N?checkoutMode=10',
