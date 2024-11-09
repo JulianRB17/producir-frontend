@@ -4,7 +4,7 @@ export const dates = {
 
   modulesDate:
     '25 de noviembre a 18 de diciembre de 2024 y del 6 al 15 de enero de 2025',
-  diaSemanaDate: 'Lunes y miércoles',
+  diaSemanaDate: 'lunes y miércoles',
   programaHoraDate: '6 pm a 8 pm (hora CDMX)',
 
   moduleDate_1: '25 de noviembre',

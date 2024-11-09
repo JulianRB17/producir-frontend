@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import bookmarkSrc from '../../../../assets/imgs/bookmark.svg';
-import checkboxSrc from '../../../../assets/imgs/checkbox.svg';
+import fbMonoSrc from '../../../../assets/imgs/fb-mono.svg';
+import checkboxAzulSrc from '../../../../assets/imgs/checkbox-azul.svg';
 import mailSrc from '../../../../assets/imgs/mail.svg';
 
 export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
@@ -33,7 +34,11 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
         </motion.p>
       </motion.div>
       <p className='pasos-v__text pasos-v__text_instructions'>
-        El programa será dado los {dates.diaSemanaDate} por la plataforma Zoom.
+        El programa será dado los{' '}
+        <span className='pasos-v__text_accent'>
+          {dates.diaSemanaDate} de {dates.programaHoraDate}
+        </span>{' '}
+        por la plataforma Zoom.
       </p>
       <div className='pasos-v__container pasos-v__container_elements'>
         <div className='pasos-v__element'>
@@ -76,7 +81,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
 
         <div className='pasos-v__element pasos-v__element_amarillo'>
           <img
-            src={checkboxSrc}
+            src={checkboxAzulSrc}
             alt='Ícono de encuesta'
             className='pasos-v__img'
           />
@@ -110,7 +115,11 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
         </div>
 
         <div className='pasos-v__element'>
-          <img src={mailSrc} alt='Ícono de email' className='pasos-v__img' />
+          <img
+            src={fbMonoSrc}
+            alt='Ícono de facebook'
+            className='pasos-v__img'
+          />
           <h3 className='pasos-v__label'>Paso #3:</h3>
           <h3 className='pasos-v__element-title'>
             Únete a la comunidad de Facebook
