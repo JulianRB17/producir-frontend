@@ -11,7 +11,7 @@ export default function DescriptionVentas({
   dates,
 }) {
   return (
-    <section className='description-ventas'>
+    <section className='description-ventas' id='description-ventas'>
       <div className='description-ventas__container description-ventas__container_grid'>
         <div className='description-ventas__container description-ventas__container_text'>
           <motion.div

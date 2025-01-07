@@ -34,6 +34,7 @@ function App() {
   const [timestamp, setTimestamp] = useState(0);
   const [privData, setPrivData] = useState({});
   const [isRegistro, setIsRegistro] = useState(false);
+  const [isVentas, setIsVentas] = useState(false);
   const [showCookiesBanner, setShowCookiesBanner] = useState(false);
   const [cookiesEnabled, setCookiesEnabled] = useState(false);
   const [isPrivacidad, setIsPrivacidad] = useState(false);
@@ -108,13 +109,25 @@ function App() {
     if (currentPath === '/privacidad') {
       setIsPrivacidad(true);
       setIsRegistro(false);
+      setIsVentas(false);
+      return;
     }
     if (currentPath === '/registro') {
       setIsPrivacidad(false);
       setIsRegistro(true);
+      setIsVentas(false);
+      return;
+    }
+    if (currentPath === '/') {
+      setIsPrivacidad(false);
+      setIsRegistro(false);
+      setIsVentas(true);
+      return;
     } else {
       setIsPrivacidad(false);
       setIsRegistro(false);
+      setIsVentas(false);
+      return;
     }
   }, [location.pathname]);
 
@@ -238,7 +251,7 @@ function App() {
         cookiesEnabled={cookiesEnabled}
         pathname={location.pathname}
       />
-      <Header isRegistro={isRegistro} />
+      <Header isRegistro={isRegistro} isVentas={isVentas} />
       <ProgressBar />
       <Routes>
         <Route
@@ -258,7 +271,6 @@ function App() {
                 btnVariants={btnVariants}
                 listElementVariants={listElementVariants}
                 titleVariants={titleVariants}
-                setIsRegistro={setIsRegistro}
                 handleBuyClick={handleBuyClick}
                 precios={precios}
               />
@@ -277,8 +289,6 @@ function App() {
               titleVariants={titleVariants}
               countdown={countdown}
               timestamp={timestamp}
-              isRegistro={isRegistro}
-              setIsRegistro={setIsRegistro}
             />
           }
         />
@@ -291,8 +301,6 @@ function App() {
               btnVariants={btnVariants}
               titleVariants={titleVariants}
               dates={dates}
-              isRegistro={isRegistro}
-              setIsRegistro={setIsRegistro}
             />
           }
         />
@@ -323,25 +331,26 @@ function App() {
                 titleVariants={titleVariants}
                 countdown={countdown}
                 timestamp={timestamp}
-                setIsRegistro={setIsRegistro}
               />
             </>
           }
         />
-        <Route
-          path='/repeticion'
-          element={
-            <Repeticion
-              urls={urls}
-              shadowVariants={shadowVariants}
-              btnVariants={btnVariants}
-              titleVariants={titleVariants}
-              dates={dates}
-              isRegistro={isRegistro}
-              setIsRegistro={setIsRegistro}
-            />
-          }
-        />
+        {urls.repetitionUrl ? (
+          <Route
+            path='/repeticion'
+            element={
+              <Repeticion
+                urls={urls}
+                shadowVariants={shadowVariants}
+                btnVariants={btnVariants}
+                titleVariants={titleVariants}
+                dates={dates}
+              />
+            }
+          />
+        ) : (
+          ''
+        )}
         <Route
           path='/privacidad'
           element={

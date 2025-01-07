@@ -11,7 +11,7 @@ import acompañamientoSrc from '../../../../assets/imgs/acompañamiento.svg';
 
 export default function Bonos({ titleVariants, precios }) {
   return (
-    <section className='bonos'>
+    <section className='bonos' id='bonos'>
       <div className='bonos__container bonos__container_grid'>
         <div className='bonos__container bonos__container_text'>
           <motion.div

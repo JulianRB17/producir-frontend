@@ -17,6 +17,24 @@
   justify-content: center;
 }
 
+.header__navbar {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+.header__navlink {
+  width: fit-content;
+}
+
+.header__navlink::marker {
+  font-size: 0;
+}
+
 .header__text {
   margin: 0 0.3em;
   font-family: anton;
@@ -48,5 +66,8 @@
 
   .header__logo {
     display: none;
+  }
+  .header__navlink {
+    font-size: 0.8em;
   }
 }

@@ -8,7 +8,7 @@ export default function Garantia({
   handleBuyClick,
 }) {
   return (
-    <section className='garantia'>
+    <section className='garantia' id='garantia'>
       <div className='garantia__container'>
         <p className='garantia__title'>
           ¿Aún tienes dudas?

@@ -97,7 +97,7 @@ export default function Faqs({ titleVariants }) {
   ];
 
   return (
-    <section className='faqs'>
+    <section className='faqs' id='faqs'>
       <div className='faqs__container faqs__container_grid'>
         <div className='faqs__container faqs__container_text'>
           <motion.div

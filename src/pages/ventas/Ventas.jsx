@@ -27,12 +27,12 @@ export default function Ventas({
   useEffect(() => {
     if (typeof fbq === 'function') {
       fbq('track', 'ViewContent', {
-        vale: 3870,
+        vale: 3487,
         currency: 'MXN',
         content_name: 'El arte de producir',
       });
     }
-  }, [precios]);
+  }, []);
 
   return (
     <section className='ventas'>

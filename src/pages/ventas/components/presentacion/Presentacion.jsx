@@ -5,7 +5,7 @@ import listElementSrc from '../../../../assets/imgs/triangulo-azul.svg';
 
 export default function Presentacion({ listElementVariants, shadowVariants }) {
   return (
-    <section className='presentacion'>
+    <section className='presentacion' id='presentacion'>
       <h2 className='presentacion__title'>
         <motion.span
           className='presentacion__title presentacion__title_shadow'

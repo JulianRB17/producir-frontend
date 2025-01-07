@@ -1,6 +1,6 @@
 export const dates = {
   //date que cambia
-  webinarDate: 'November 11, 2024 18:00:00',
+  webinarDate: 'November 20, 2024 18:00:00',
 
   modulesDate:
     '25 de noviembre a 18 de diciembre de 2024 y del 6 al 15 de enero de 2025',
@@ -16,11 +16,10 @@ export const dates = {
 
 export const urls = {
   //URLS que se cambian
-  repetitionUrl:
-    'https://www.youtube.com/embed/kboAinWEjN0?si=hOWFOi5Rqg9L-0DT',
+  repetitionUrl: '',
 
-  live: 'https://www.youtube.com/live/R0FQSMo4-EM',
-  whatsappGroupUrl: 'https://chat.whatsapp.com/E034OONoo1WGm7HyyMb4MO',
+  live: 'https://youtube.com/live/wx7IQjlCjvo?feature=share',
+  whatsappGroupUrl: 'https://chat.whatsapp.com/BvBY14wZisr722H2dOaDS0',
 
   //Aquí van las después de registrar/comprar
   fbGroupUrl: 'https://www.facebook.com/groups/elartedeproducir/',
@@ -46,6 +45,6 @@ export const urls = {
 
 export const precios = {
   precioCompleto: '14,000',
-  precioReal: '3,478',
-  precioNumero: 3478,
+  precioReal: '3,487',
+  precioNumero: 3487,
 };

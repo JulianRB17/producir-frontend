@@ -6,7 +6,7 @@ import mascarasSrc from '../../assets/imgs/mascaras.svg';
 
 export default function About({ titleVariants }) {
   return (
-    <section className='about'>
+    <section className='about' id='about'>
       <motion.div className='about__container about__container_grid'>
         <div className='about__container about__container_text'>
           <motion.div
