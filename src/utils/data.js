@@ -19,7 +19,7 @@ export const urls = {
     'https://www.youtube.com/embed/9B6a-X73qBA?si=Vgc-AI2u8D68ePQh&t=414',
 
   live: 'https://youtube.com/live/-h_HB7tkjcA?feature=share',
-  whatsappGroupUrl: 'https://chat.whatsapp.com/G4X8WYpfzFeHT0yDGbRrdR',
+  whatsappGroupUrl: 'https://chat.whatsapp.com/Iq4pYVMj6yo69UfN8p6RTp',
 
   //Aquí van las después de registrar/comprar
   fbGroupUrl: 'https://www.facebook.com/groups/elartedeproducir/',
