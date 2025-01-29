@@ -1,6 +1,6 @@
 export const dates = {
   //date que cambia
-  webinarDate: 'March 4, 2025 19:00:00',
+  webinarDate: 'February 4, 2025 19:00:00',
 
   modulesDate: '18 de febrero a 27 de marzo de 2025',
   diaSemanaDate: 'martes y jueves',
