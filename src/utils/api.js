@@ -1,7 +1,7 @@
 class Api {
   constructor() {
     this._baseUrl = 'https://elartedeproducir.com/api/';
-    // this._baseUrl = 'http://localhost:3000/api/';
+    //this._baseUrl = 'http://localhost:3000/api/';
     this._options = {
       headers: {
         accept: 'application/json',
@@ -10,11 +10,12 @@ class Api {
     };
   }
 
-  async postContact({ firstName, email }) {
+  async postContact({ firstName, number }) {
     this._options.method = 'POST';
     this._specificUrl = 'users';
-    this._options.body = JSON.stringify({ firstName, email });
+    this._options.body = JSON.stringify({ firstName, number });
     const data = await this._fetchData();
+    console.log(data);
     return data;
   }
 

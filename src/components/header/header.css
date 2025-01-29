@@ -29,6 +29,7 @@
 
 .header__navlink {
   width: fit-content;
+  cursor: pointer;
 }
 
 .header__navlink::marker {

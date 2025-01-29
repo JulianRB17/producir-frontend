@@ -173,6 +173,12 @@
   font-size: 1.2rem;
 }
 
+.form__info {
+  padding: 1em 0 0;
+  text-shadow: 1px 1px 2px #05022b;
+  font-size: 1.2rem;
+}
+
 .form__link {
   color: #e1f102;
   margin-left: 0;
@@ -274,5 +280,10 @@
 
   .form__credito-foto {
     font-size: 0.6rem;
+  }
+
+  .form__info {
+    font-size: 1rem;
+    text-align: center;
   }
 }

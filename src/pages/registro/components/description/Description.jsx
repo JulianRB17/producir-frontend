@@ -17,16 +17,19 @@ export default function Description() {
               initial={{ opacity: 0.5, rotate: '-30deg' }}
               whileInView={{ opacity: 1, rotate: 0 }}
               transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
-              src={listElementSrc}
+              src00={listElementSrc}
               alt='lista'
               className='description__list-element'
             />
             <p className='description__text'>
-              Aprende cómo{' '}
+              La razón{' '}
               <span className='description__text description__text_accent'>
-                optimizar los recursos y conseguir mejores resultados{' '}
+                que ha evitado{' '}
               </span>
-              para tus proyectos escénicos.
+              que materialices tus proyectos escénicos a pesar de{' '}
+              <span className='description__text description__text_accent'>
+                haberlo intentado todo.
+              </span>
             </p>
           </li>
           <div className='description__division' />
@@ -40,12 +43,11 @@ export default function Description() {
               className='description__list-element'
             />
             <p className='description__text'>
-              Conoce herramientas para
+              Reconoce tus virtudes como artista y aprende cómo
               <span className='description__text description__text_accent'>
                 {' '}
-                que dejen de rechazarte en las convocatorias
-              </span>{' '}
-              a las que postulas.
+                eso puede ayudarte a fortalecer tu proyecto escénico.
+              </span>
             </p>
           </li>
           <div className='description__division' />
@@ -59,11 +61,11 @@ export default function Description() {
               className='description__list-element'
             />
             <p className='description__text'>
-              Descubre cómo la &quot;fama&quot; no es lo que necesitas para
+              El paso a paso para que{' '}
               <span className='description__text description__text_accent'>
-                {' '}
-                materializar tus ideas dignamente
+                la materialización de tu proyecto{' '}
               </span>
+              no sea un desperdicio de tiempo y dinero.
             </p>
           </li>
         </ul>

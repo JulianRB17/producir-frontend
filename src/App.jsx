@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 
@@ -23,7 +23,7 @@ import Redirect from './components/redirect/Redirect.jsx';
 function App() {
   const [formValues, setFormValues] = useState({
     firstName: '',
-    email: '',
+    number: '',
   });
   const [loading, setLoading] = useState(false);
   const [isValidForm, setValidForm] = useState(false);
@@ -39,7 +39,7 @@ function App() {
   const [cookiesEnabled, setCookiesEnabled] = useState(false);
   const [isPrivacidad, setIsPrivacidad] = useState(false);
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
@@ -83,13 +83,14 @@ function App() {
       if (contactData) {
         setMsgSuccess(true);
         setSentUser(true);
-        navigate('/cierre-r');
+        window.location.href = urls.whatsappGroupUrl;
+        //navigate('/cierre-r');
       } else {
         setMsgSuccess(false);
       }
       setFormValues({
         firstName: '',
-        email: '',
+        number: '',
       });
       setLoading(false);
       return;
@@ -98,7 +99,7 @@ function App() {
       console.error(error);
       setFormValues({
         firstName: '',
-        email: '',
+        number: '',
       });
       alert('Ahh, algo salió malo, por favor vuelve a intentarlo.');
     }

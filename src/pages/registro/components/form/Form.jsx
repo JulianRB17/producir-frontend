@@ -104,20 +104,26 @@ export default function Form({
             </div>
             <div className='form__element'>
               <div className='form__container form__container_input'>
-                <p className='form__label'>Email:</p>
+                <p className='form__label'>Número de WhatsApp:</p>
                 <input
-                  type='email'
+                  type='number'
                   className='form__input'
-                  placeholder='Escribe aquí tu email para mandarte la info.'
+                  placeholder='Escribe aquí tu teléfono para sumarte al grupo.'
                   onChange={onChange}
-                  autoComplete='on'
                   required
-                  value={formValues.email}
-                  id='email'
+                  value={formValues.number}
+                  id='number'
+                  min={1000000000}
+                  max={9999999999}
                 />
               </div>
             </div>
           </div>
+          <p className='form__info'>
+            Al registrarte, te invitaremos a un grupo de WhatsApp donde
+            recibirás la información necesaria y recordatorios de la clase
+            gratuita.
+          </p>
           <div className='form__element'>
             <div className='form__container form__container_inputs form__container_checkbox'>
               <input

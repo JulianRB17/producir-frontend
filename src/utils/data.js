@@ -1,25 +1,25 @@
 export const dates = {
   //date que cambia
-  webinarDate: 'November 20, 2024 18:00:00',
+  webinarDate: 'March 4, 2025 19:00:00',
 
-  modulesDate:
-    '25 de noviembre a 18 de diciembre de 2024 y del 6 al 15 de enero de 2025',
-  diaSemanaDate: 'lunes y miércoles',
-  programaHoraDate: '6 pm a 8 pm (hora CDMX)',
+  modulesDate: '18 de febrero a 27 de marzo de 2025',
+  diaSemanaDate: 'martes y jueves',
+  programaHoraDate: '7 pm a 9 pm (hora CDMX)',
 
-  moduleDate_1: '25 de noviembre',
-  moduleDate_2: '27 de noviembre a 4 de diciembre',
-  moduleDate_3: '9 a 18 de diciembre',
-  moduleDate_4: '6 a 8 de enero',
-  moduleDate_5: '13 a 15 de enero',
+  moduleDate_1: '18 de febrero',
+  moduleDate_2: '20 a 27 de febrero',
+  moduleDate_3: '4 a 13 de marzo',
+  moduleDate_4: '18 y 20 de marzo',
+  moduleDate_5: '25 y 27 de marzo',
 };
 
 export const urls = {
   //URLS que se cambian
-  repetitionUrl: '',
+  repetitionUrl:
+    'https://www.youtube.com/embed/9B6a-X73qBA?si=Vgc-AI2u8D68ePQh&t=414',
 
-  live: 'https://youtube.com/live/wx7IQjlCjvo?feature=share',
-  whatsappGroupUrl: 'https://chat.whatsapp.com/BvBY14wZisr722H2dOaDS0',
+  live: 'https://youtube.com/live/-h_HB7tkjcA?feature=share',
+  whatsappGroupUrl: 'https://chat.whatsapp.com/G4X8WYpfzFeHT0yDGbRrdR',
 
   //Aquí van las después de registrar/comprar
   fbGroupUrl: 'https://www.facebook.com/groups/elartedeproducir/',

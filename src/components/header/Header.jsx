@@ -76,7 +76,6 @@ const HeaderStandard = () => (
 );
 
 export default function Header({ isRegistro, isVentas }) {
-  console.log(isRegistro, isVentas);
   const renderHeaderContent = () =>
     isRegistro ? (
       <HeaderRegistro />
