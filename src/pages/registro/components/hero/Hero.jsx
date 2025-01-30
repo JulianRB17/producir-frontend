@@ -60,7 +60,7 @@ export default function Hero({ shadowVariants, btnVariants }) {
             whileTap='tap'
             onClick={handleScrollToFormClick}
           >
-            Regístrate gratis
+            Únete gratis
           </motion.button>
         </div>
         <div className='hero__container hero__container_disclaimer'>

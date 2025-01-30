@@ -176,8 +176,7 @@
 .form__info {
   padding: 1em 0 0;
   text-shadow: 1px 1px 2px #05022b;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 1.2rem;
 }
 
 .form__link {
@@ -264,10 +263,6 @@
 
   .form__link {
     margin: 0;
-  }
-
-  .form__info {
-    font-size: 1.3rem;
   }
 }
 

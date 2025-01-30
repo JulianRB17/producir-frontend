@@ -69,7 +69,7 @@ function App() {
     setValidForm(target.form.checkValidity());
   };
 
-  const handleSubmit = async (e) => {
+  /* const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -103,6 +103,16 @@ function App() {
       });
       alert('Ahh, algo salió malo, por favor vuelve a intentarlo.');
     }
+  }; */
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = urls.whatsappGroupUrl;
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead');
+    }
+    setLoading(false);
+    setMsgSuccess(true);
   };
 
   useEffect(() => {
@@ -332,6 +342,7 @@ function App() {
                 titleVariants={titleVariants}
                 countdown={countdown}
                 timestamp={timestamp}
+                urls={urls}
               />
             </>
           }
@@ -387,6 +398,10 @@ function App() {
         /> */}
         <Route path='/live' element={<Redirect url={urls.live} />} />
         <Route path='/form' element={<Redirect url={urls.checkout} />} />
+        <Route
+          path='/unirme'
+          element={<Redirect url={urls.whatsappGroupUrl} />}
+        />
         <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />
       </Routes>
       <Footer urls={urls} />

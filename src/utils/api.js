@@ -15,7 +15,6 @@ class Api {
     this._specificUrl = 'users';
     this._options.body = JSON.stringify({ firstName, number });
     const data = await this._fetchData();
-    console.log(data);
     return data;
   }
 
