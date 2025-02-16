@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import Ventas from './pages/ventas/Ventas';
 import CierreRegistro from './pages/cierreRegistro/CierreRegistro';
 import CierreVenta from './pages/cierreVenta/CierreVenta';
-import Registro from './pages/registro/Registro';
+//import Registro from './pages/registro/Registro';
 import Repeticion from './pages/repeticion/Repeticion';
 import { countdown } from './utils/countdown.js';
 import NotFound from './pages/notFound/NotFound';
@@ -21,14 +21,15 @@ import { dates, urls, precios } from './utils/data.js';
 import Redirect from './components/redirect/Redirect.jsx';
 
 function App() {
-  const [formValues, setFormValues] = useState({
+  /*const [formValues, setFormValues] = useState({
     firstName: '',
     number: '',
   });
   const [loading, setLoading] = useState(false);
   const [isValidForm, setValidForm] = useState(false);
   const [msgSuccess, setMsgSuccess] = useState(true);
-  const [sentUser, setSentUser] = useState(false);
+  const [sentUser, setSentUser] = useState(false);*/
+
   const [localDate, setLocalDate] = useState('');
   const [hour, setHour] = useState('');
   const [timestamp, setTimestamp] = useState(0);
@@ -58,7 +59,7 @@ function App() {
     setHour(`${webinarHour}:${webinarMinutes ? 0 : '00'}`);
   }, []);
 
-  const handleChange = (e) => {
+  /*const handleChange = (e) => {
     const { target } = e;
     const { id, value } = target;
 
@@ -103,7 +104,7 @@ function App() {
       });
       alert('Ahh, algo salió malo, por favor vuelve a intentarlo.');
     }
-  }; */
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -113,7 +114,7 @@ function App() {
     }
     setLoading(false);
     setMsgSuccess(true);
-  };
+  };*/
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -315,7 +316,7 @@ function App() {
             />
           }
         />
-        <Route
+        {/*<Route
           path='/registro'
           element={
             <>
@@ -346,7 +347,7 @@ function App() {
               />
             </>
           }
-        />
+        />*/}
         {urls.repetitionUrl ? (
           <Route
             path='/repeticion'
@@ -396,12 +397,13 @@ function App() {
               handleCookiesReject={handleCookiesReject}
               cookiesEnabled={cookiesEnabled}/>}
         /> */}
-        <Route path='/live' element={<Redirect url={urls.live} />} />
+        {/*<Route path='/live' element={<Redirect url={urls.live} />} />*/}
         <Route path='/form' element={<Redirect url={urls.checkout} />} />
         <Route
           path='/unirme'
           element={<Redirect url={urls.whatsappGroupUrl} />}
         />
+        <Route path='/encuesta' element={<Redirect url={urls.encuestaUrl} />} />
         <Route path='*' element={<NotFound />} setIsRegistro={setIsRegistro} />
       </Routes>
       <Footer urls={urls} />

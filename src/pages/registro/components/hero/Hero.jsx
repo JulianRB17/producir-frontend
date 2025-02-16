@@ -5,16 +5,16 @@ import logoSrc from '../../../../assets/logos/imag-eap.png';
 import logoDisclaimerSrc from '../../../../assets/logos/iso-largo-eap.png';
 import flechaSrc from '../../../../assets/imgs/flecha.svg';
 
-export default function Hero({ shadowVariants, btnVariants }) {
+export default function Hero({ shadowVariants, btnVariants, onSubmit }) {
   const handleScrollToDateClick = (e) => {
     e.preventDefault();
     document.getElementById('date')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleScrollToFormClick = (e) => {
+  /* const handleScrollToFormClick = (e) => {
     e.preventDefault();
     document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }; */
 
   return (
     <section className='hero'>
@@ -52,15 +52,18 @@ export default function Hero({ shadowVariants, btnVariants }) {
           />
         </div>
         <div className='hero__container hero__container_btn'>
+          <p className='hero__cta'>
+            Reserva GRATIS tu lugar antes de que se llene (cupos limitados)
+          </p>
           <motion.button
             className='hero_btn hero__btn_registro'
-            href='#form'
             variants={btnVariants}
             whileHover='hover'
             whileTap='tap'
-            onClick={handleScrollToFormClick}
+            animate='loop'
+            onClick={onSubmit}
           >
-            Únete gratis
+            ¡Asegura tu cupo!
           </motion.button>
         </div>
         <div className='hero__container hero__container_disclaimer'>
@@ -69,16 +72,16 @@ export default function Hero({ shadowVariants, btnVariants }) {
             alt='logo-del-arte-de-producir'
             className='hero__logo hero__logo_disclaimer'
           />
-          <p className='hero__disclaimer'>
+          {/* <p className='hero__disclaimer'>
             Tu información está segura y no será compartida con nadie.
-          </p>
+          </p> */}
         </div>
         <div className='hero__container hero__container_arrow'>
           <motion.button
             variants={btnVariants}
-            animate='loop'
             whileHover='hover'
             whileTap='tap'
+            animate='loop'
             className='hero_btn hero__btn_arrow'
             onClick={handleScrollToDateClick}
           >
@@ -95,4 +98,5 @@ export default function Hero({ shadowVariants, btnVariants }) {
 Hero.propTypes = {
   shadowVariants: PropTypes.object,
   btnVariants: PropTypes.object,
+  onSubmit: PropTypes.func,
 };

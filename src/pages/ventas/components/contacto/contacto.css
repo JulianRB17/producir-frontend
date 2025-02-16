@@ -1,0 +1,19 @@
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(172, 166, 228, 1) 100%;
+  padding: 2em;
+}
+
+.contacto__text {
+  font-family: anton;
+  font-size: 2rem;
+  color: #e1f102;
+  text-shadow: 2px 2px 0 #05022b;
+}
+
+.contacto__logo {
+  height: 150px;
+  padding: 1em 0;
+}

@@ -39,7 +39,7 @@
 .header__text {
   margin: 0 0.3em;
   font-family: anton;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .header__text_accent {
@@ -56,12 +56,16 @@
 
 @media screen and (max-width: 900px) {
   .header__text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 650px) {
   .header__text {
+    font-size: 0.9rem;
+  }
+
+  .header__text_accent {
     font-size: 1rem;
   }
 

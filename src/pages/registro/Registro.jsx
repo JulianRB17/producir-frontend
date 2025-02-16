@@ -35,7 +35,11 @@ export default function Registro({
         <title>Registro</title>
       </Helmet>
       <section className='registro'>
-        <Hero shadowVariants={shadowVariants} btnVariants={btnVariants} />
+        <Hero
+          shadowVariants={shadowVariants}
+          btnVariants={btnVariants}
+          onSubmit={onSubmit}
+        />
         <Date
           localDate={localDate}
           hour={hour}

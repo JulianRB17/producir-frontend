@@ -93,7 +93,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             Queremos darte la información más útil que podamos en esta clase.
             Para ello, te pido que nos ayudes contestando esta encuesta que{' '}
             <span className='pasos-v__text_accent'>
-              te tomará menos de 5 minutos
+              te tomará menos de 10 minutos
             </span>{' '}
             , así podemos mejorar cada vez más en el contenido que te podemos
             ofrecer.
@@ -107,7 +107,7 @@ export default function PasosV({ titleVariants, btnVariants, urls, dates }) {
             {' '}
             <Link
               className='pasos-v__text pasos-v__text_link pasos-v__text_link_azul'
-              to={urls.encuestaUrl}
+              to={urls.encuestaVentasUrl}
             >
               Haz click aquí
             </Link>

@@ -10,6 +10,7 @@ const navLinks = [
   { key: 'bonos', tag: 'Bonos' },
   { key: 'garantia', tag: 'Garantía' },
   { key: 'faqs', tag: 'Preguntas frecuentes' },
+  { key: 'contacto', tag: 'Contacto' },
 ];
 
 const Logo = () => (

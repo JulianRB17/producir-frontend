@@ -31,24 +31,25 @@ export default function Form({ shadowVariants, btnVariants, onSubmit }) {
             para poder materializar tus ideas, tus sueños.
           </p>
         </div>
-        <p className='form__cta'>Únete a esta clase gratuita</p>
+        <p className='form__cta'>
+          No dejes que tus ideas se queden en el papel:
+        </p>
         <div action='submit' className='form__form'>
-          <p className='form__info'>
+          {/*   <p className='form__info'>
             Únete al grupo de WhatsApp donde daremos la información necesaria y
             recordatorios de la clase gratuita.
-          </p>
+          </p> */}
           <div className='form__element'></div>
           <div className='form__container form__container_btn'>
             <motion.button
-              type='submit'
-              variants={btnVariants}
               className='form__btn'
+              variants={btnVariants}
               whileHover='hover'
               whileTap='tap'
               animate='loop'
               onClick={onSubmit}
             >
-              ¡Únete ahora!
+              ¡Únete gratis!
             </motion.button>
           </div>
         </div>

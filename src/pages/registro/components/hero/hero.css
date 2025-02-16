@@ -37,7 +37,7 @@
 }
 
 .hero__container_btn {
-  grid-column: 4/8;
+  grid-column: 3/9;
   grid-row: 4/5;
   height: 100%;
   display: flex;
@@ -117,6 +117,13 @@
   font-size: 0.8rem;
 }
 
+.hero__cta {
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #e1f102;
+}
+
 .hero__overlay {
   position: absolute;
   top: 0;
@@ -168,17 +175,17 @@
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     width: 100%;
   }
 
   .hero__title_accent {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .hero__title_shadow {
-    font-size: 6rem;
+    font-size: 4rem;
     top: -0.6em;
     right: 2.2;
   }
@@ -195,35 +202,50 @@
   .hero__arrow {
     width: 4em;
   }
+
+  .hero__cta {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  .hero__logo {
+    min-width: 100px;
+  }
+
+  .hero__cta {
+    font-size: 1.3rem;
+  }
+
   .hero__container_title {
     grid-column: 1/11;
+    grid-row: 3/7;
+    margin: 1em 0;
   }
 
   .hero__container_disclaimer {
-    align-items: center;
+    /*     align-items: center;
     grid-column: 2/10;
-    grid-row: 7/10;
-    align-items: center;
+    grid-row: 9/11;
+    align-items: center; */
+    display: none;
   }
 
   .hero__container_arrow {
     grid-column: 5/7;
-    grid-row: 9/10;
+    grid-row: 11/12;
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero__title_accent {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero__title_shadow {
-    font-size: 4rem;
+    font-size: 1.5em;
   }
 
   .hero__btn_registro {
@@ -240,5 +262,9 @@
 
   .hero__credito-foto {
     font-size: 0.6rem;
+  }
+
+  .hero__container_btn {
+    grid-row: 6/10;
   }
 }

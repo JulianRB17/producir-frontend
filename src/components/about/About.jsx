@@ -36,24 +36,20 @@ export default function About({ titleVariants }) {
             <span className='about__text about__text_accent'>
               ¡Hola! Somos Verónica Ramos y Julián Reyes Botello
             </span>
-            , egresamos del Colegio de Literatura Dramática y Teatro de la UNAM.
-            Al salir de la carrera, nos enfrentamos a la incertidumbre del
-            desempleo, preguntándonos si podríamos ejercer nuestra pasión y si
-            realmente era
+            , egresamos del CLDyT de la UNAM. Al salir de la carrera, nos
+            enfrentamos a la incertidumbre del desempleo y a dudas de si es
             <span className='about__text about__text_accent'>
               {' '}
               posible vivir del teatro.
             </span>
           </p>
           <p className='about__text'>
-            Recordamos nuestros primeros proyectos profesionales llenos de
-            entusiasmo, pero también de inseguridad ya que teníamos muchas dudas
-            sobre temas de producción y eso nos generaba mucha duda sobre
-            nuestras capacidades. La necesidad de autoemplearnos y no depender
-            de que alguien más nos llamara para trabajar nos llevó a invertir
-            mucho tiempo, dinero y esfuerzo en proyectos que muchas veces no
-            alcanzaban los objetivos que deseábamos. Fue entonces cuando
-            comprendimos que era crucial
+            Nuestros primeros proyectos, llenos de entusiasmo y también de
+            inseguridades en producción nos hicieron dudar de nuestra capacidad
+            creadora. La necesidad de no depender de que alguien más nos llamara
+            para trabajar nos llevó a invertir mucho tiempo, dinero y esfuerzo
+            en proyectos que no alcanzaban los objetivos que deseábamos.
+            Comprendimos que era crucial
             <span className='about__text about__text_accent'>
               {' '}
               aprender más sobre los caminos para consolidar nuestros propios
@@ -94,27 +90,19 @@ export default function About({ titleVariants }) {
         </div>
         <div className='about__container about__container_text about__container_dark-text'>
           <p className='about__text about__text_dark'>
-            Decidimos enfrentar nuestros miedos y desafíos, dedicándonos a
-            mejorar nuestras habilidades y entendiendo que la seguridad y el
-            éxito vendrían con el tiempo y la experiencia. Esta decisión nos
-            transformó. Poco a poco, la inversión en nuestro aprendizaje nos
-            brindó la{' '}
+            Con el tiempo, la experiencia y este nuevo conocimiento logramos
+            adquirir la
             <span className='about__text about__text_dark about__text_accent'>
+              {' '}
               confianza necesaria para postularnos en proyectos que parecían
               inalcanzables{' '}
             </span>
-            pero que se consolidaron e incluso nos permitieron colaborar con
-            profesionales de importante trayectoria. Cada paso que dimos nos
-            permitió crecer, no solo como artistas, sino como personas capaces
-            de enfrentar y superar la adversidad.
+            pero que logramos consolidar como sólo lo habíamos soñado.
           </p>
           <p className='about__text about__text_dark'>
-            Por eso hoy, queremos compartir contigo todos estos conocimientos y
-            experiencia adquiridos a lo largo de nuestra carrera artística para
-            hacer de tu tránsito por la consolidación de tus proyectos, un
-            camino mucho más llevadero y sientas compañía en esos momentos donde
-            la incertidumbre y el miedo al fracaso son normales, pero no deben
-            detenerte.
+            Hoy queremos compartir este conocimientos y experiencia para que,
+            sin importar los obstáculos, puedas consolidar tus proyectos
+            escénicos.
             <span className='about__text about__text_dark about__text_accent'>
               {' '}
               El teatro es más que una profesión, es una pasión que se nutre de

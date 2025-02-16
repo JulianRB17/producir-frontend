@@ -1,6 +1,6 @@
 export const dates = {
   //date que cambia
-  webinarDate: 'February 4, 2025 19:00:00',
+  webinarDate: 'February 11, 2025 19:00:00',
 
   modulesDate: '18 de febrero a 27 de marzo de 2025',
   diaSemanaDate: 'martes y jueves',
@@ -16,16 +16,18 @@ export const dates = {
 export const urls = {
   //URLS que se cambian
   repetitionUrl:
-    'https://www.youtube.com/embed/9B6a-X73qBA?si=Vgc-AI2u8D68ePQh&t=414',
-
-  live: 'https://youtube.com/live/-h_HB7tkjcA?feature=share',
-  whatsappGroupUrl: 'https://chat.whatsapp.com/Iq4pYVMj6yo69UfN8p6RTp',
+    'https://www.youtube.com/embed/DWK3oDT6qMA?si=QX_rWt2e5gRH-wS0',
+  live: 'https://youtube.com/live/UV5LcaBp1mg?feature=share',
+  whatsappGroupUrl: 'https://chat.whatsapp.com/CxBAxjaRuVV7chRRpUOeaJ',
 
   //Aquí van las después de registrar/comprar
   fbGroupUrl: 'https://www.facebook.com/groups/elartedeproducir/',
-  whatsappUrl: '',
+  whatsappUrl:
+    'https://api.whatsapp.com/send/?phone=5215554626406&text&type=phone_number&app_absent=0',
   encuestaUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLScD-ZJHGFrqaGchVDIorfHjR3hFiRCyQykINN_HkONyB5pmWA/viewform?usp=sf_link',
+  encuestaVentasUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLSf7sp2Bqu8HrjkX4rfVVsqo-wQV9nBOMCChyeF2WzldwDrpUw/viewform?usp=sharing',
 
   graciasRegistroUrl:
     'https://www.youtube-nocookie.com/embed/xc4zlW3Cxds?si=h91HVDNVD_X47tHZ',

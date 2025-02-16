@@ -14,6 +14,7 @@ import Garantia from './components/garantia/Garantia';
 import Faqs from './components/faqs/Faqs';
 import Disclaimer from './components/disclaimer/Disclaimer';
 import CtaL from './components/ctaL/CtaL';
+import Contacto from './components/contacto/Contacto';
 
 export default function Ventas({
   shadowVariants,
@@ -23,6 +24,7 @@ export default function Ventas({
   dates,
   handleBuyClick,
   precios,
+  urls,
 }) {
   useEffect(() => {
     if (typeof fbq === 'function') {
@@ -78,6 +80,7 @@ export default function Ventas({
         handleBuyClick={handleBuyClick}
         precios={precios}
       />
+      <Contacto btnVariants={btnVariants} urls={urls} />
     </section>
   );
 }
@@ -90,4 +93,5 @@ Ventas.propTypes = {
   dates: PropTypes.object,
   handleBuyClick: PropTypes.func,
   precios: PropTypes.object,
+  urls: PropTypes.object,
 };
