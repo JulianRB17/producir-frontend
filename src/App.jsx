@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import Ventas from './pages/ventas/Ventas';
 import CierreRegistro from './pages/cierreRegistro/CierreRegistro';
 import CierreVenta from './pages/cierreVenta/CierreVenta';
-//import Registro from './pages/registro/Registro';
+import Registro from './pages/registro/Registro';
 import Repeticion from './pages/repeticion/Repeticion';
 import { countdown } from './utils/countdown.js';
 import NotFound from './pages/notFound/NotFound';
@@ -21,14 +21,14 @@ import { dates, urls, precios } from './utils/data.js';
 import Redirect from './components/redirect/Redirect.jsx';
 
 function App() {
-  /*const [formValues, setFormValues] = useState({
+  /* const [formValues, setFormValues] = useState({
     firstName: '',
     number: '',
   });
+  const [isValidForm, setValidForm] = useState(false);*/
   const [loading, setLoading] = useState(false);
-  const [isValidForm, setValidForm] = useState(false);
   const [msgSuccess, setMsgSuccess] = useState(true);
-  const [sentUser, setSentUser] = useState(false);*/
+  const [sentUser, setSentUser] = useState(false);
 
   const [localDate, setLocalDate] = useState('');
   const [hour, setHour] = useState('');
@@ -70,7 +70,7 @@ function App() {
     setValidForm(target.form.checkValidity());
   };
 
-  /* const handleSubmit = async (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -104,7 +104,7 @@ function App() {
       });
       alert('Ahh, algo salió malo, por favor vuelve a intentarlo.');
     }
-  };
+  };*/
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -114,7 +114,7 @@ function App() {
     }
     setLoading(false);
     setMsgSuccess(true);
-  };*/
+  };
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -316,38 +316,40 @@ function App() {
             />
           }
         />
-        {/*<Route
-          path='/registro'
-          element={
-            <>
-              <CookiesNotice
-                showCookiesBanner={showCookiesBanner}
-                onCookiesAccept={handleCookiesAccept}
-                onCookiesReject={handleCookiesReject}
-                btnVariants={btnVariants}
-              />
-              <Registro
-                localDate={localDate}
-                hour={hour}
-                onSubmit={handleSubmit}
-                onChange={handleChange}
-                sentUser={sentUser}
-                isValidForm={isValidForm}
-                loading={loading}
-                msgSuccess={msgSuccess}
-                setSentUser={setSentUser}
-                formValues={formValues}
-                shadowVariants={shadowVariants}
-                btnVariants={btnVariants}
-                listElementVariants={listElementVariants}
-                titleVariants={titleVariants}
-                countdown={countdown}
-                timestamp={timestamp}
-                urls={urls}
-              />
-            </>
-          }
-        />*/}
+        {
+          <Route
+            path='/registro'
+            element={
+              <>
+                <CookiesNotice
+                  showCookiesBanner={showCookiesBanner}
+                  onCookiesAccept={handleCookiesAccept}
+                  onCookiesReject={handleCookiesReject}
+                  btnVariants={btnVariants}
+                />
+                <Registro
+                  localDate={localDate}
+                  hour={hour}
+                  onSubmit={handleSubmit}
+                  //onChange={handleChange}
+                  sentUser={sentUser}
+                  //isValidForm={isValidForm}
+                  loading={loading}
+                  msgSuccess={msgSuccess}
+                  setSentUser={setSentUser}
+                  //formValues={formValues}
+                  shadowVariants={shadowVariants}
+                  btnVariants={btnVariants}
+                  listElementVariants={listElementVariants}
+                  titleVariants={titleVariants}
+                  countdown={countdown}
+                  timestamp={timestamp}
+                  urls={urls}
+                />
+              </>
+            }
+          />
+        }
         {urls.repetitionUrl ? (
           <Route
             path='/repeticion'

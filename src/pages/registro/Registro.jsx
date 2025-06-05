@@ -15,13 +15,13 @@ export default function Registro({
   localDate,
   hour,
   onSubmit,
-  onChange,
+  // onChange,
   sentUser,
-  isValidForm,
+  //isValidForm,
   loading,
   msgSuccess,
   setSentUser,
-  formValues,
+  //formValues,
   shadowVariants,
   btnVariants,
   listElementVariants,
@@ -57,13 +57,13 @@ export default function Registro({
         <Allies shadowVariants={shadowVariants} />
         <Form
           onSubmit={onSubmit}
-          onChange={onChange}
+          //onChange={onChange}
           sentUser={sentUser}
-          isValidForm={isValidForm}
+          //isValidForm={isValidForm}
           loading={loading}
           msgSuccess={msgSuccess}
           setSentUser={setSentUser}
-          formValues={formValues}
+          //formValues={formValues}
           shadowVariants={shadowVariants}
           btnVariants={btnVariants}
         />
@@ -76,13 +76,13 @@ Registro.propTypes = {
   localDate: PropTypes.any,
   hour: PropTypes.string,
   onSubmit: PropTypes.func,
-  onChange: PropTypes.func,
-  isValidForm: PropTypes.bool,
+  //onChange: PropTypes.func,
+  //isValidForm: PropTypes.bool,
   loading: PropTypes.bool,
   msgSuccess: PropTypes.bool,
   sentUser: PropTypes.bool,
   setSentUser: PropTypes.func,
-  formValues: PropTypes.object,
+  //formValues: PropTypes.object,
   shadowVariants: PropTypes.object,
   btnVariants: PropTypes.object,
   listElementVariants: PropTypes.object,

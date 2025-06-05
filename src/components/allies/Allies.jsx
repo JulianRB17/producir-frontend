@@ -13,6 +13,7 @@ import tramaSrc from '../../assets/logos/aliados/trama.png';
 import arceSrc from '../../assets/logos/aliados/arce.png';
 import mosSrc from '../../assets/logos/aliados/mos.png';
 import apagaSrc from '../../assets/logos/aliados/apaga.png';
+import tchSrc from '../../assets/logos/aliados/tch.png';
 
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
@@ -21,7 +22,7 @@ export default function Allies({ shadowVariants }) {
   return (
     <section className='allies'>
       <div className='allies__title-container'>
-        <p className='allies__title'>
+        <h2 className='allies__title'>
           <motion.span
             className='allies__title allies__title_shadow'
             variants={shadowVariants}
@@ -32,7 +33,7 @@ export default function Allies({ shadowVariants }) {
             Aliados
           </motion.span>
           Aliados
-        </p>
+        </h2>
       </div>
       <motion.div
         className='allies__grid-container'
@@ -89,6 +90,13 @@ export default function Allies({ shadowVariants }) {
           <img
             src={tramaSrc}
             alt='logo Trama y Drama'
+            className='allies__logo'
+          />
+        </div>
+        <div className='allies__grid-element'>
+          <img
+            src={tchSrc}
+            alt='logo Teatro de Ciertos Habitantes'
             className='allies__logo'
           />
         </div>

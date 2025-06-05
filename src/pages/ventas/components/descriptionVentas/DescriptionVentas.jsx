@@ -20,22 +20,22 @@ export default function DescriptionVentas({
             initial='initialContainer'
             whileInView='viewContainer'
           >
-            <motion.p
+            <motion.h2
               className='description-ventas__title'
               variants={titleVariants}
               initial='initial'
               whileInView='view'
             >
               ¿Qué se verá
-            </motion.p>
-            <motion.p
+            </motion.h2>
+            <motion.span
               className='description-ventas__title description-ventas__title_accent'
               variants={titleVariants}
               initial='initial'
               whileInView='view'
             >
               dentro del programa?
-            </motion.p>
+            </motion.span>
           </motion.div>
         </div>
         <img
@@ -53,8 +53,8 @@ export default function DescriptionVentas({
           a tus ideas y sueños.
         </p>
         <p className='description-ventas__text'>
-          Estos son los módulos que trabajaremos en este programa, éste será en
-          línea y nos veremos los{' '}
+          Estos son los módulos que trabajaremos en este programa en línea, nos
+          veremos los{' '}
           <span className='description-ventas__text description-ventas__text_accent description-ventas__text_accent-l'>
             {dates.diaSemanaDate} de {dates.programaHoraDate} del{' '}
             {dates.modulesDate}.

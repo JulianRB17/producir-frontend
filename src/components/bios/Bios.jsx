@@ -11,8 +11,8 @@ export default function Bios({ listElementVariants }) {
       <div className='bios__container bios__container_bio'>
         <img src={veroSrc} alt='Vero Ramos' className='bios__photo' />
         <div className='bios__container bios__container_name'>
-          <p className='bios__name'>Verónica</p>
-          <p className='bios__name bios__name_accent'>Ramos</p>
+          <h3 className='bios__name'>Verónica</h3>
+          <h3 className='bios__name bios__name_accent'>Ramos</h3>
         </div>
         <ul className='bios__list'>
           <li className='bios__element'>
@@ -25,7 +25,7 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Productora y gestora con 9 años de trayectoria en proyectos
+              Productora y gestora con 10 años de trayectoria en proyectos
               culturales y artísticos para instituciones públicas y privadas.
             </p>
           </li>
@@ -39,9 +39,9 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Coordinadora de producción del Colectivo Escénico El Arce
-              beneficiario del programa México en Escena del Sistema de Apoyos a
-              la Creación de Proyectos Culturales (MEGA).
+              Coordinadora de producción del Colectivo Escénico El Arce,
+              colectivo con 10 años de trayectoria, beneficiario del programa
+              México en Escena (MEGA) entre otros.
             </p>
           </li>
           <li className='bios__element'>
@@ -54,8 +54,8 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Productora ejecutiva de Los obscenos de Silere/Vórtex proyecto
-              beneficiario de EFIARTES.
+              Coordinadora de producción y productora ejecutiva de proyectos
+              financiados por diversos fondos institucionales como EFIARTES.
             </p>
           </li>
         </ul>
@@ -67,8 +67,8 @@ export default function Bios({ listElementVariants }) {
           className='bios__photo'
         />
         <div className='bios__container bios__container_name'>
-          <p className='bios__name'>Julián</p>
-          <p className='bios__name bios__name_accent'>Reyes Botello</p>
+          <h3 className='bios__name'>Julián</h3>
+          <h3 className='bios__name bios__name_accent'>Reyes Botello</h3>
         </div>
         <ul className='bios__list'>
           <li className='bios__element'>
@@ -81,8 +81,8 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Teatrero: director escénico, actor, productor y gestor con 8 años
-              de experiencia en el medio profesional.
+              Director escénico, actor, productor y gestor con 9 años de
+              experiencia en el medio profesional.
             </p>
           </li>
           <li className='bios__element'>
@@ -95,9 +95,9 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Con un diplomado en Creación/Investigación por la UBA (Argentina)
-              y la UNAM y otro en Perfeccionamiento en Dirección Escénica por la
-              Secretaría de Cultura
+              Productor ejecutivo de Teatro de Ciertos Habitantes, compañía de
+              gran formato con 30 años de trayectoria y presencia en más de 200
+              ciudades alrededor del globo.
             </p>
           </li>
           <li className='bios__element'>
@@ -110,8 +110,8 @@ export default function Bios({ listElementVariants }) {
               whileInView='view'
             />
             <p className='bios__text'>
-              Formó parte del equipo de producción de Los obscenos de
-              Silere/Vórtex proyecto beneficiario de EFIARTES.
+              Coordinador de producción y productor ejecutivo de proyectos
+              financiados por diversos fondos institucionales como EFIARTES.
             </p>
           </li>
         </ul>
